@@ -1,0 +1,364 @@
+%%%   Important note: think of a good write of the educational plan, that
+%%is our plans fro training. Now it says nothing
+\subsection{Proposed Research}
+
+
+In this section, we describe the detailed components of our proposed research that was 
+outlined in the Overview section. In the following project descriptions, Bogner will lead the 
+IMSRG-related developments, while Hjorth-Jensen will lead the coupled-cluster theory developments.
+
+
+
+\subsubsection{{\em Ab initio} calculations of Finite Nuclei}\label{subsec:finitenuclei}
+
+The projects in this subsection concern the development of {\em ab
+  initio} methods to calculate ground- and excited-state properties of
+medium mass nuclei. The methods we will focus on are the IMSRG and CC theory. Since we
+have already developed a large MBPT and large-scale FCI framework \cite{Hjorth-Jensen:1995ys,mhj2004,Tsunoda:2013bla,Tsunoda:2016fjh}, these methods will serve as
+additional many-body methods used to compare our calculations with.
+Emphasis will be placed on developing reliable and efficient {\em ab initio}
+calculations of ground- and excited-state properties for both closed-
+and open-shell nuclei, with the proper inclusion of two- and
+three-nucleon forces and continuum degrees of freedom.  Additionally,
+these developments will be used to inform and improve existing
+phenomenological approaches, for instance by generating improved
+starting points for the optimization of phenomenological shell model
+Hamiltonians and energy density functionals, or by providing
+qualitative insights as to the different types of couplings one
+expects.
+
+
+
+\begin{enumerate}
+ 
+ \item {\bf Inclusion of NNN forces and three-body correlations.} 
+ In the same way that NN interactions imply that, at a minimum, doubles excitations ($2p2h$,
+  disconnected $4p4h$, etc.) must be included for an accurate
+  description of many-body correlations, the presence of NNN forces
+  demands an explicit treatment of triples excitations. We propose to 
+  develop computationally feasible schemes for including explicit
+  three-body correlations in CC and IMSRG calculations when NNN forces are present.  In CC theory, this corresponds to including
+  non-iterative triples (e.g., CCSD(T)) and analogous approximations to full triples, while for the IMSRG, this entails performing approximate IMSRG(3)
+  calculations using the Magnus expansion formulation developed in Refs.~\cite{TitusThesis, Morris:2015ve}. 
+s
+\item{\bf Merging EOM methods with the single-reference IMSRG.}
+In Ref.~\cite{Parzuchowski:2016njm}, we presented a new approach to 
+ calculate excited states in medium-mass closed-shell nuclei by merging 
+ equations-of-motion (EOM) techniques~\cite{Rowe:1968eq} with the IMSRG.  We propose to extend this method to calculate ground- and excited-state properties of nuclei within 1-2 nucleons of a closed shell by extending the EOM ladder operators to include particle-number non-conserving terms. We will also use Lanczos' method and appropriately evolved operators to calculate nuclear response functions and transition densities. In principle, the same Lanczos techniques can be used to construct microscopic optical potentials when applied to the closed-shell $\pm 1$ nuclei, thereby linking \emph{ab initio} structure to reactions.
+ 
+\item {\bf Merging EOM methods with the multi-reference IMSRG.}  The
+  valence-space IMSRG~\cite{Tsukiyama:2012fk,Bogner:2014tg,
+    Stroberg:2015ymf,Stroberg:2016ung} has the virtue of providing a
+  unified treatment of ground- and excited-state properties couched in the familiar language of the shell model, but it also suffers the same ``curse
+  of dimensionality'' associated with the large-scale matrix
+  diagonalizations required for midshell nuclei and/or
+  extended valence spaces.  One alternative is to directly target excited states by combining the
+  IMSRG with equations-of-motion (EOM) techniques~\cite{Rowe:1968eq},
+  similar to what is done in CC
+  theory~\cite{Ekstrom:2014iya,Jansen:2012ey}. Successful
+  ``proof-of-principle'' calculations have been performed in
+  Ref.~\cite{Parzuchowski:2016njm}, where EOM methods were combined
+  with the single-reference IMSRG to calculate excited states in
+  closed-shell systems. While the EOM-IMSRG potentially offers some
+  technical simplifications due to the Hermiticity of the transformed
+  Hamiltonian (e.g., no need to solve a separate left-eigenvalue
+  problem when calculating properties other than energy), the
+  practical limitations of the single-reference formulation should be
+  comparable to the analogous EOM-CC calculations, limiting the method
+  to nuclei within 1 or 2 nucleons of a closed shell. To remove these
+  limitations, we propose to merge EOM techniques with the
+  multi-reference IMSRG (MR-IMSRG) formulation recently developed for
+  ground-state calculations of open-shell even-even
+  nuclei~\cite{Hergert:2013ij,Hergert:2014vn}. In principle,
+  spectroscopy for the target nucleus and its even-odd, odd-even, and
+  odd-odd neighbors could then be accessed using suitably generalized
+  EOM excitation operators. This work will be done in close collaboration with
+  NSCL colleague Heiko Hergert.
+  
+\item {\bf Continuum effect via the Gamow basis.}  As one nears the
+  limits of stability, \emph{ab initio} calculations in a localized,
+  $L^2$ single-particle basis fail to account for important couplings
+  to resonances and the non-resonant continuum. In recent years, we
+  have had success in working with the so-called Gamow basis in MBPT
+  and coupled cluster calculations for nuclei near shell closures, see
+  Ref.~\cite{Hagen:2006pq,Tsukiyama:2009hy,Hagen:2012oq} and
+  references therein. To date, none of the IMSRG implementations have
+  incorporated this important physics. Therefore, a major component of
+  this proposal will be to implement the Gamow basis in the EOM-IMSRG,
+  valence-shell decoupling IMSRG, and MR-IMSRG formulations, with
+  particular emphasis placed on the latter two since they span the
+  more challenging regime of unstable, open-shell nuclei. 
+%  Our multi-shell MBPT formalism wil be extended in order to 
+%include continuum effects as well as three-body forces, providing thereby three different many-body approaches to the inclusion of continuum effects.
+  
+\item {\bf Shell model interactions in extended valence spaces.} 
+As one nears the limits of stability, traditional shell model calculations in a
+single major shell are often insufficient. Moreover, for loosely-bound
+systems it is necessary to utilize a single-particle basis which
+accounts for resonances and the non-resonant continuum. Therefore, it
+is a high priority to develop a framework to derive
+multi-shell effective interactions with the proper inclusion of
+continuum degrees of freedom using both CC and IMSRG methods. We note that we have recently tested multi-shell
+effective interactions derived in MBPT for selected nuclei, see
+Ref.~\cite{Tsunoda:2013bla,Tsunoda:2016fjh}. We propose to extend the CC effective interaction (CCEI)~\cite{Jansen:2014qf,Jansen:2015ngw} and the valence-decoupled
+IMSRG methods~\cite{Bogner:2014tg,Stroberg:2015ymf,Stroberg:2016ung}, both of which have been quite successful in calculations within a single major shell and neglecting continuum effects, to the more
+challenging case of multiple major shells within the Gamow basis.  Together with the previous item and with our
+multi-shell effective interactions from MBPT, we have the possibility to test three different many-body approaches, with and without three-body forces and continuum effects.
+
+
+\item{\bf Microscopically-improved phenomenological shell model
+    interactions.}  In the phenomenological approach to shell model
+  interactions, the valence single-particle energies (SPEs) and
+  two-body matrix elements (TBMEs) are optimized directly to data. In
+  practice, this is done by starting with some microscopic
+  calculation, and then iteratively adjusting the relevant linear
+  combinations of SPEs and TBMEs that are probed by the data, leaving
+  the remaining terms fixed at the values given by the microscopic
+  calculation~\cite{Brown:1988vm,Brown:2001rg,Caurier:2005qf}. In all
+  applications to date, the microscopic starting point is taken from a
+  low-order MBPT calculation without initial NNN forces. We propose to
+  use our multi-shell MBPT, CCEI and IMSRG shell model interactions, which start from
+  state-of-the-art chiral NN and NNN interactions, as an improved starting point for the
+  optimization of phenomenological interactions in collaboration with NSCL colleague Alex Brown. We will also use
+  qualitative and semi-analytic insights gleaned from the CCEI and
+  IMSRG calculations to suggest alternative ans\"atze for the
+  phenomenological interactions. For instance, in traditional
+  phenomenology, the TBMEs are essentially fixed across the entire
+  shell, with the exception of an empirical $A$-dependent scaling that
+  mocks up the changing size of the
+  core~\cite{Brown:1988vm,Brown:2001rg}. In contrast, the IMSRG
+  valence interactions seem to suggest a much more complicated
+  $A$-dependence~\cite{Stroberg:2015ymf,Stroberg:2016ung}.  We will
+  also explore how the initial Hamiltonian is renormalized under the
+  IMSRG to gain some insight into the general operator structures that
+  result, which can then be used to motivate a ``bottom-up''
+  description of the shell model as an effective field theory around
+  the Fermi surface, in analogy with the modern RG view of
+  Landau-Migdal theory~\cite{ShankarRG,MigdalBook}.
+    
+\end{enumerate}
+
+
+
+\subsubsection{{\em Ab initio} calculations of infinite matter}\label{subsec:infinitematter}
+
+Starting from optimized chiral EFT Hamiltonians we will perform extensive
+studies of the equation of state of nucleonic matter, extracting
+constraints on the energy per particle in symmetric matter and
+$\beta$-stable matter, and obtaining reliable estimates for the
+symmetry energy.  Our research aims at providing a consistent approach to several crucial quantities of relevance
+for dense matter studies, spanning from the equations of state and the symmetry energy 
+to various response functions and the estimation of  neutrino rates, spectra and opacities. These are all
+quantities which play prominent roles in  our understanding of the evolution of neutron stars and proto-neutron stars.
+The role of three-body forces on these quantities will be explored as well using realistic chiral Hamiltonians.
+
+\begin{enumerate}
+\item{\bf EoS and symmetry energy calculations.} We will develop IMSRG and CC calculations of
+  the EoS and the symmetry energy of infinite matter starting from
+  realistic NN and NNN interactions with approximate and full triples excitations. In our contributions to a recent
+  volume of Lecture Notes in Physics (to be published in early
+  2017), entitled {\em An advanced course in computational nuclear
+   physics; Bridging the scales from quarks to neutron stars}
+  \cite{lnp} (see also Refs.~\cite{Baardsen:2013vwa,Hagen:2013yba}), we have
+  developed IMSRG and CC infinite matter codes at the IMSRG(2) and CCD levels of approximation. Building on this foundation,
+  we will develop approximate IMSRG(3) and CCDT codes that are capable of treating realistic chiral NN and NNN interactions. These calculations will provide reliable   benchmarks for the EoS of general asymmetric nuclear matter and
+$\beta$-stable nuclear matter. We have already implemented approximate 
+  triples correlations in studies of the homogeneous electron gas for the coupled-cluster
+  \cite{audunthesis} and IMSRG~\cite{TitusThesis} methods. Due to large memory requirements, our codes will need to be rewritten in order to run efficiently on existing and
+  future high-performance facilities.  Finally, in addition to providing valuable information about the symmetry
+  energy and its dependence on various components
+  of the underlying NN and NNN interactions, these
+  calculations will allow us to extract the so-called Landau fermi
+  liquid parameters, which are useful to parameterize the collision
+  integral term in transport theory.  This will naturally complement
+  the reaction theory program of our colleagues Danielewicz and Nunes at the
+  NSCL at Michigan State University.
+
+% Should ask Luke to take a look at this? 
+
+\item{\bf Effective operators and Neutrinos properties.} The CC and
+  IMSRG methods will also allow us to extract one- and two-body
+  effective operators for asymmetric infinite matter and to study
+  their dependence on the various components of chiral NN and NNN
+  interactions.  As an example, we will develop formalism and codes
+  for computing effective baryon masses in dense matter as well as
+  effective medium-dependent interactions and operators. These
+  ingredients form the basis for the evaluation of various processes
+  for neutrino emissions in dense matter. In neutron stars, neutrinos
+  exhibit a mean free path which is larger than the typical radius
+  $R\sim 10$ km of a neutron star. Neutron stars are thus expected to
+  cool via various neutrino emission mechanisms such as the direct and
+  modified Urca processes, and neutrino-pair bremsstrahlung. To
+  properly account for the medium dependence of these processes, one
+  needs controlled calculations of quantities such as nucleon
+  effective masses, effective operators and interactions, and
+  spin-isospin response functions. These elements all enter the
+  determination of the rates that characterize the different neutrino
+  production mechanisms. Normally, these have been approximated
+  through various mean-field approaches or simplified phenomenological
+  interactions. Changes in such rates due to uncertainties in
+  different many-body methods can significantly alter the
+  neutrino cooling timescale of proto-neutron stars and impact
+  predictions of nucleosynthesis in the innermost regions of core
+  collapse supernovae.  For instance, a proper knowledge of the
+  spin-isospin response from {\em ab initio} methods, even in a
+  limited range of temperature-density space, would provide valuable
+  constraints on the phenomenological models that are in current
+  use. The aim of this part of the project is thus to compute neutrino
+  emissivities and spectra in dense matter using medium dependent
+  quantities like effective masses, effective one-body operators and
+  two-body interactions, and spin-isospin response functions extracted from IMSRG and CC calculations with
+  and without NN and NNN forces. The hope is then to be able to
+  provide better constrained predictions for neutrino spectra in dense
+  matter.
+
+  
+\item{\bf Finite size corrections and many-body approximation errors.}
+ In this subproject, we will treat the results from our large-scale simulations as ``synthetic data''  that depend on the number of basis functions used and the truncations
+we make at the level of many-body excitations. By analyzing trends and correlations within the data, we will extract empirical guidelines and ``rules of thumb'' to estimate the theoretical uncertainties of common many-body approximations. 
+
+  Since we simulate infinite matter in a finite periodic box and truncated plane-wave basis for both the
+  IMSRG and CC methods, an important aspect will be to study and
+  quantify finite-size and basis-truncation errors. For the former, we propose to study the use of
+  so-called twisted periodic boundary conditions, which have been used
+  with much success in condensed matter calculations to minimize
+  finite size effects~\cite{Shepherd:2012,Hagen:2013yba,Drummond:2008}.  In
+  depth studies of a proper treatment of finite size effects will be
+  included in both our IMSRG and CC codes. Our numerical results for a wide range of basis sets will allow us to extract
+  a better understanding of the basis-set truncation errors. An analysis along the lines performed
+  by Shepherd in \cite{shepherd2016} will be done using our numerical data.
+   
+  We will also investigate truncation errors arising from different
+  levels of many-body approximation. Unlike the studies of basis-set
+  truncation errors, it is difficult to obtain an analytic or
+  semi-analytic understanding of many-body approximation errors for
+  nuclear many-body systems. Therefore, we will proceed in an
+  empirical fashion by using benchmark results provided from auxiliary field diffusion Monte
+  Carlo calculations~\cite{Roggero:2013ora,Roggero:2014lga,pederiva2016} to generate quasi-exact 
+  results for a range of nuclear densities.  Using the
+  Monte Carlo results as the exact benchmark, we will study how the
+  truncation errors of the IMSRG, CC, and MBPT in different levels of approximation
+  correlate with various quantities that one expects to affect convergence, such as the UV cutoff in the nuclear
+  Hamiltonian, the D-state probability in the deuteron, the wound
+  parameter calculated in leading-order Brueckner Hartree-Fock theory,
+  etc. It is hoped that in this manner, we can at least gain ``rule of
+  thumb'' estimates of how accurate we expect a given level of CC or
+  IMSRG calculation to be given some simple quantities that
+  characterize the input interactions and the reference state upon
+  which correlations are to be built.   The calculations will be performed with and without three-body forces as well as with simplified Hamiltonians like those provided from pionless effective field theory \cite{pederiva2016}. The latter references, based on 
+auxiliary field diffusion Monte Carlo calculations provide near exact benchmarks to neutron matter and symmetric nuclear matter calculations. 
+ \end{enumerate}
+
+
+\subsubsection{Applications to other systems}\label{subsec:othersystems}
+To further validate our many-body machinery, we will also carry out
+ground- and excited-state calculations using CC, IMSRG and MBPT
+for the following well-studied systems that can serve as interesting
+benchmarks for our methods:
+\begin{enumerate}
+\item{\bf Homogenous electron gas (HEG) in two and three dimensions.}
+  The HEG has been studied extensively in the literature, see for
+  example the recent full configuration interaction theory quantum Monte Carlo (FCIQMC) calculations of Alavi {\em et al}
+  \cite{booth2009,booth2013}. We have recently started to study the
+  two-dimensional HEG using CC theory and IMSRG,
+  with very promising results~\cite{Baardsen:2013vwa,audunthesis}. These systems can
+  serve as a testbed for the development of reliable infinite nuclear
+  matter calculations, as much of the formalism is similar except that
+  the nuclear forces have a finite range compared with the Coulomb
+  interaction. Since Coulomb interactions are simpler, studies of the
+  HEG will allow us to gain important insights about many-body
+  correlations and various approximations like CC theory with and
+  without triples correlations, IMSRG(2) and IMSRG(3) etc. In our
+  IMSRG, CC and MBPT calculations to date, periodic boundary
+  conditions have been used without including finite-size
+  corrections~\cite{Baardsen:2013vwa, audunthesis}. Here again we plan to perform calculations with full triples
+ and perform similar benchmark calculations as done for our nuclear matter calculations. 
+  In order to compare the results to
+  the benchmarks from Monte Carlo calculations, we will have to implement finite-size corrections in our
+  formalism. Since we ultimately face the same issues in the nuclear
+  matter problem, we believe that the conclusions and experiences we
+  will gain from the HEG will be very useful.  The analysis of the approximation errors discussed in the previous subproject, will be performed here as well.
+ 
+\item{\bf Quantum dots and neutron drops.} We have also performed
+ test studies of quantum dots in two-dimensional parabolic
+  traps~\cite{Lohne:2010aw,sarahthesis}.  We have benchmarked CCSD and CCSDT theories and IMSRG(2) with
+  diffusion Monte Carlo calculations, obtaining results which agree
+  rather well. The aim is to extend the studies of such systems
+  open-shell configurations and double well quantum dots by implementing the equation of motion techniques discussed above. 
+  We have already performed preliminary calculations of the spectra of systems with one electron added or removed from a closed shell core, using CC and IMSRG at the level of doubles excitations. A comparison of MBPT using the IMSRG-evolved interaction to third order shows good agreement for addition and removal spectra. These results will be published early 2017 with three of our graduate students. We note that the formalism developed here can in turn be used to extract effective masses and effective single-particle energies for nucleons in dense matter, electrons in the HEG and for closed-shell nuclei with one particle removed or attached.
+ Finally, as the problem is essentially identical to quantum dots, we will
+  also perform calculations of harmonically-trapped neutrons
+  (``neutron drops''), which serve as useful theoretical ``data'' to
+  constrain the construction of improved energy density functionals  for
+  nuclei~\cite{Bogner:2011kp}.
+
+\item{\bf Unitary fermi gas.}  Another interesting testing ground for
+  many-body theories is the unitary fermi gas~\cite{UFG}. The unitary
+  fermi gas (UFG) is a many-fermion system interacting via short-range
+  interactions tuned to infinite $s$-wave scattering length. Since the
+  only length scale in the problem is the Fermi momentum, many
+  properties of the UFG obey elegant universal relations that are
+  independent of the details of the microscopic interactions. As a
+  result, the physics of the UFG is relevant to a wide range of
+  systems from trapped atomic gases to low-density neutron matter to
+  the quark-gluon plasma~\cite{UFG}.  Despite the preponderance of
+  elegant and simple universal relations, the UFG is very challenging
+  to calculate from first principles since the problem is ``maximally
+  non-perturbative'' due to the lack of a small parameter to expand
+  in.  Over recent years, a large number of Quantum Monte Carlo and other
+  non-perturbative calculations of the UFG have been
+  accumulated. Therefore, an interesting and challenging problem will
+  be to apply the IMSRG and CC methods to this system and
+  compare to other methods.
+
+\end{enumerate}
+
+
+
+\subsubsection{Broader Impacts}
+
+The academic environment at MSU provides numerous opportunities
+for the PIs to attract bright young people to 
+high-level research in nuclear physics. For example, the theory group at the NSCL is very active in mentoring undergraduate
+students in the NSF sponsored Research Experience for Undergraduates
+(REU) program in the summer months, with the PIs successfully supervising two REU students 
+over the past three years. Many of the projects in this proposal
+can be tested in prototype toy-model problems that manage to
+simultaneously i) illustrate cutting-edge concepts to the student at a technical level
+appropriate for an undergraduate physics major, and ii) benefit the
+overall progress of the PIs' research program. 
+
+One of the primary \emph{broader impacts} of our previous NSF award, which we will continue in the current award, is the development of an
+open source library that can be used by other theorists and serve
+as a educational resource for graduate students and postdocs learning about 
+advanced many-body methods like CC and IMSRG.  In our recent
+Lecture Notes in Physics book~\cite{lnp}, we have together with our graduate students
+and other colleagues, written two long chapters on the application of
+the above many-methods to neutron star studies. These chapters contain
+links to our codes, which are fully open source and contain
+benchmark calculations as well, making thereby our science
+reproducible. They can be accessed via the GitHub
+link \url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src}. As we implement the infinite matter projects described in the current proposal (e.g., inclusion of NNN forces and approximate triples excitations, calculation of spin-isospin response functions, etc.), the codes in the repository will be updated accordingly.  
+
+The PIs are requesting support for three graduate students plus one postdoc to work on
+the projects outlined above. The methods at the center of this proposal
+are at the forefront of basic research in many-body physics and
+low-energy nuclear physics.The many collaborations of the PIs with academic institutions world wide provides an excellent
+platform for developing the communication skills of the supported
+students. Global collaboration, and collaboration within the local
+group, requires skills in project management in order to adequately
+communicate the progress of the project and to meet
+deadlines. Participation in international conferences and visits at
+research centers can be expected within the time period the proposed
+project. This will equip the involved participants with skills in
+presentation techniques.  Proper documentation, both internally and in
+peer-reviewed international journals, in writing is expected. The
+project is grounded in nuclear physics but there is a very large
+overlap with computational science and numerical analysis. These two
+complementary aspects will form a natural part of the everyday work
+and therefore add to the total competence of the
+participants. Naturally, this will add to the number of possible
+career paths.
+
+
+

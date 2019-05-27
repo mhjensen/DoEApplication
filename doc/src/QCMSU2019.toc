@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}Executive Summary}{4}{section.1}
+\contentsline {section}{\numberline {2}Introduction and Scientific Motivation}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}The overarching intellectual question(s)}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Aims}{6}{subsection.2.2}
+\contentsline {paragraph}{Strategic relevance}{7}{section*.6}
+\contentsline {section}{\numberline {3}Proposed Research and Methods}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Project Description}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Quantum Simulation Algorithms}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Software for Quantum Simulations}{9}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Lattice QCD}{9}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Variational adiabatic evolution}{9}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Spectral reconstruction and transition matrix elements}{10}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}Scattering, reactions, and few-body dynamics}{12}{subsubsection.3.3.4}
+\contentsline {subsection}{\numberline {3.4}Nuclear structure, Finite Nuclei and Infinite Nuclear Matter}{12}{subsection.3.4}
+\contentsline {paragraph}{Simulation of Many-Body Hamiltonians}{12}{section*.10}
+\contentsline {subsubsection}{\numberline {3.4.1}Broader Impacts}{13}{subsubsection.3.4.1}
+\contentsline {subsection}{\numberline {3.5}Tasks}{14}{subsection.3.5}
+\contentsline {section}{\numberline {4}Workforce Development}{14}{section.4}
+\contentsline {subsection}{\numberline {4.1}Mentoring Plan}{14}{subsection.4.1}
+\contentsline {section}{\numberline {5}Timetable of Activities}{15}{section.5}
+\contentsline {section}{\numberline {6}Project Management plan}{15}{section.6}
+\contentsline {section}{\numberline {7}Project Objectives}{15}{section.7}
+\contentsline {section}{\numberline {8}Budget Justification}{15}{section.8}
+\contentsline {subsection}{\numberline {8.1}Senior Personnel}{15}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Graduate Students and Post-Graduates}{15}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Equipment}{15}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Travel}{15}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Materials and Supplies}{15}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}Other}{15}{subsection.8.6}
+\contentsline {subsection}{\numberline {8.7}Indirect Costs}{15}{subsection.8.7}
+\contentsline {section}{\numberline {A}Biographical Sketches}{16}{appendix.A}
+\contentsline {section}{\numberline {B}Current and Pending Support}{16}{appendix.B}
+\contentsline {section}{\numberline {C}Bibliography and References Cited}{16}{appendix.C}
+\contentsline {section}{\numberline {D}Facilities and other Resources}{16}{appendix.D}
+\contentsline {section}{\numberline {E}Data Management plan}{16}{appendix.E}
+\contentsline {section}{\numberline {F}Additional perspectives}{16}{appendix.F}
+\contentsline {subsection}{\numberline {F.1}Relevance and benefit to society}{16}{subsection.F.1}
+\contentsline {subsection}{\numberline {F.2}Environmental impact}{16}{subsection.F.2}
+\contentsline {subsection}{\numberline {F.3}Ethical perspectives}{16}{subsection.F.3}
+\contentsline {subsection}{\numberline {F.4}Gender issues}{16}{subsection.F.4}
