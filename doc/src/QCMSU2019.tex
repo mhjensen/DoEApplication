@@ -27,15 +27,16 @@
 \begin{document}
 
 \thispagestyle{empty}
-     \rule{\linewidth}{1mm}
-     \begin{flushright}
+
+     \begin{center}
+     \rule{\linewidth}{1mm}     
            \Huge From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body Problem
-     \end{flushright}
      \rule{\linewidth}{1mm}
+     \end{center}
      \vspace*{\stretch{2}}
  \begin{center}
  \begin{figure}[hb]
- \includegraphics[scale=1.0]{Figures/NP_Collaboration.png}
+ \includegraphics[scale=0.9]{Figures/NP_Collaboration.png}
  \end{figure}
  \end{center}
 \newpage
@@ -819,7 +820,7 @@ e^{A+B}=\lim_{n\to\infty}\left(e^{A/n}e^{B/n}\right)^n
 Which approximation to use for a given problem is an active area of research.
 Next, one maps the time-evolution operator into quantum circuits consisting of 2-qubit gates. The mapping that results in the shortest depth quantum circuit is an open question. Finally, one plugs the quantum circuit for $U$ into the phase estimation algorithm.
 
-This process can be used to simulating nuclear systems such as infinite matter (jellium) or be used to estimate binding energies. The theoretical expertise hear at the NSCL/FRIB is extremely helpful in setting up the problems in such a way that they can be most efficiently solved by a quantum computer.
+This process can be used to simulating nuclear systems such as infinite matter (jellium) or be used to estimate binding energies. The theoretical expertise here at the NSCL/FRIB is extremely helpful in setting up the problems in such a way that they can be most efficiently solved by a quantum computer.
 
 In the near-term, the variational quantum eigensolver algorithm is best suited to solve problems. It is a hybrid quantum-classical algorithm that is based on the variational principle of quantum mechanics
 \begin{align*}
