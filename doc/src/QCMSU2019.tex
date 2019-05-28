@@ -11,6 +11,7 @@
 \usepackage{enumitem}
 \usepackage{subcaption}
 \usepackage{braket}
+\usepackage{tabto}
 % set up paper size
 \setlength{\textwidth}{17.59cm}
 \setlength{\marginparsep}{0pt}
@@ -24,6 +25,9 @@
 \renewcommand{\baselinestretch}{1.1}
 \DeclareMathOperator{\sgn}{sgn}
 
+\newcommand{\dagg}[1]{\ensuremath #1^\dag}
+
+\newcommand{\tbd}[1]{{\color{red}#1}}
 
 \begin{document}
 
@@ -41,14 +45,14 @@
  \end{figure}
  \end{center}
 \newpage
-\title{DOE Quantum Horizons: QIS Research and Innovation for Nuclear Science}
+\title{DOE Quantum Horizons: \\ QIS Research and Innovation for Nuclear Science}
 \maketitle
 \rule{\linewidth}{1mm}
 \begin{flushleft}
 {\bf Title: From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body Problem}\newline
 Institution: Facility for Rare Isotope Beams and Michigan State University\newline
 Address: 640 S.~Shaw Lane, East Lansing, MI 48824\newline
-Administrative point of Contact: Chris West, westc@frib.msu.edu (add phone) \newline
+Administrative point of Contact: Chris West, westc@frib.msu.edu (517-908-7757) \newline
 Lead Principal Investigator: Morten Hjorth-Jensen\newline
 DOE Funding Opportunity Announcement (FOA) Number: DE-FOA-0002110\newline
 FOA type: Initial\newline
@@ -72,6 +76,8 @@ Bazavov & Alexei & Assistant Professor & Michigan State University \\
 Bogner & Scott & Professor & Michigan State University \\
 \hline
 Coles & Patrick & Senior Scientist & Los Alamos National Laboratory \\
+\hline
+Glick & Jennifer & Applications Researcher & IBM \\
 \hline
 Hergert & Heiko & Assistant Professor & Michigan State University \\
 \hline
@@ -225,7 +231,7 @@ medium-mass region~\cite{Ekstrom2015}.
 \centering
    \begin{subfigure}[t]{.5\textwidth}
    \centering
-  \includegraphics[width=.99\linewidth]{Figures/abinitio2005.pdf}}
+  \includegraphics[width=.99\linewidth]{Figures/abinitio2005.pdf}
    \caption{   \label{fig:abinitio2005} }
 \end{subfigure}%
 \begin{subfigure}[t]{.5\textwidth}
@@ -275,7 +281,7 @@ figure here.
 \begin{center}
   \includegraphics[width=.6\linewidth]{Figures/manybody.png}
 \end{center}
-\caption{A first principle approach to nuclei and nuclear matter, linking QCD with few- and many-body methods.}
+\caption{A first principle approach to nuclei and nuclear matter, linking QCD with few- and many-body methods. (Image by APS/Alan Stonebraker.)}
 \end{figure}
 
 The problem of many-body systems like those we encounter in nuclear physics, from nuclei to the properties of dense nuclear matter,  is to simulate the stationary and dynamical 
@@ -396,7 +402,7 @@ hardware. This approach reduces hardware requirements, making quantum simulation
 nucleons possible with the existing and near-term quantum devices expected to be a part of
 the future DOE quantum computing test bed. The proposed solution is, thus, heterogeneous across
 quantum hardware and classical and quantum algorithms.
-To accomplish our objectives, we have assembled a multidisciplinary team
+To accomplish our objectives, we have assembled a multidisciplinary team of 
 applied mathematicians, theoretical nuclear physicists  and quantum computing
 researchers.
 
@@ -498,29 +504,29 @@ quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.
 Among several promising candidates for future computing technologies (probabilistic \& neuromorphic computing, tensor \& graphical processing units, etc.), quantum computers (QCs) are one of the most exciting. For certain problems, algorithms for QCs (quantum algorithms/QAs) can provide exponential speedups over the best algorithms for current computers (for example, the quantum Fourier transform). With future QCs, such algorithms will enable us to compute in hours what would currently take years. However, current QCs are noisy and have not yet demonstrated clear advantage over classical computers. To do this, we must redesign existing QAs to counteract the noise of current QCs. For the long-term, we must design new QAs to expand the problem set future QCs can efficiently solve.
 
 
-I propose to use machine learning (ML) to help (re)design QAs. This exciting new idea has been explored in two seminal papers [1, 2] and my own research [3]. ML can redesign existing algorithms for current/near-term QCs and design new algorithms for future QCs.
+We propose to use machine learning (ML) to help (re)design QAs. This exciting new idea has been explored in two seminal papers [1, 2] and our own research [3]. ML can redesign existing algorithms for current/near-term QCs and design new algorithms for future QCs.
 
 
-\textbf{(2) Preliminary work} \tab ML has been used to design QAs for mathematical functions, a result that provides important subroutines for other QAs [1]. ML has also been used to design a QA for computing quantum state overlap [2]. In collaboration with the authors of [2], I used this result to design a new QA for matrix diagonalization (pre-print at [4]).
+\textbf{(2) Preliminary work} \tab ML has been used to design QAs for mathematical functions, a result that provides important subroutines for other QAs [1]. ML has also been used to design a QA for computing quantum state overlap [2]. In collaboration with the authors of [2], we used this result to design a new QA for matrix diagonalization (pre-print at [4]).
 
-Additionally, I used ML to redesign several known QAs for current QCs. This work has been published in a pre-print [3] that shows, e.g., the quantum Fourier transform (QFT) redesigned to the hardware constraints of ``ibmqx4'' (a current five-qubit QC). Our redesigned algorithm is more robust to noise/errors on ibmqx4 than the standard QFT algorithm.
-
-
-\textbf{(3) Proposed work} \tab I propose to expand on my prior work to use ML to redesign QAs for near-term QCs (see 3.1) and design new QAs for future QCs (see 3.2). A quantum algorithm $\mathcal{A}$ is defined by a set of $N$ gates $\mathcal{A} = \{ G_i(k_i, \theta_i)\}_{i = 1}^{N}$ that describe a unitary matrix. Here, $G_i$ is the $i$th gate that acts on qubits indexed by $k_i$, and $\theta_i$ denotes internal gate parameters.
-
-\textbf{(3.1) Algorithm redesign for near-term QCs} \tab I will use a ``cost-driven'' method to optimally redesign QAs for current/near-term QCs. Optimal algorithms need to contain as few gates as possible (due to noise), and only a limited set of gates can be implemented on current QCs. Despite this, current QCs have been used to compute the deuteron binding energy in nuclear physics, compute ground-state energies of small molecules in chemistry, and (a result of my own research [5]) learn decision boundaries for classification problems in data science. My proposed work will increase possible problem sizes (bigger nuclei/molecules/etc.) and reduce errors by redesigning QAs to have fewer gates and added ``noise-adjusting'' gates.
+Additionally, we used ML to redesign several known QAs for current QCs. This work has been published in a pre-print [3] that shows, e.g., the quantum Fourier transform (QFT) redesigned to the hardware constraints of ``ibmqx4'' (a current five-qubit QC). Our redesigned algorithm is more robust to noise/errors on ibmqx4 than the standard QFT algorithm.
 
 
-My proposed method works as follows. Let $\mathcal{U}$ be a known QA, $\mathcal{Q}$ a current/near-term QC, and $\mathcal{Q}_G$ the set of gates that can be implemented on $\mathcal{Q}$. The goal is to design a new algorithm, $\mathcal{A}$, that produces the same output as $\mathcal{U}$ but with fewer gates. We first initialize a guess for our trainable algorithm $\mathcal{A}$ with all gates $G_i$ from $\mathcal{Q}_G$. We then evaluate the cost $C(\mathcal{A}, \mathcal{U}) = || \mathcal{A} -  \mathcal{U} ||$ for a given matrix norm $|| \cdot ||$. The parameters $\{G_i(\theta_i), k_i\}$ in $\mathcal{A}$ are then iteratively adjusted to minimize the cost. When the cost is exactly (approximately) zero, we learn an exact (approximate) algorithm. Using similar methods in [3], I have redesigned QAs with significantly fewer gates compared to standard \textit{quantum compiling} methods, which only locally translate individual gates into $\mathcal{Q}_G$. Additionally, by training $\mathcal{A}$ in the presence of noise, our redesigned QAs add in gates to adjust for noise. Algorithms with fewer gates and noise-adjusting gates will enable more/larger problems to be solved on near-term QCs.
+\textbf{(3) Proposed work} \tab We propose to expand on our prior work to use ML to redesign QAs for near-term QCs (see 3.1) and design new QAs for future QCs (see 3.2). A quantum algorithm $\mathcal{A}$ is defined by a set of $N$ gates $\mathcal{A} = \{ G_i(k_i, \theta_i)\}_{i = 1}^{N}$ that describe a unitary matrix. Here, $G_i$ is the $i$th gate that acts on qubits indexed by $k_i$, and $\theta_i$ denotes internal gate parameters.
+
+\textbf{(3.1) Algorithm redesign for near-term QCs} \tab We will use a ``cost-driven'' method to optimally redesign QAs for current/near-term QCs. Optimal algorithms need to contain as few gates as possible (due to noise), and only a limited set of gates can be implemented on current QCs. Despite this, current QCs have been used to compute the deuteron binding energy in nuclear physics, compute ground-state energies of small molecules in chemistry, and (a result of our own research [5]) learn decision boundaries for classification problems in data science. Our proposed work will increase possible problem sizes (bigger nuclei/molecules/etc.) and reduce errors by redesigning QAs to have fewer gates and added ``noise-adjusting'' gates.
 
 
-My proposed work will use this method to optimally redesign QAs for simulating fermionic systems on ``ibmqx5'' (a current sixteen-qubit QC). This work will enable more accurate and longer simulations of Hamiltonian evolution for many chemical systems. As QCs scale to larger sizes, my proposed method could revolutionize quantum chemistry and drug discovery.
+Our proposed method works as follows. Let $\mathcal{U}$ be a known QA, $\mathcal{Q}$ a current/near-term QC, and $\mathcal{Q}_G$ the set of gates that can be implemented on $\mathcal{Q}$. The goal is to design a new algorithm, $\mathcal{A}$, that produces the same output as $\mathcal{U}$ but with fewer gates. We first initialize a guess for our trainable algorithm $\mathcal{A}$ with all gates $G_i$ from $\mathcal{Q}_G$. We then evaluate the cost $C(\mathcal{A}, \mathcal{U}) = || \mathcal{A} -  \mathcal{U} ||$ for a given matrix norm $|| \cdot ||$. The parameters $\{G_i(\theta_i), k_i\}$ in $\mathcal{A}$ are then iteratively adjusted to minimize the cost. When the cost is exactly (approximately) zero, we learn an exact (approximate) algorithm. Using similar methods in [3], we have redesigned QAs with significantly fewer gates compared to standard \textit{quantum compiling} methods, which only locally translate individual gates into $\mathcal{Q}_G$. Additionally, by training $\mathcal{A}$ in the presence of noise, our redesigned QAs add in gates to adjust for noise. Algorithms with fewer gates and noise-adjusting gates will enable more/larger problems to be solved on near-term QCs.
 
-\textbf{(3.2) Algorithm design for future QCs} \tab I will use a ``data-driven'' method to design new QAs for future QCs. The goal is to design a new QA $\mathcal{A}$ for some function $f$, which could be anything from computing quantum state overlap to a mathematical operation like integration. At a low-level, however, all such functions $f$ map bit-strings to bit-strings. %Designing new QAs is key to discovering the additional problems QCs can efficiently solve.
 
-My proposed method works as follows. First, we pick a number of qubits $n$ and evaluate $f$ (using a classical computer) on bit-strings $x_j$. This provides training data $y_j = f(x_j)$, where $j = 1, ..., D$. We then train over the parameters $\{G_i(\theta_i), k_i\}$ in our algorithm $\mathcal{A}$ to minimize the cost $\sum_{j = 1}^{D} ||y_j - \mathcal{A}(x_j)||^2$. Then, we repeat this process for multiple $n$. After, we analyze the learned algorithms to gain insight from the quantum gates that compute $f$ on multiple problem sizes. Using pattern matching or motif recognition, we can deduce a new QA.
+Our proposed work will use this method to optimally redesign QAs for simulating fermionic systems on ``ibmqx5'' (a current sixteen-qubit QC). This work will enable more accurate and longer simulations of Hamiltonian evolution for many chemical systems. As QCs scale to larger sizes, our proposed method could revolutionize quantum chemistry and drug discovery.
 
-A similar approach was used in [2] to learn a new QA for computing state overlap. My proposed work will design new QAs for computing quantum entropies of quantum states. Such QAs, currently unknown, would be extremely useful for characterizing quantum states produced by, e.g., simulation algorithms on QCs. These functions fit well into my data-driven method because they can be computed classically \& scale naturally to multiple problem sizes. %Such QAs may provide speedups over classical algorithms because of the inherent ``quantum nature'' of quantum entropies.
+\textbf{(3.2) Algorithm design for future QCs} \tab We will use a ``data-driven'' method to design new QAs for future QCs. The goal is to design a new QA $\mathcal{A}$ for some function $f$, which could be anything from computing quantum state overlap to a mathematical operation like integration. At a low-level, however, all such functions $f$ map bit-strings to bit-strings. %Designing new QAs is key to discovering the additional problems QCs can efficiently solve.
+
+Our proposed method works as follows. First, we pick a number of qubits $n$ and evaluate $f$ (using a classical computer) on bit-strings $x_j$. This provides training data $y_j = f(x_j)$, where $j = 1, ..., D$. We then train over the parameters $\{G_i(\theta_i), k_i\}$ in our algorithm $\mathcal{A}$ to minimize the cost $\sum_{j = 1}^{D} ||y_j - \mathcal{A}(x_j)||^2$. Then, we repeat this process for multiple $n$. After, we analyze the learned algorithms to gain insight from the quantum gates that compute $f$ on multiple problem sizes. Using pattern matching or motif recognition, we can deduce a new QA.
+
+A similar approach was used in [2] to learn a new QA for computing state overlap. Our proposed work will design new QAs for computing quantum entropies of quantum states. Such QAs, currently unknown, would be extremely useful for characterizing quantum states produced by, e.g., simulation algorithms on QCs. These functions fit well into our data-driven method because they can be computed classically \& scale naturally to multiple problem sizes. %Such QAs may provide speedups over classical algorithms because of the inherent ``quantum nature'' of quantum entropies.
 
 
 
@@ -529,8 +535,8 @@ A similar approach was used in [2] to learn a new QA for computing state overlap
 
 For the data-driven method, deciding which gates to include in training is an open question. Further research is needed to identify the necessary number of training data points (i.e., the $D$ above). Methods from active learning can significantly reduce $D$ for large algorithm sizes.
 
-\textbf{(5) Intellectual merit} The idea of ML for QA design has demonstrated initial success in seminal papers [1, 2] and my own research [3]. The cost-driven method searches a more expansive space than standard quantum compiling methods to produce more optimal and more robust QAs. This method could redesign any known QA for any given QC.
-Methods for designing QAs for future QCs do not exist. My proposed data-driven method could produce many new QAs with applications in many fields. The recent success of this approach in [2] necessitates further study. My knowledge of both ML and QAs is ideal for these methods.
+\textbf{(5) Intellectual merit} The idea of ML for QA design has demonstrated initial success in seminal papers [1, 2] and our own research [3]. The cost-driven method searches a more expansive space than standard quantum compiling methods to produce more optimal and more robust QAs. This method could redesign any known QA for any given QC.
+Methods for designing QAs for future QCs do not exist. Our proposed data-driven method could produce many new QAs with applications in many fields. The recent success of this approach in [2] necessitates further study. Our knowledge of both ML and QAs is ideal for these methods.
 
 \textbf{(6) Broader impact} \tab This research will significantly increase what is possible with near-term QCs and produce new algorithms for future QCs. Both will improve our understanding of the power of QCs, which have the potential to answer some of the most important scientific questions of the 21st century. Powerful QAs could impact society outside of academia as well---e.g., efficient chemistry could discover new drugs that vastly improve human health.
 
@@ -928,9 +934,11 @@ Scattering and reaction probabilities & & & & & & & & & $\bullet$ &$\bullet$ &$\
 \end{center}
 \end{footnotesize}
 
-\subsection{Work Package 4 (WP4): Nuclear structure, Finite Nuclei and Infinite Nuclear Matter}
+\subsection{Work Package 4 (WP4): Nuclear structure, from Finite Nuclei to Infinite Nuclear Matter}
 {\bf Lead Scientists: Scott Bogner (MSU), Heiko Hergert (MSU) and Morten Hjorth-Jensen (MSU)}
 \paragraph{Simulation of Many-Body Hamiltonians}
+
+The aim of the WP4 is to perform quantum simulations of infinite nuclear matter by rewriting classical many-body methods like coupled-cluster (CC) theory and Similarity Renormalization Group (SRG) theory in terms of quantum algorithms. In particular we will work on  the so-called unitary coupled-cluster (UCC). The UCC provides an affordable and systematically improvable unitary coupled-cluster wavefunction suitable for implementation on a near-term quantum computer as well as on existing and future supercomputers. Our first test case is going to be a simpler nuclear pairing model before we venture into calculations of the homogeneous electron gas and infinite nuclear matter. These are systems which have been extensively studied with standard coupled-cluster theory and in-medium SRG theory as well as many other many-body methods.  
 
 A theoretical understanding of the behavior of many-body systems
 is a  great challenge and provides fundamental insights into quantum 
@@ -1019,9 +1027,15 @@ This process can be used to simulating nuclear systems such as infinite matter (
 
 In the near-term, the variational quantum eigensolver algorithm is best suited to solve problems. It is a hybrid quantum-classical algorithm that is based on the variational principle of quantum mechanics
 \begin{align*}
-\bra{\psi(\theta)}H\ket{\psi{\theta}}\geq E_0
+\bra{\psi(\theta)}H\ket{\psi(\theta)}\geq E_0
 \end{align*}
 where $E_0$ is the ground state. The quantum computer is used to prepare an initial state that one guesses and measure the expectation value of the Hamiltonian in that state. The initial state is then slightly varied by a small change in the parameters $\theta$ and the expectation value is measured again. The classical computer computes some norm of the difference between the iterations of the expectation values and stops when this norm is sufficiently small. The algorithm will converge to the ground state energy of the Hamiltonian. The excited energies can be calculated by shifting the Hamiltonian and repeating the algorithm.
+
+\textbf{Expressing UCC and IMSRG in Terms of Quantum Gates.} Unitary CC and IMSRG can be understood as methods for solving the many-body Schr\"odinger equation by a unitary transformation of the Hamiltonian (and other operators), so that a prepared reference state is mapped onto the true ground state of the quantum system. The UCC ansatz for the many-body wave function has been used in conjunction with the VQE to determine molecular and nuclear ground state wave functions \cite{Dumitrescu:2018az} \tbd{[More (chemistry) Refs.]} by optimizing the parameters of the unitary transformation, \tbd{but no quantum implementation of the UCC algorithm --- essentially, the solution of non-linear equations --- exists, to the best of our knowledge [Does it make sense to try?]}. 
+
+While 
+
+\textbf{Using the IMSRG in circuit design.} In quantum many-body physics and field theory, renormalization groups are powerful tools for identifying the relevant degrees of freedom in an interacting quantum system. 
 
 The time line for WP4 is summarized in the table here:
 \begin{footnotesize}
@@ -1030,13 +1044,16 @@ The time line for WP4 is summarized in the table here:
 \hline
 \multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2020 } & \multicolumn{4}{c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } \\
 \hline
-Topic 1 &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & & & &  \\
+Develop PE algorithm for Pairing model &$\bullet$ &$\bullet$ && & & & & & & & &  \\
 \hline
-Topic 2 & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & &  \\
+Develop VQE algorithm for Pairing model &$\bullet$  & $\bullet$ & & &  & & & & & &  \\
 \hline
-Topics 3 & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & &  \\
+Implement generalized two-body Hamiltonian & & &$\bullet$  & $\bullet$ & & & & & & & &  \\
+
 \hline
-Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
+UCC for the HEG and Infinity Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
+\hline
+IMSRG for the HEG and Infinity Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
 \hline
 
 \end{tabular}
@@ -1232,7 +1249,7 @@ Indirect costs are not charged on graduate student tuition and fees.
 \section{Facilities and other Resources}
 \section{Data Management plan}
 
-\centerline{\underline{\Large{Data Management Plan}}} 
+% \centerline{\underline{\Large{Data Management Plan}}} 
 
 The primary data collected or created during this project include:
 source codes, intermediate output from large runs and final results to
@@ -1273,7 +1290,9 @@ Ethical aspects concerning XXX
 The project will consist of both male and female researchers, and we
 will actively recruit female students and researchers for the various activities. 
 
-\bibliography{References}
+% replace with style we want
+\bibliographystyle{h-physrev_mod}
+\bibliography{References.bib}
 \end{document}
 
 
