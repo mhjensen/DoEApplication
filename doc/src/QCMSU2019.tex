@@ -278,6 +278,63 @@ figure here.
 \caption{A first principle approach to nuclei and nuclear matter, linking QCD with few- and many-body methods.}
 \end{figure}
 
+The problem of many-body systems like those we encounter in nuclear physics, from nuclei to the properties of dense nuclear matter,  is to simulate the stationary and dynamical 
+properties of nucleons interacting via the strong or effective representations thereof. The solution of this problem has wide implications for many areas in Physics since these many-body methods can be applied to areas such as
+quantum chemistry, condensed matter physics, and materials science,
+and is of industrial relevance in the design and engineering of for example new materials. 
+Recently, quantum computers
+have emerged as promising tools for tackling this challenge, offering
+the potential to access difficult electronic structure with reduced
+computational complexity. However as the age of ``quantum supremacy''
+dawns, so has the realization that many ``efficient'' quantum
+algorithms still require more resources than will be available in the
+near-term.
+Originally proposed by Feynman~\cite{Feynman1982}, the efficient
+simulation of quantum systems by other, more controllable quantum
+systems formed the basis for modern constructions of quantum
+computation.  This early insight has since been refined to encompass
+more universal and versatile constructions of
+simulation~\cite{Lloyd1996,Abrams1997}. By combining quantum phase
+estimation~\cite{Kitaev1995} with these techniques, Aspuru-Guzik et
+al. showed the first efficient quantum algorithm for solving quantum
+chemistry problems~\cite{Aspuru-Guzik2005}. This initial algorithm was
+based on adiabatic state preparation combined with Trotter-Suzuki
+decomposition of the unitary time-evolution operator
+\cite{Trotter1959,Suzuki1993} in second quantization.
+
+Many algorithmic and theoretical advances have followed since the
+initial work in this area. The quantum simulation of electronic
+structure has been proposed via an adiabatic algorithm
+\cite{BabbushAQChem}, via Taylor series time-evolution
+\cite{BabbushSparse1}, in second quantization, in real space
+\cite{Kassal2008,Kivlichan2016}, in the configuration interaction
+representation \cite{Toloui2013,BabbushSparse2}, and using a quantum
+variational algorithm \cite{Peruzzo2013,McClean2015}. Starting with
+\cite{Whitfield2010}, researchers have sought to map these algorithms
+to practical circuits and reduce the overhead required for
+implementation by both algorithmic
+enhancements~\cite{Wecker2014,Poulin2014,Hastings2015,Romero2017} as
+well as physical considerations~\cite{BabbushTrotter,McClean2014}. As
+a second quantized formulation is generally regarded as most practical
+for near-term devices, many works have also tried to find more
+efficient ways of mapping fermionic operators to qubits
+\cite{Seeley2012,Tranter2015,Whitfield2016,Bravyi2017,Havlicek2017}.
+
+With recent developments in quantum computing
+hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
+there is an additional drive to identify early practical problems on
+which these devices might demonstrate an advantage
+\cite{Mohseni2017,Boixo2016}. The challenge of using such devices in
+the near-term is that limited coherence requirements necessitates
+algorithms with extremely low circuit depth. Toy demonstrations of
+quantum chemistry algorithms have been performed on architectures
+ranging from quantum photonics and ion traps to superconducting
+qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
+particular, the variational quantum algorithm
+\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
+inherently robust to certain errors~\cite{OMalley2016}, and is
+considered to be a promising candidate for performing practical
+quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.
 
 \subsection{Aims}
 
@@ -325,7 +382,7 @@ applied to
 \item With the pertinent effective Hamiltonians, including two- and three-body forces from EFT, we aim at developing quantum algorithms for studying nuclear few- and many-body problems. The feasibility of these algorithms will be compared to existing many-body methods like Coupled Cluster theory and in-medium Similarity Renormalization Group approaches on classical high-performance computing facilities 
 \end{itemize}
 
-
+We propose thus to develop, analyze and implement quantum algorithms for simulating the dynamics and structure of nuclear many-body systems, spanning from interacting quarks to the equation of state for infinite matter as seen in dense objects like neutron stars. These algorithms will run on available and near-term quantum hardware as standalone applications and as a many-body quantum algoritm to be run on existing high-performance computing facilities. 
 
 \paragraph{Strategic relevance}
 
@@ -356,11 +413,70 @@ systems.
 
 \section{Proposed Research and Methods}
 
+In order to acheieve our scientific goals, our application is divided into five work packages, four of these deal with our scientific goals while work package 5 details our plans for workforce developments. 
+
+
 \subsection{Work Package 1 (WP1): Quantum Simulation Algorithms}
 
 {\bf Lead Scientists: Patrick Coles (LANL) Matthew Hirn (MSU)}
 \textbf{(1) Introduction} \tab The answers to many important scientific questions rely on computer simulations. Galactic evolution, weather patterns, drug discovery, and many-body physics all require high-performance computational techniques. Current computers are fundamentally limited by physical restrictions on transistor sizes---Moore's law is failing. To answer critical questions at the forefront of science, new models of computation need to be developed.
-
+With recent developments in quantum computing
+hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
+there is an additional drive to identify early practical problems on
+which these devices might demonstrate an advantage
+\cite{Mohseni2017,Boixo2016}. The challenge of using such devices in
+the near-term is that limited coherence requirements necessitates
+algorithms with extremely low circuit depth. Toy demonstrations of
+quantum chemistry algorithms have been performed on architectures
+ranging from quantum photonics and ion traps to superconducting
+qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
+particular, the variational quantum algorithm
+\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
+inherently robust to certain errors~\cite{OMalley2016}, and is
+considered to be a promising candidate for performing practical
+quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.With recent developments in quantum computing
+hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
+there is an additional drive to identify early practical problems on
+which these devices might demonstrate an advantage
+\cite{Mohseni2017,Boixo2016}. The challenge of using such devices in
+the near-term is that limited coherence requirements necessitates
+algorithms with extremely low circuit depth. Toy demonstrations of
+quantum chemistry algorithms have been performed on architectures
+ranging from quantum photonics and ion traps to superconducting
+qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
+particular, the variational quantum algorithm
+\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
+inherently robust to certain errors~\cite{OMalley2016}, and is
+considered to be a promising candidate for performing practical
+quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.With recent developments in quantum computing
+hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
+there is an additional drive to identify early practical problems on
+which these devices might demonstrate an advantage
+\cite{Mohseni2017,Boixo2016}. The challenge of using such devices in
+the near-term is that limited coherence requirements necessitates
+algorithms with extremely low circuit depth. Toy demonstrations of
+quantum chemistry algorithms have been performed on architectures
+ranging from quantum photonics and ion traps to superconducting
+qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
+particular, the variational quantum algorithm
+\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
+inherently robust to certain errors~\cite{OMalley2016}, and is
+considered to be a promising candidate for performing practical
+quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.With recent developments in quantum computing
+hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
+there is an additional drive to identify early practical problems on
+which these devices might demonstrate an advantage
+\cite{Mohseni2017,Boixo2016}. The challenge of using such devices in
+the near-term is that limited coherence requirements necessitates
+algorithms with extremely low circuit depth. Toy demonstrations of
+quantum chemistry algorithms have been performed on architectures
+ranging from quantum photonics and ion traps to superconducting
+qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
+particular, the variational quantum algorithm
+\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
+inherently robust to certain errors~\cite{OMalley2016}, and is
+considered to be a promising candidate for performing practical
+quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.
 
 Among several promising candidates for future computing technologies (probabilistic \& neuromorphic computing, tensor \& graphical processing units, etc.), quantum computers (QCs) are one of the most exciting. For certain problems, algorithms for QCs (quantum algorithms/QAs) can provide exponential speedups over the best algorithms for current computers (for example, the quantum Fourier transform). With future QCs, such algorithms will enable us to compute in hours what would currently take years. However, current QCs are noisy and have not yet demonstrated clear advantage over classical computers. To do this, we must redesign existing QAs to counteract the noise of current QCs. For the long-term, we must design new QAs to expand the problem set future QCs can efficiently solve.
 
@@ -798,6 +914,67 @@ Scattering and reaction probabilities & & & & & & & & & $\bullet$ &$\bullet$ &$\
 \subsection{Work Package 4 (WP4): Nuclear structure, Finite Nuclei and Infinite Nuclear Matter}
 {\bf Lead Scientists: Scott Bogner (MSU), Heiko Hergert (MSU) and Morten Hjorth-Jensen (MSU)}
 \paragraph{Simulation of Many-Body Hamiltonians}
+
+A theoretical understanding of the behavior of many-body systems
+is a  great challenge and provides fundamental insights into quantum 
+mechanical studies, as well
+as offering potential areas of applications.
+However, apart from some few analytically solvable problems,
+the typical absence of an exactly solvable contribution to the
+many-particle
+ Hamiltonian
+means that we need reliable numerical many-body methods.
+These methods should allow for controlled approximations
+and provide a computational scheme which accounts for successive
+many-body corrections in a systematic way.
+Typical examples of
+popular many-body methods are coupled-cluster methods
+\cite{bartlett81,helgaker,Dean2004},
+various types of
+Monte Carlo methods \cite{Pudliner1997,kdl97,ceperley1995},
+perturbative expansions \cite{lindgren,mhj95},
+Green's function methods \cite{dickhoff,blaizot},
+the density-matrix renormalization group \cite{white1992,schollwock2005},
+ab initio density functional theory
+\cite{bartlett2005,peirs2003,vanneck2006}
+and large-scale diagonalization methods
+\cite{Whitehead1977,caurier2005,navratil2004,horoi2006}. 
+However, all these methods have to face in some form or the other the problem of 
+an exponential growth in dimensionality. For a system of $P$ fermions
+which 
+can be placed 
+into $N$ levels, the total number of basis states are given by
+$\left(\begin{array}{c}N\\P\end{array}\right)$.
+The dimensional curse means that most quantum
+mechanical calculations on classical computers have exponential
+complexity and therefore are very hard to solve for larger systems. On 
+the other hand, a so-called 
+quantum computer, a particularly dedicated computer,
+can improve greatly on the size of systems that can be simulated, as
+foreseen by Feynman \cite{feynman1982,feynman1986}. A quantum computer 
+does not need
+an exponential amount of memory to represent a quantum state.  
+The basic unit of information for a  quantum computer 
+is the so-called qubit or quantum bit. Any
+suitable 
+two-level quantum system can be a qubit, but the  
+standard model of quantum computation is a model where two-level
+quantum systems are located at different points in
+space, and are manipulated by a small universal set of  operations.
+These operations are called gates in the same fashion as operations on
+bits in classical computers are called gates. 
+
+For the example of $P$ spin $1/2$  particles, 
+a classical computer needs $2^P$ bits to represent all possible states, while  
+a quantum computer needs only $P$ qubits. The complexity in
+number of qubits is thus linear.  Based on these ideas, several groups have proposed
+various algorithms for simulating quantal many-body systems on quantum computers.
+Abrams 
+and  Lloyd, see for example Refs.~\cite{lloyd1997,lloyd1999a}, introduced a  
+quantum algorithm that uses the quantum fast Fourier transform to find 
+eigenvalues and eigenvectors of a given Hamiltonian,
+
+
 
 Given a Hamiltonian in second-quantized form
 \begin{align*}
