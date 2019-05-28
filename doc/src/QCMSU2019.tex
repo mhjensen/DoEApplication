@@ -29,7 +29,7 @@
 \thispagestyle{empty}
      \rule{\linewidth}{1mm}
      \begin{flushright}
-           \Huge From Quarks to Stars; A Quantum Computing Approach to the Nuclear Many-Body Problem
+           \Huge From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body Problem
      \end{flushright}
      \rule{\linewidth}{1mm}
      \vspace*{\stretch{2}}
@@ -43,7 +43,7 @@
 \maketitle
 \rule{\linewidth}{1mm}
 \begin{flushleft}
-{\bf Title: From Quarks to Stars; A Quantum Computing Approach to the Nuclear Many-Body Problem}\newline
+{\bf Title: From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body Problem}\newline
 Institution: Facility for Rare Isotope Beams and Michigan State University\newline
 Address: 640 S.~Shaw Lane, East Lansing, MI 48824\newline
 Administrative point of Contact: Chris West, westc@frib.msu.edu (add phone) \newline
@@ -93,7 +93,7 @@ Coles & Patrick & Senior Scientist & Los Alamos National Laboratory \\
 \section{Executive Summary}
 
 Michigan State University (MSU) and the Facility for Rare Ion Beams (FRIB) are submitting 
-a proposal on {\bf From Quarks to Stars; A Quantum Computing Approach to the Nuclear Many-Body Problem}. 
+a proposal on {\bf From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body Problem}. 
 
 {\bf Intellectual merit:} For nuclear theorists, the overarching
 challenge is to develop a comprehensive description of nuclei and
@@ -160,7 +160,7 @@ Can we understand nuclei and nuclear matter and the limits of
 stability of matter in terms of the fundamental laws of motion and
 forces?  Stated differently, can we relate  what we observe experimentally
 to the properties of the strong force and its underlying theory
-quantum chromodynamics?
+Quantum Chromodynamics?
 
 One of the fundamental intellectual challenges in nuclear physics is to understand
 why nucleonic matter is stable, how it comes into being, how it
@@ -320,7 +320,7 @@ applied to
 \item Lattice QCD simulations of quantum field theories, with the aim to perform calculations at the physical point with relevant lattice spacings. 
 \item Develop theory that allows for hybrid and multiscale simulations of LQCD and EFT on the lattice, linking thereby quark and gluonic degrees of freedom with nucleons and pions as effective degrees of freedom.
 \item The link between LQCD and lattice EFT will also explore quantum machine learning algorithms, using LQCD results and experimental data on few-nucleon systems to constrain Hamiltonians for few- and many-body methods. 
-\item With the pertinent effective Hamiltonians, including two- and three-body forces from EFT, we aim at developing quantum algorithms for studying nuclear few- and many-body problems. The feasibility of these algorithms will be comparedto existing many-body methods like Coupled Cluster theory and in-medium Similarity Renormalization Group approaches on classical high-performance computing facilities 
+\item With the pertinent effective Hamiltonians, including two- and three-body forces from EFT, we aim at developing quantum algorithms for studying nuclear few- and many-body problems. The feasibility of these algorithms will be compared to existing many-body methods like Coupled Cluster theory and in-medium Similarity Renormalization Group approaches on classical high-performance computing facilities 
 \end{itemize}
 
 
@@ -354,16 +354,9 @@ systems.
 
 \section{Proposed Research and Methods}
 
-
-
-\subsection{Project Description}
-
-
-
-
 \subsection{Work Package 1 (WP1): Quantum Simulation Algorithms}
 
-{\bf Lead Scientists: Patrick Cosel (LANL) Matthew Hirn (MSU)}
+{\bf Lead Scientists: Patrick Coles (LANL) Matthew Hirn (MSU)}
 \textbf{(1) Introduction} \tab The answers to many important scientific questions rely on computer simulations. Galactic evolution, weather patterns, drug discovery, and many-body physics all require high-performance computational techniques. Current computers are fundamentally limited by physical restrictions on transistor sizes---Moore's law is failing. To answer critical questions at the forefront of science, new models of computation need to be developed.
 
 
@@ -422,11 +415,11 @@ Topics 3 & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & &  \\
 \hline
 Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
 \hline
-
 \end{tabular}
+\end{center}
+\end{footnotesize}
 
-
-\subsection{Work Package 2 (WP2) Lattice QuantumChromoDynamics (QCD) and Quantum Information Theories}
+\subsection{Work Package 2 (WP2): Lattice Quantum ChromoDynamics (QCD) and Quantum Information Theories}
 {\bf Lead Scientists: Alexei Bazavov (MSU), Huey-Wen Lin (MSU) and Andrea Shindler (MSU)}
 
 
@@ -447,11 +440,16 @@ Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
 \hline
 
 \end{tabular}
+\end{center}
+\end{footnotesize}
 
-\subsection{Work package 3 (WP3):Software for Quantum Simulations}
+\subsection{Work package 3 (WP3): Quantum state preparation and dynamics}
 {\bf Lead Scientists: Dean Lee (MSU)}
 
-%\subsubsection{Lattice QCD}
+The research activity of Dean Lee focuses on developing new algorithms for quantum state preparation and time evolution that are sufficiently robust to operate on noisy near-term devices.  These include both digital quantum computers and analog quantum simulators.  The problems we address are designed to probe correlations in nuclear structure, the spectrum of nuclear energy levels, transition matrix elements, and the dynamics of nuclear scattering and reactions.  Graduate  student Jacob Watkins has worked on the topics presented in this proposal and funds would be used to support his continuing research in quantum computing applied to nuclear physics. 
+
+
+
 
 
 \subsubsection{Variational adiabatic evolution}
@@ -524,7 +522,7 @@ H_{\rm odd} &= \frac{1}{2} \sum_{n=1,3,\cdots,2L-1} [\sigma_x^{(n+1)}\sigma_x^{(
 + \sigma_y^{(n+1)}\sigma_y^{(n)}], \\
 H_\odot &= H_z + H_{\rm even} + H_{\rm odd}.
 \end{align}
-We note that each of the terms in $H_{\rm even}$ commute with each other and each of the terms in $H_{\rm odd}$ commute with each other.  This will simplify the unitary time evolution.  In order to describe the physics of a single particle, we consider the linear space where exactly one qubit is in the $\ket{1}$ state and the remaining $2L$ qubits are in the  $\ket{0}$ state.  For $L_t$ time steps and total evolution time $\tau$, we define the time interval $dt=\tau/L_t$.  We let the unitary operator at time step $n_t$ be
+We note that all of the terms in $H_{\rm even}$ commute with each other and all of the terms in $H_{\rm odd}$ commute with each other.  This simplifies the unitary time evolution.  In order to describe the physics of a single particle, we consider the linear space where exactly one qubit is in the $\ket{1}$ state and the remaining $2L$ qubits are in the  $\ket{0}$ state.  For $L_t$ time steps and total evolution time $\tau$, we define the time interval $dt=\tau/L_t$.  We let the unitary operator at time step $n_t$ be
 \begin{equation}
 U(n_t,L_{t},dt) = \exp(-iH_{\rm odd}n_tdt/L_t)\exp(-iH_{\rm even}n_tdt/L_t)\exp(-iH_ zdt).   
 \end{equation} 
@@ -772,25 +770,26 @@ several time snapshots, with later times linearly displaced in the vertical
 direction.}
 \label{dimer_particle}
 \end{figure}
- 
- 
- The time line for the development of the various elements WP3 is
+
+ The time line for the development of the various elements of WP3 is
 \begin{footnotesize}
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2020 } & \multicolumn{4}{c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } \\
 \hline
-Topic 1 &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & & & &  \\
+Variational adiabatic evolution &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & & & &  \\
 \hline
-Topic 2 & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & &  \\
+Spectral reconstruction & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & &  \\
 \hline
-Topics 3 & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & &  \\
+Transition matrix elements & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & &   \\
 \hline
-Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
+Scattering and reactions & & & & & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ \\
 \hline
 
 \end{tabular}
+\end{center}
+\end{footnotesize}
 
 \subsection{Work Package 4 (WP4): Nuclear structure, Finite Nuclei and Infinite Nuclear Matter}
 {\bf Lead Scientists: Scott Bogner (MSU), Heiko Hergert (MSU) and Morten Hjorth-Jensen (MSU)}
@@ -843,6 +842,8 @@ Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
 \hline
 
 \end{tabular}
+\end{center}
+\end{footnotesize}
 
 \subsubsection{Broader Impacts}
 
@@ -921,7 +922,8 @@ Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
 \hline
 
 \end{tabular}
-
+\end{center}
+\end{footnotesize}
 
 \subsection{Mentoring Plan}
 
