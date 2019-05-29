@@ -107,21 +107,20 @@ profound challenge and opportunity for nuclear theory.  We would like to know ho
 
 Quantum computing has emerged as a new computational paradigm that offers the hope of evading both of these fundamental problems.  By allowing for arbitrary quantum superpositions of tensor products of qubits, one can store exponentially more information than classical bits.  Furthermore, qubits naturally evolve with unitary real-time dynamics. Clearly there are tremendous opportunities in this new paradigm for solving the most profound problems in nuclear physics.  But with these great opportunities, there are enormous challenges to realizing their promise.  All of the currently available digital quantum computing devices suffer from short decoherence times and significant readout errors.  Meanwhile all of the currently available analog quantum simulators have inherent quantum characteristics that are not directly applicable to address systems of relevance to nuclear physics.
 
-In order to meet these formidable challenges, we have proposed a series of new projects that bridge the gap between quantum computing as it exists today and the targeted territory of unsolved nuclear physics problems.  Some of the projects focus on variational methods and developing new algorithms for optimizing quantum wave functions.  We also explore new applications of error stabilization techniques, machine learning, and quantum compiling to make efficient short-depth quantum circuits. Other proposed projects focus on real-time evolution, the calculation of observables using new algorithms, and creative adaptations of quantum simulators to nuclear physics.  As a whole, we are confident that the scientific output of this collaboration will have a significant and lasting impact on the landscape of quantum computing applied to nuclear physics.
+In order to meet these formidable challenges, we have proposed a series of new projects that bridge the gap between quantum computing as it exists today and the targeted territory of unsolved nuclear physics problems.  Some of the projects focus on variational methods and developing new algorithms for optimizing quantum wave functions.  We also explore new applications of error stabilization techniques, machine learning, and quantum compiling to make efficient short-depth quantum circuits. Other proposed projects focus on real-time evolution, the calculation of observables using new algorithms, and creative adaptations of quantum simulators to nuclear physics.  We are confident that the scientific output of this collaboration will have a significant and lasting impact on the landscape of quantum computing applied to nuclear physics.
 
-{\bf Benefit to Society:}  Sustaining future progress in nuclear physics and quantum computing depends on training the next generation of thinkers and innovators.  Towards this purpose, our proposal has designed a very significant educational component involving the Quantum Computing Summer School at Los Alamos, the student-run Quantum Information and Computing (QuIC) seminar series at Michigan State, a proposed Training in Advanced Low Energy Nuclear Theory (TALENT) summer school, as well as student and postdoctoral travel funds for collaborative work between Los Alamos and Michigan State.  The students also benefit from being a part of the nuclear physics program at FRIB and MSU, which is ranked the number one graduate program in the country according US News and World Report. The mix of analytical and numerical computational skills that our students learn and implement provides excellent preparation for both academic and industrial research. All of the investigators on this proposal are committed to diversity in science and will seek to promote a diverse scientific workforce and an inclusive environment for learning and research.
+{\bf Benefit to Society:}  Sustaining future progress in nuclear physics and quantum computing depends on training the next generation of thinkers and innovators.  Towards this purpose, our proposal has designed a very significant educational component involving the Quantum Computing Summer School at Los Alamos, the student-run Quantum Information and Computing (QuIC) seminar series at Michigan State, a proposed Training in Advanced Low Energy Nuclear Theory (TALENT) summer school, as well as student and postdoctoral travel funds for collaborative work between Los Alamos and Michigan State.  The students also benefit from being a part of the nuclear physics program at FRIB and MSU, which is ranked the number one graduate program in the country according US News and World Report. The mix of analytical and computational skills that our students learn and implement provides excellent preparation for both academic and industrial research. All of the investigators on this proposal are committed to diversity in science and will seek to build a diverse scientific workforce and an inclusive environment for learning and research.
 
 \section{Introduction and Scientific Motivation}
 
-\subsection{The Overarching Intellectual Question(s)}
+\subsection{The Overarching Intellectual Questions}
 
-Can we understand nuclei and nuclear matter and the limits of
-stability of matter in terms of the fundamental laws of motion and
-forces?  Stated differently, can we relate  what we observe experimentally
-to the properties of the strong force and its underlying theory
-Quantum Chromodynamics?
+How do we understand nuclei, strongly-interacting matter, and the limits of
+stable matter in terms of the fundamental laws of motion and
+forces?  How do we explain what we observe in experiments from first principles,
+starting from Quantum Chromodynamics and the fundamental interactions of the quarks and gluons?
 
-One of the fundamental intellectual challenges in nuclear physics is to understand
+One of the key intellectual challenges in nuclear physics is to understand
 why nucleonic matter is stable, how it comes into being, how it
 evolves and organizes itself, and what phenomena emerge. The task
 facing nuclear theorists is to develop the tools to help answer these
@@ -430,11 +429,12 @@ quantum computations in the near term~\cite{Wecker2015a,Mueck2015}.
 %We propose to use machine learning (ML) to help (re)design QAs. This exciting new idea has been explored in \cite{Mitarai2018,Cincio2018} and our own research \cite{Khatri2018}. ML can redesign existing algorithms for current/near-term QCs and design new algorithms for future QCs.
 
 
-\subsubsection{Preliminary work} In a recently published article \cite{Khatri2018}, we presented a VHQCA called quantum-assisted quantum compiling (QAQC), where the goal was to take a long gate sequence $U$ and compile it to a much shorter gate sequence $V$. We proved that evaluating our cost function in QAQC is inefficient on a classical computer but efficient on a quantum computer. Hence QAQC may be useful for reducing the circuit depth of large-scale QAs, i.e., QAs that could not be optimally compiled with classical methods. We implemented QAQC on cloud quantum computers and on classical simulators to redesign several known QAs for current QCs. For example, the quantum Fourier transform (QFT) was redesigned to the hardware constraints of ``ibmqx4'' (a current five-qubit QC). Our redesigned algorithm is more robust to noise/errors on ibmqx4 than the standard QFT algorithm.
+\subsubsection{Preliminary work} We have applied the (classical) ML methods from \cite{Cincio2018} to the problem of quantum simulation. Here, the goal is produce a short-depth quantum circuit that approximately implements the propagator $e^{-iHt}$ for some Hamiltonian $H$. As a simple example, we applied this ML approach to the Ising model for a small number of spins, and it resulted in gate sequences of much shorter depth than what we obtained from the standard Trotterization approach (for the same simulation error). While these results were encouraging, future work is needed to make this classical ML approach more scalable to larger problem sizes. One approach is to develop automated methods for motif recognition that we discuss in the next subsesction, and the other approach is to use VHQCAs.
 
-In preliminary work, we have investigated the possibility of using our QAQC algorithm for the purpose of quantum simulation. Our idea is to use QAQC to compile the propagator $U = e^{-iH \Delta t}$, where $\Delta t$ is a very short time, into a form $V$ that can be easily extended to longer times $t$. This easily extendable form is based on diagonalization.
 
-This approach is inspired by the following fact. For some Hamiltonians (e.g., the Ising model) that can be exactly diagonalized, QAs exist for performing quantum simulations that require only a constant number of gates, irrespective of whether the time to be simulated is short or long \cite{6}. Inspired by this fact, we have investigated using QAQC to approximately diagonalize more gen-eral Hamiltonians, including that of the Hubbard model (the standard model for HTCS). This would allow us to simulate long time evolutions using quantum circuits with a constant number of gates. Hence, unlike standard quantum simulation methods, our method would not be limited to simulation times shorter than the decoherence time of the quantum computer. We remark that some Hamiltonians are known to be fast-forwardable while the general question is an open problem [14]
+Along the lines of the latter strategy, we recently published \cite{Khatri2018} a VHQCA called quantum-assisted quantum compiling (QAQC), where the goal was to take a long gate sequence $U$ and compile it to a much shorter gate sequence $V$. We proved that evaluating our cost function in QAQC is inefficient on a classical computer but efficient on a quantum computer. Hence QAQC may be useful for reducing the circuit depth of large-scale QAs, i.e., QAs that could not be optimally compiled with classical methods. We implemented QAQC on cloud quantum computers and on classical simulators to redesign several known QAs for current QCs. For example, the quantum Fourier transform (QFT) was redesigned to the hardware constraints of ``ibmqx4'' (a current five-qubit QC). Our redesigned algorithm is more robust to noise/errors on ibmqx4 than the standard QFT algorithm.
+
+In preliminary work, we have investigated the possibility of using our QAQC algorithm for the purpose of quantum simulation. Our idea is to use QAQC to compile the propagator $U = e^{-iH \Delta t}$, where $\Delta t$ is a very short time, into a form $V$ that can be easily extended to longer times $t$. This easily extendable form is based on diagonalization. This approach is inspired by the following fact. For some Hamiltonians (e.g., the Ising model) that can be exactly diagonalized, QAs exist for performing quantum simulations that require only a constant number of gates, irrespective of whether the time to be simulated is short or long \cite{6}. Inspired by this, we have investigated using QAQC to approximately diagonalize more general Hamiltonians. This would allow us to simulate long time evolutions using quantum circuits with a constant number of gates. Hence, unlike standard quantum simulation methods, our method would not be limited to simulation times shorter than the decoherence time of the quantum computer. We remark that some Hamiltonians are known to be fast-forwardable while the general question is an open problem \cite{14}. 
 
 
 %ML has been used to design QAs for mathematical functions, a result that provides important subroutines for other QAs \cite{Mitarai2018}. ML has also been used to design a QA for computing quantum state overlap \cite{Cincio2018}. In collaboration with the authors of Ref.~\cite{Cincio2018}, we used this result to design a new QA for matrix diagonalization \cite{LaRose2018}.
@@ -1123,12 +1123,7 @@ ab initio density functional theory
 and large-scale diagonalization methods
 \cite{Whitehead1977,caurier2005,navratil2004,horoi2006}. 
 However, all these methods have to face in some form or the other the problem of 
-an exponential growth in dimensionality. For a system of $P$ fermions
-which 
-can be placed 
-into $N$ levels, the total number of basis states are given by
-$\left(\begin{array}{c}N\\P\end{array}\right)$.
-The dimensional curse means that most quantum
+an exponential growth in dimensionality.  The dimensional curse means that most quantum
 mechanical calculations on classical computers have exponential
 complexity and therefore are very hard to solve for larger systems. On 
 the other hand, a so-called 
@@ -1231,7 +1226,7 @@ IMSRG for the HEG and Infinite Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\b
 
 The development of competences and skills in computational science, data science, quantum computing and quantum information theories, machine learning etc is an essential part of the development of a workforce for the future in the STEM (Science, Technology, Engineering and Mathematics) fields. Essentially all jobs in the STEM fields require nowadays a broad spectrum of computational capabilities. 
 
-In work package 5 we present our plans for a professional development of the Ph.D. candidates and the post-doctoral fellow. This is split in two parts, the development of scientific and profession competences and a general mentoring environment which is offered at MSU. 
+In work package 5 we present our plans for a professional development of the Ph.D. candidates and the postdoctoral fellow. This is split in two parts, the development of scientific and profession competences and a general mentoring environment which is offered at MSU. 
 
 \paragraph{Scientific development}
 The scientific development of the candidates involves several elements, of which some are exit already while other ones need will be developed. 
@@ -1470,13 +1465,13 @@ Furthermore, the competences and skills acquired by the Ph.D. candidates and pos
 
 This project and its realization has no  significant environmental impacts.
 
-\subsection{Ethical perspectives}
+\subsection{Ethical Perspectives}
 
 This project abides to open source access to codes and data as discussed in the data management section. This has important consequences on how to make scientific results reproducible. Our published results will always have a link to our repositories with codes and simulation data. This will allow researchers from other institutions to benchmark and reproduce our results as well as helping in advancing their own 
 research. The hope is that this will serve as an example to an open and proper ethical conduct in scientific research.  Our codes will also be written in a modular and sustainable way, making it easy to build upon them. 
 Else, we foresee no particular ethical issues. All PIs abide to a sound ethical conduct in research.
 
-\subsection{Gender issues}
+\subsection{Gender Issues}
 
 
 The project will consist of both male and female researchers, and we
@@ -1498,7 +1493,7 @@ Biographical sketches of the senior personnel follow in alphabetical order.
 \clearpage
 \includepdf[page=-]{bios/bio_bogner.pdf}
 \clearpage
-%\includepdf[page=-]{bios/bio_cosel.pdf}
+\includepdf[page=-]{bios/bio_coles.pdf}
 \clearpage
 \includepdf[page=-]{bios/bio_hergert.pdf}
 \clearpage
