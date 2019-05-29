@@ -436,20 +436,13 @@ systems.
 
 \section{Proposed Research and Methods}
 
-In order to acheieve our scientific goals, our application is divided into five work packages, four of these deal with our scientific goals while work package 5 details our plans for workforce developments. 
+In order to achieve our scientific goals, our application is divided into five work packages, four of these deal with our scientific goals while work package 5 details our plans for workforce developments. 
 
 
 \subsection{Work Package 1 (WP1): Quantum Simulation Algorithms}
 
-{\bf Lead Scientists: Patrick Coles (LANL) Matthew Hirn (MSU)}
-\textbf{(1) Introduction} \tab The answers to many important scientific questions rely on computer simulations. Galactic evolution, weather patterns, drug discovery, and many-body physics all require high-performance computational techniques. Current computers are fundamentally limited by physical restrictions on transistor sizes---Moore's law is failing. To answer critical questions at the forefront of science, new models of computation need to be developed.
-With recent developments in quantum computing
-hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
-there is an additional drive to identify early practical problems on
-which these devices might demonstrate an advantage
-\cite{Mohseni2017,Boixo2016}. The challenge of using such devices in
-the near-term is that limited coherence requirements necessitates
-algorithms with extremely low circuit depth. Toy demonstrations of
+{\bf Lead Scientists: Patrick Coles (LANL), Matthew Hirn (MSU), and Ryan LaRose (MSU Ph.D. Student)}
+\subsubsection{ Introduction}  Current computers are fundamentally limited by physical restrictions on transistor size.  Moore's law is failing. To answer critical questions at the forefront of science, new models of computation need to be developed.  Simple demonstrations of
 quantum chemistry algorithms have been performed on architectures
 ranging from quantum photonics and ion traps to superconducting
 qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
@@ -457,64 +450,28 @@ particular, the variational quantum algorithm
 \cite{Peruzzo2013,McClean2015} has been shown experimentally to be
 inherently robust to certain errors~\cite{OMalley2016}, and is
 considered to be a promising candidate for performing practical
-quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.With recent developments in quantum computing
+quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}. With recent developments in quantum computing
 hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
 there is an additional drive to identify early practical problems on
 which these devices might demonstrate an advantage
 \cite{Mohseni2017,Boixo2016}. The challenge of using such devices in
 the near-term is that limited coherence requirements necessitates
-algorithms with extremely low circuit depth. Toy demonstrations of
-quantum chemistry algorithms have been performed on architectures
-ranging from quantum photonics and ion traps to superconducting
-qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
-particular, the variational quantum algorithm
-\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
-inherently robust to certain errors~\cite{OMalley2016}, and is
-considered to be a promising candidate for performing practical
-quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.With recent developments in quantum computing
-hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
-there is an additional drive to identify early practical problems on
-which these devices might demonstrate an advantage
-\cite{Mohseni2017,Boixo2016}. The challenge of using such devices in
-the near-term is that limited coherence requirements necessitates
-algorithms with extremely low circuit depth. Toy demonstrations of
-quantum chemistry algorithms have been performed on architectures
-ranging from quantum photonics and ion traps to superconducting
-qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
-particular, the variational quantum algorithm
-\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
-inherently robust to certain errors~\cite{OMalley2016}, and is
-considered to be a promising candidate for performing practical
-quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.With recent developments in quantum computing
-hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
-there is an additional drive to identify early practical problems on
-which these devices might demonstrate an advantage
-\cite{Mohseni2017,Boixo2016}. The challenge of using such devices in
-the near-term is that limited coherence requirements necessitates
-algorithms with extremely low circuit depth. Toy demonstrations of
-quantum chemistry algorithms have been performed on architectures
-ranging from quantum photonics and ion traps to superconducting
-qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
-particular, the variational quantum algorithm
-\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
-inherently robust to certain errors~\cite{OMalley2016}, and is
-considered to be a promising candidate for performing practical
-quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.
+algorithms with extremely low circuit depth. 
 
 Among several promising candidates for future computing technologies (probabilistic \& neuromorphic computing, tensor \& graphical processing units, etc.), quantum computers (QCs) are one of the most exciting. For certain problems, algorithms for QCs (quantum algorithms/QAs) can provide exponential speedups over the best algorithms for current computers (for example, the quantum Fourier transform). With future QCs, such algorithms will enable us to compute in hours what would currently take years. However, current QCs are noisy and have not yet demonstrated clear advantage over classical computers. To do this, we must redesign existing QAs to counteract the noise of current QCs. For the long-term, we must design new QAs to expand the problem set future QCs can efficiently solve.
 
 
-We propose to use machine learning (ML) to help (re)design QAs. This exciting new idea has been explored in two seminal papers [1, 2] and our own research [3]. ML can redesign existing algorithms for current/near-term QCs and design new algorithms for future QCs.
+We propose to use machine learning (ML) to help (re)design QAs. This exciting new idea has been explored in \cite{Mitarai2018,Cincio2018} and our own research \cite{Khatri2018}. ML can redesign existing algorithms for current/near-term QCs and design new algorithms for future QCs.
 
 
-\textbf{(2) Preliminary work} \tab ML has been used to design QAs for mathematical functions, a result that provides important subroutines for other QAs [1]. ML has also been used to design a QA for computing quantum state overlap [2]. In collaboration with the authors of [2], we used this result to design a new QA for matrix diagonalization (pre-print at [4]).
+\subsubsection{Preliminary work} ML has been used to design QAs for mathematical functions, a result that provides important subroutines for other QAs \cite{Mitarai2018}. ML has also been used to design a QA for computing quantum state overlap \cite{Cincio2018}. In collaboration with the authors of Ref.~\cite{Cincio2018}, we used this result to design a new QA for matrix diagonalization \cite{LaRose2018}.
 
-Additionally, we used ML to redesign several known QAs for current QCs. This work has been published in a pre-print [3] that shows, e.g., the quantum Fourier transform (QFT) redesigned to the hardware constraints of ``ibmqx4'' (a current five-qubit QC). Our redesigned algorithm is more robust to noise/errors on ibmqx4 than the standard QFT algorithm.
+Additionally, we used ML to redesign several known QAs for current QCs. This work has been published in a pre-print \cite{Khatri2018} that shows, e.g., the quantum Fourier transform (QFT) redesigned to the hardware constraints of ``ibmqx4'' (a current five-qubit QC). Our redesigned algorithm is more robust to noise/errors on ibmqx4 than the standard QFT algorithm.
 
 
-\textbf{(3) Proposed work} \tab We propose to expand on our prior work to use ML to redesign QAs for near-term QCs (see 3.1) and design new QAs for future QCs (see 3.2). A quantum algorithm $\mathcal{A}$ is defined by a set of $N$ gates $\mathcal{A} = \{ G_i(k_i, \theta_i)\}_{i = 1}^{N}$ that describe a unitary matrix. Here, $G_i$ is the $i$th gate that acts on qubits indexed by $k_i$, and $\theta_i$ denotes internal gate parameters.
+\subsubsection{Proposed work} We propose to expand on our prior work to use ML to redesign QAs for near-term QCs and design new QAs for future QCs. A quantum algorithm $\mathcal{A}$ is defined by a set of $N$ gates $\mathcal{A} = \{ G_i(k_i, \theta_i)\}_{i = 1}^{N}$ that describe a unitary matrix. Here, $G_i$ is the $i$th gate that acts on qubits indexed by $k_i$, and $\theta_i$ denotes internal gate parameters.
 
-\textbf{(3.1) Algorithm redesign for near-term QCs} \tab We will use a ``cost-driven'' method to optimally redesign QAs for current/near-term QCs. Optimal algorithms need to contain as few gates as possible (due to noise), and only a limited set of gates can be implemented on current QCs. Despite this, current QCs have been used to compute the deuteron binding energy in nuclear physics, compute ground-state energies of small molecules in chemistry, and (a result of our own research [5]) learn decision boundaries for classification problems in data science. Our proposed work will increase possible problem sizes (bigger nuclei/molecules/etc.) and reduce errors by redesigning QAs to have fewer gates and added ``noise-adjusting'' gates.
+\textbf{Algorithm redesign for near-term QCs.} We will use a ``cost-driven'' method to optimally redesign QAs for current/near-term QCs. Optimal algorithms need to contain as few gates as possible (due to noise), and only a limited set of gates can be implemented on current QCs. Despite this, current QCs have been used to compute the deuteron binding energy in nuclear physics, compute ground-state energies of small molecules in chemistry, and learn decision boundaries for classification problems in data science (https://github.com/QuantumAI-lib/NISQAI). Our proposed work will increase possible system sizes and reduce errors by redesigning QAs to have fewer gates and added ``noise-adjusting'' gates.
 
 
 Our proposed method works as follows. Let $\mathcal{U}$ be a known QA, $\mathcal{Q}$ a current/near-term QC, and $\mathcal{Q}_G$ the set of gates that can be implemented on $\mathcal{Q}$. The goal is to design a new algorithm, $\mathcal{A}$, that produces the same output as $\mathcal{U}$ but with fewer gates. We first initialize a guess for our trainable algorithm $\mathcal{A}$ with all gates $G_i$ from $\mathcal{Q}_G$. We then evaluate the cost $C(\mathcal{A}, \mathcal{U}) = || \mathcal{A} -  \mathcal{U} ||$ for a given matrix norm $|| \cdot ||$. The parameters $\{G_i(\theta_i), k_i\}$ in $\mathcal{A}$ are then iteratively adjusted to minimize the cost. When the cost is exactly (approximately) zero, we learn an exact (approximate) algorithm. Using similar methods in [3], we have redesigned QAs with significantly fewer gates compared to standard \textit{quantum compiling} methods, which only locally translate individual gates into $\mathcal{Q}_G$. Additionally, by training $\mathcal{A}$ in the presence of noise, our redesigned QAs add in gates to adjust for noise. Algorithms with fewer gates and noise-adjusting gates will enable more/larger problems to be solved on near-term QCs.
@@ -522,23 +479,18 @@ Our proposed method works as follows. Let $\mathcal{U}$ be a known QA, $\mathcal
 
 Our proposed work will use this method to optimally redesign QAs for simulating fermionic systems on ``ibmqx5'' (a current sixteen-qubit QC). This work will enable more accurate and longer simulations of Hamiltonian evolution for many chemical systems. As QCs scale to larger sizes, our proposed method could revolutionize quantum chemistry and drug discovery.
 
-\textbf{(3.2) Algorithm design for future QCs} \tab We will use a ``data-driven'' method to design new QAs for future QCs. The goal is to design a new QA $\mathcal{A}$ for some function $f$, which could be anything from computing quantum state overlap to a mathematical operation like integration. At a low-level, however, all such functions $f$ map bit-strings to bit-strings. %Designing new QAs is key to discovering the additional problems QCs can efficiently solve.
+\textbf{Algorithm design for future QCs.} We will use a ``data-driven'' method to design new QAs for future QCs. The goal is to design a new QA $\mathcal{A}$ for some function $f$, which could be anything from computing quantum state overlap to a mathematical operation like integration. At a low-level, however, all such functions $f$ map bit-strings to bit-strings. %Designing new QAs is key to discovering the additional problems QCs can efficiently solve.
 
 Our proposed method works as follows. First, we pick a number of qubits $n$ and evaluate $f$ (using a classical computer) on bit-strings $x_j$. This provides training data $y_j = f(x_j)$, where $j = 1, ..., D$. We then train over the parameters $\{G_i(\theta_i), k_i\}$ in our algorithm $\mathcal{A}$ to minimize the cost $\sum_{j = 1}^{D} ||y_j - \mathcal{A}(x_j)||^2$. Then, we repeat this process for multiple $n$. After, we analyze the learned algorithms to gain insight from the quantum gates that compute $f$ on multiple problem sizes. Using pattern matching or motif recognition, we can deduce a new QA.
 
-A similar approach was used in [2] to learn a new QA for computing state overlap. Our proposed work will design new QAs for computing quantum entropies of quantum states. Such QAs, currently unknown, would be extremely useful for characterizing quantum states produced by, e.g., simulation algorithms on QCs. These functions fit well into our data-driven method because they can be computed classically \& scale naturally to multiple problem sizes. %Such QAs may provide speedups over classical algorithms because of the inherent ``quantum nature'' of quantum entropies.
+A similar approach was used in \cite{Cincio2018} to learn a new QA for computing state overlap. Our proposed work will design new QAs for computing quantum entropies of quantum states. Such QAs, currently unknown, would be extremely useful for characterizing quantum states produced by, e.g., simulation algorithms on QCs. These functions fit well into our data-driven method because they can be computed classically \& scale naturally to multiple problem sizes. %Such QAs may provide speedups over classical algorithms because of the inherent ``quantum nature'' of quantum entropies.
 
-
-
-
-\textbf{(4) Challenges} \tab In both methods, numerical optimization over the parameters $\{G_i(\theta_i), k_i)\}$ is challenging for large algorithm sizes. To overcome this, we can introduce an algorithm ``ansatz,'' or structure, to eliminate the $k_i$ and even $G_i$ parameters. Additionally, for the cost-driven method, we can train over ``sub-algorithms'' (subsets of gates) to limit the large search space while still exploring a larger space than other quantum compiling methods. %Picking a good initial guess for $\mathcal{A}$ and using a ``good'' norm $|| \cdot ||$ are both crucial for training.
-
+\subsubsection{Challenges and outlook} 
+In both methods, numerical optimization over the parameters $\{G_i(\theta_i), k_i)\}$ is challenging for large algorithm sizes. To overcome this, we can introduce an algorithm ``ansatz,'' or structure, to eliminate the $k_i$ and even $G_i$ parameters. Additionally, for the cost-driven method, we can train over ``sub-algorithms'' (subsets of gates) to limit the large search space while still exploring a larger space than other quantum compiling methods. %Picking a good initial guess for $\mathcal{A}$ and using a ``good'' norm $|| \cdot ||$ are both crucial for training.
 For the data-driven method, deciding which gates to include in training is an open question. Further research is needed to identify the necessary number of training data points (i.e., the $D$ above). Methods from active learning can significantly reduce $D$ for large algorithm sizes.
 
-\textbf{(5) Intellectual merit} The idea of ML for QA design has demonstrated initial success in seminal papers [1, 2] and our own research [3]. The cost-driven method searches a more expansive space than standard quantum compiling methods to produce more optimal and more robust QAs. This method could redesign any known QA for any given QC.
-Methods for designing QAs for future QCs do not exist. Our proposed data-driven method could produce many new QAs with applications in many fields. The recent success of this approach in [2] necessitates further study. Our knowledge of both ML and QAs is ideal for these methods.
-
-\textbf{(6) Broader impact} \tab This research will significantly increase what is possible with near-term QCs and produce new algorithms for future QCs. Both will improve our understanding of the power of QCs, which have the potential to answer some of the most important scientific questions of the 21st century. Powerful QAs could impact society outside of academia as well---e.g., efficient chemistry could discover new drugs that vastly improve human health.
+The idea of ML for QA design has demonstrated initial success in \cite{Mitarai2018,Cincio2018} and our own research \cite{Khatri2018}. The cost-driven method searches a more expansive space than standard quantum compiling methods to produce more optimal and more robust QAs. This method could redesign any known QA for any given QC.
+Methods for designing QAs for future QCs do not exist. Our proposed data-driven method could produce many new QAs with applications in many fields. The recent success of this approach in \cite{Cincio2018} necessitates further study. Our knowledge of both ML and QAs is ideal for these methods.
 
 
 The time line for WP1 is summarized in the table here:
@@ -548,43 +500,17 @@ The time line for WP1 is summarized in the table here:
 \hline
 \multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2020 } & \multicolumn{4}{c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } \\
 \hline
-Topic 1 &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & & & &  \\
+Cost-driven design for current QCs &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & $\bullet$ & $\bullet$& & & & & & \\
 \hline
-Topic 2 & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & &  \\
-\hline
-Topics 3 & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & &  \\
-\hline
-Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
+Data-driven design for future QCs & & & & & & & $\bullet$ & $\bullet$ & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ \\
 \hline
 \end{tabular}
 \end{center}
 \end{footnotesize}
 
-\subsection{Work Package 2 (WP2): Lattice Quantum ChromoDynamics (QCD) and Quantum Information Theories}
-{\bf Lead Scientists: Alexei Bazavov (MSU), Huey-Wen Lin (MSU) and Andrea Shindler (MSU)}
 
 
-The time line for WP2 is summarized in the table here:
-\begin{footnotesize}
-\begin{center}
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-\multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2020 } & \multicolumn{4}{c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } \\
-\hline
-Topic 1 &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & & & &  \\
-\hline
-Topic 2 & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & &  \\
-\hline
-Topics 3 & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & &  \\
-\hline
-Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
-\hline
-
-\end{tabular}
-\end{center}
-\end{footnotesize}
-
-\subsection{Work package 3 (WP3): Quantum state preparation and dynamics}
+\subsection{Work package 2 (WP2): Quantum state preparation and dynamics}
 {\bf Lead Scientists: Dean Lee (MSU)}
 
 The research activity of Dean Lee focuses on developing new algorithms for quantum state preparation and time evolution that are sufficiently robust to operate on noisy near-term devices.  These include both digital quantum computers and analog quantum simulators.  The problems we address are designed to probe correlations in nuclear structure, the spectrum of nuclear energy levels, transition matrix elements, and the dynamics of nuclear scattering and reactions.  Graduate  student Jacob Watkins has worked on the topics presented in this proposal and funds would be used to support his continuing research in quantum computing applied to nuclear physics. 
@@ -840,9 +766,10 @@ system using transition operators of the form $b^{\dagger}_n b_n$ for
 some particular value of $n$.  This is analogous to the single-nucleon
 charge density operator.  In addition to the energy differences
 $E^{n}_\odot-E^{n'}_\odot$, we can also extract $c^*_{n'} c_n
-\braket{\phi^{n'}_\odot|O|\phi^n_\odot}$.  Given the fact that $\sum_n
-|c_n|^2=1,$ this provides a lower bound on the magnitude of the
-transition matrix element,
+\braket{\phi^{n'}_\odot|O|\phi^n_\odot}$.  This is enough information to calculate the ratio of transition matrix elements  $\braket
+{\phi^{n'}_\odot|O|\phi^n_\odot}/
+\braket{\phi^{n'}_\odot|O'|\phi^n_\odot}$ for any pair of observables $O$ and $O'$.  Given the fact that $\sum_n
+|c_n|^2=1,$ we can also determine a lower bound on the magnitude of 
 $|\braket{\phi^{n'}_\odot|O|\phi^n_\odot}|$. We propose to study
 different imperfectly-evolved states $\ket{\psi(t)}$ to generate many
 different coefficients $c_n$ and thus estimate the magnitude of the
@@ -933,6 +860,114 @@ Scattering and reaction probabilities & & & & & & & & & $\bullet$ &$\bullet$ &$\
 \end{tabular}
 \end{center}
 \end{footnotesize}
+
+\subsection{Work Package 3 (WP3): Lattice Quantum ChromoDynamics (QCD) and Quantum Information Theories}
+{\bf Lead Scientists: Alexei Bazavov (MSU), Huey-Wen Lin (MSU) and Andrea Shindler (MSU)}
+
+The strong interaction between quarks and gluons is
+described by a local quantum field theory, Quantum Chromodynamics (QCD).
+QCD also describes the properties of baryons and ultimately the interaction between them.
+While at high energy the smallness of the
+strong interaction coupling constant (asymptotic freedom) allows a perturbative
+expansion, at low energy one needs non-perturbative techniques.
+To date the only theoretically solid approach to solve QCD at low energies
+is to rotate from Minkowski to Euclidean and discretize space time.
+The theory regulated with a 4-d Euclidean lattice is called lattice QCD (LQCD).
+LQCD is amenable to numerical simulations and the theory can be solved numerically.
+Following the expectation of the Long Range Plan for Nuclear Science~\cite{Geesaman:2015fha},
+at the Facility of Rare Isotope Beams (FRIB) we have a theoretical program
+to calculate the low-energy properties of nucleons and nuclei and the equilibrium properties
+of matter at finite temperature and density ranging from single nucleons to heavier nuclei.
+LQCD plays also an important role in the studies of double-beta decay of nuclei
+or the electric dipole moments of particles and nuclei
+where time-reversal symmetry is violated.
+
+For many physical systems, the computation of the
+functional integral in Euclidean space defining the theory
+suffers from a sign problem. In general any study directly
+performed in Minkowski space, i.e. a real-time calculation,
+is plagued by a sign-problem.
+Quantum computing (QC) has the potential to overcome this difficulty
+changing completely the way the computations are performed.
+QC will retain the physical information contained in the quantum phase
+allowing a direct real-time calculation.
+
+It has been estimated that a realistic 4-d LQCD calculation with quantum computers
+would require around $10^5 - 10^6$ qubits. Even if the hardware development is still
+far away to reach those numbers, there is a growing interest in the community
+to develop algorithmic techniques and new theoretical and numerical tools applying them
+to lower dimensional field theories.
+
+Quantum electrodynamics in 1+1 dimension, i.e. the Schwinger model,
+serves as a test ground for simplified studies of QCD.
+In fact it also enjoys properties such as
+spontaneous breaking of chiral symmetry and confinement.
+The one dynamical degree of freedom of the photon remaining
+after the gauge fixing becomes massive.
+Similarly to QCD, there is a non-zero
+chiral condensate $\left\langle \bar\psi \psi \right\rangle$.
+
+The Schwinger model is defined by the following
+Lagrangian density
+\begin{equation}
+  \mathcal{L} = \bar\psi \left[i D - m\right]\psi - \frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
+\end{equation}  
+To discretize the Schwinger model we use staggered fermions~\cite{Kogut:1974ag,Banks:1975gq}, where
+the 2 spinor components are distributed in neighboring sites resulting in
+two fermion sites per spatial sites.
+To obtain the form of the Hamiltonian density one uses a Jordan-Wigner
+transformation. To fix the gauge we set the temporal components
+of the gauge field to zero one obtains~\cite{Kuhn:2014rha,Klco:2018kyo}
+\begin{eqnarray}
+H &=& \beta \sum_{n=0}^{N_{f_s}-1} \left[\sigma_n^{+} L_n^- \sigma_{n+1}^{-} +
+  \sigma_{n+1}^{+} L_n^+ \sigma_{n}^{-}\right] \\ \nonumber
+&+& \sum_{n=0}^{N_{f_s}-1}\left[ l_n^2 + m \beta (-1)^n \sigma_n^z\right]\,,
+\label{eq:schwinger}
+\end{eqnarray}
+where $N_{f_s}$ denotes the number of fermion sites
+and we have defined $\beta = 1/(ag)^2$, $a$ is the lattice spacing and
+$g$ is the gauge coupling. The link acting as raising or lowering operators are
+denoted with $L_{\pm}$, $L_{\pm} |l\rangle = |l \pm 1 \rangle$
+while the quantized electric flux is parameterized by the integers $l_n$.
+
+The structure of the Hamiltonian in eq.~\eqref{eq:schwinger} adapts well to the
+variational adiabatic method described in sec.~\ref{sssec:vae}. In the strong coupling limit
+$\beta \rightarrow 0$ ( with $m \rightarrow \infty$ and $\beta m = \textrm{const.}$)
+it is possible to determine the ground state exactly.
+The form of the Schwinger Hamiltonian for $\beta = 0$ is almost identical to the
+initial Hamiltonian described in sec.~\ref{sssec:vae}.
+One could then tune adiabatically the coupling $\beta$ to several values
+$\beta_i$ and for each of them determine the evolved state.
+Following the discussion of sec.~\ref{sssec:vae} one can then apply the variational
+principle to determine the ground state with the target $\beta$.
+We plan to investigate the possibility to reduce
+errors generated by imperfect adiabatic evolution 
+or the possibility to reduce the
+total time needed in the adiabatic evolution.
+
+The time line for WP3 is summarized in the table here:
+\begin{footnotesize}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2020 } & \multicolumn{4}{c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } \\
+\hline
+Topic 1 &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & & & &  \\
+\hline
+Topic 2 & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & &  \\
+\hline
+Topics 3 & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & &  \\
+\hline
+Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
+\hline
+
+\end{tabular}
+\end{center}
+\end{footnotesize}
+
+
+
+
 
 \subsection{Work Package 4 (WP4): Nuclear structure, from Finite Nuclei to Infinite Nuclear Matter}
 {\bf Lead Scientists: Scott Bogner (MSU), Heiko Hergert (MSU) and Morten Hjorth-Jensen (MSU)}
@@ -1055,9 +1090,9 @@ Develop VQE algorithm for Pairing model &$\bullet$  & $\bullet$ & & &  & & & & &
 Implement generalized two-body Hamiltonian & & &$\bullet$  & $\bullet$ & & & & & & & &  \\
 
 \hline
-UCC for the HEG and Infinity Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
+UCC for the HEG and Infinite Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
 \hline
-IMSRG for the HEG and Infinity Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
+IMSRG for the HEG and Infinite Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
 \hline
 
 \end{tabular}
