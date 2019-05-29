@@ -1031,11 +1031,15 @@ In the near-term, the variational quantum eigensolver algorithm is best suited t
 \end{align*}
 where $E_0$ is the ground state. The quantum computer is used to prepare an initial state that one guesses and measure the expectation value of the Hamiltonian in that state. The initial state is then slightly varied by a small change in the parameters $\theta$ and the expectation value is measured again. The classical computer computes some norm of the difference between the iterations of the expectation values and stops when this norm is sufficiently small. The algorithm will converge to the ground state energy of the Hamiltonian. The excited energies can be calculated by shifting the Hamiltonian and repeating the algorithm.
 
-\textbf{Expressing UCC and IMSRG in Terms of Quantum Gates.} Unitary CC and IMSRG can be understood as methods for solving the many-body Schr\"odinger equation by a unitary transformation of the Hamiltonian (and other operators), so that a prepared reference state is mapped onto the true ground state of the quantum system. The UCC ansatz for the many-body wave function has been used in conjunction with the VQE to determine molecular and nuclear ground state wave functions \cite{Dumitrescu:2018az} \tbd{[More (chemistry) Refs.]} by optimizing the parameters of the unitary transformation, \tbd{but no quantum implementation of the UCC algorithm --- essentially, the solution of non-linear equations --- exists, to the best of our knowledge [Does it make sense to try?]}. 
+\textbf{Expressing UCC and IMSRG in Terms of Quantum Gates.} Unitary CC and IMSRG can be understood as methods for solving the many-body Schr\"odinger equation by a unitary transformation of the Hamiltonian (and other operators), so that a prepared reference state is mapped onto the true ground state of the quantum system. The UCC ansatz for the many-body wave function has been used in conjunction with the VQE to determine electronic (see, e.g., \cite{Wecker:2015bk,McClean:2016qr,Lee:2019dd}) and nuclear ground state wave functions \cite{Dumitrescu:2018az,Lu:2018aq} \tbd{[More Refs.?]} by optimizing the parameters of the unitary transformation, \tbd{but... [Does it make sense to try direct implementation]}. 
 
 While 
 
+\tbd{\cite{Dawson:2008td} - variational methods with RG-based quantum states: Can the IMSRG be understood as a new ansatz? Does Magnus qualify as an RG-version of the UCC ansatz... maybe analog to a MERA, that has an explicit scale dimension, which could correspond to our flow parameter?}
+
 \textbf{Using the IMSRG in circuit design.} In quantum many-body physics and field theory, renormalization groups are powerful tools for identifying the relevant degrees of freedom in an interacting quantum system. 
+
+\tbd{[...] can complement the machine-learning based efforts described in WP1.}
 
 The time line for WP4 is summarized in the table here:
 \begin{footnotesize}
