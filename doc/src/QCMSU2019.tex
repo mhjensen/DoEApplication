@@ -350,7 +350,7 @@ controlled approximations and provide a computational scheme which
 accounts for successive corrections in a systematic way.
 However, all these methods face in some form or the other the problem
 of an exponential growth in dimensionality. For a system of $P$
-fermions which can be placed into $N$ levels, the total number of
+identical fermions which can be placed into $N$ levels, the total number of
 basis states are given by $N!/(P!(N-P)!)$.
 %\[ \left(\begin{array}{c}N\\P\end{array}\right).  \]
 The dimensional curse means that most quantum mechanical calculations
@@ -1280,53 +1280,6 @@ through comprehensive outreach activities including user workshops, publications
 external facing code servers.
 \end{itemize}
 
-\section{Budget Justification}
-
-
-\subsection{Senior Personnel}
-
-This grant proposal covers the research of XXX
-
-\subsection{Graduate Students and Post-Graduates} 
-
-We are requesting full support for three graduate  students at
-MSU, plus one postdoc who will work on XXX
-
-There is an excellent pool of graduate students from the Department of
-Physics and Astronomy at MSU, many of whom come specifically to work
-in a highly ranked graduate nuclear physics program at the National
-Superconducting Cyclotron Laboratory. 
-More text to come
-
-\subsection{Equipment}
-The Institute for Cyber Enabled Research (iCER) at MSU is offering xxx
-
-\subsection{Travel}
-
-The PIs and the graduate students are expected to attend the spring
-APS or fall DNP annual meetings, in addition to relevant domestic
-conferences such as topical programs at the Institute for Nuclear
-Theory. Funding is also requested for
-
-In general, the theory group at the NSCL recognizes the importance of
-travel to the success and professional development of a young
-physicist's career, and we strongly encourage our graduate students
-and postdoctoral research associates to attend important workshops and
-conferences.  Therefore, \$XXXX in travel funds is requested in the
-first year of the grant (split 50/50 between domestic and
-international travel, and adjusted in subsequent years assuming a 3\%
-inflation rate).
-
-\subsection{Materials and Supplies}
-
-\subsection{Other}
-This covers graduate student tuition plus fees.
-
-\subsection{Indirect Costs}
-
-Indirect costs are not charged on graduate student tuition and fees.
-
-
 
 
 \appendix
@@ -1372,7 +1325,114 @@ Current and pending support of the senior personnel follow in alphabetical order
 \includepdf[page=-]{support/support_lin.pdf}
 \clearpage
 \includepdf[page=-]{support/support_shindler.pdf}
-\section{Facilities and other Resources}
+\clearpage
+
+\section{Institutional Commitment and Budget Justification}
+
+\subsection{Institutional Commitment} 
+Applicants are strongly encouraged provide evidence of their commitment to the proposed activity. This commitment may take the form of uncompensated effort; the provision of surplus materials, supplies, or equipment; the provision of access to facilities at no or reduced cost; voluntary cost sharing; mentoring, training, or coaching of personnel; the provision of release time for teaching faculty; the provision of scholarship support for students; or other methods of involving the applicant in the proposed activity.
+Institutional commitment is not a form of cost-sharing: It is intended to ensure that the applicant institution is leveraging existing resources and capabilities to further the public benefit of groundbreaking scientific discovery.
+
+
+\subsection{Graduate Students and Post-Graduates} 
+
+We are requesting full support for three graduate  students at
+MSU, plus one postdoc who will work on different work packages described in the main part of the application. 
+
+
+
+
+
+
+\subsection{Travel}
+
+The PIs and the graduate students are expected to attend the spring
+APS or fall DNP annual meetings, in addition to relevant domestic
+conferences such as topical programs at the Institute for Nuclear
+Theory. Funding is also requested for
+
+In general, the theory group at the NSCL recognizes the importance of
+travel to the success and professional development of a young
+physicist's career, and we strongly encourage our graduate students
+and postdoctoral research associates to attend important workshops and
+conferences.  Therefore, \$XXXX in travel funds is requested in the
+first year of the grant (split 50/50 between domestic and
+international travel, and adjusted in subsequent years assuming a 3\%
+inflation rate).
+
+\subsection{Materials and Supplies}
+
+\subsection{Other}
+This covers graduate student tuition plus fees.
+
+\subsection{Indirect Costs}
+
+Indirect costs are not charged on graduate student tuition and fees.
+
+
+
+
+
+
+
+\section{Facilities, Equipment and Other Resources}
+
+This project group will have access to the various supercomputing resources at MSU that are listed here.
+\subsection{Institute for Cyber-Enabled Research}
+
+MSU's Institute for Cyber-Enabled Research (ICER), was originally launched as
+the High-Performance Computing Center (HPCC) in 2005, before expanding
+its mission in 2008 to include research consulting. ICER staff currently
+includes five research consultants with backgrounds in different domain
+sciences that can aid in the adaptation of applications to ICER's
+infrastructure, provide support in proposal development, etc.
+
+ICER provides HPC services to about 1000 users from MSU faculty and other
+Michigan universities. It is also an XSEDE level 3 partner institution
+(\texttt{http://www.xsede.org}). The facility offers two types of access
+to its compute resources:
+\begin{enumerate}
+\item Open access for MSU faculty and faculty-sponsored users, subject to
+a fair-sharing policy. Users jobs are limited to running on 512 cores at
+any given time, although short-term exceptions can be granted if necessary.
+\item Buy-in accounts give MSU faculty priority access to specific nodes
+in ICER's systems. Buy-in nodes are not subject to the 512-core limit.
+User jobs are guaranteed to begin execution within four hours of submission,
+allowing open-access users to run short jobs on buy-in nodes. In this way,
+idle time in the system is minimized.
+\end{enumerate}
+In 2017, ICER provided a total of 107M core hours of computing time to its
+user base.
+
+\subsubsection{Compute Resources}
+\textbf{Laconia} is MSU's primary computing resource, operated and maintained
+by the Institute for Cyber-Enabled Research (ICER). The cluster consists
+of 370 compute nodes powered by dual 14-core Intel \emph{Broadwell} CPUs.
+50 of these nodes are equipped with four Nvidia Tesla K80 GPUs. The theoretical
+peak performance of the system is  $\sim$370 teraflops from CPUs only, and
+754 teraflops with GPUs. In 2016, the system was benchmarked using the LINPACK
+benchmark at 535 teraflops. The majority of the nodes are equipped with 128GB
+RAM. 24 of the CPU nodes and the 50 GPU nodes have 256GB RAM.
+
+ICER also operates \textbf{Intel14} cluster, consisting of 220 compute nodes
+with dual Intel \emph{Ivy Bridge} 10-core processors. Nodes with 64 GB, 128 GB,
+and 256 GB RAM are available. 40 nodes are equipped with two Nvidia Tesla K20
+GPUs, 28 with Intel Xeon Phi MIC accelerators. The total peak performance of
+the system is 235.8 teraflops, including the accelerators.
+
+\subsubsection{Storage Infrastructure}
+ICER's data infrastructure offers 2 PB of scratch space on a Lustre
+file system that is accessible by all computing resources. The facility offers
+2.1PB multiply-redundant, backed-up storage, eliminating the risk of data loss.
+Free storage of up to 1TB is provided to all ICER user accounts, which is
+sufficient to meet most of the day-to-day needs of the applications that
+will be used for this project. An additional 1TB of project storage
+is offered free of charge for working groups.
+
+
+
+
+
 \section{Data Management plan}
 The project investigators  have determined the following data to be subject to the data management plan
 (DMP), and includes the following list of DMP elements (as recommended by Suggested Elements
