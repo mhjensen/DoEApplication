@@ -32,20 +32,7 @@
 
 \begin{document}
 
-\thispagestyle{empty}
 
-     \begin{center}
-     \rule{\linewidth}{1mm}     
-           \Huge From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body Problem
-     \rule{\linewidth}{1mm}
-     \end{center}
-     \vspace*{\stretch{2}}
- \begin{center}
- \begin{figure}[hb]
- \includegraphics[scale=0.9]{Figures/NP_Collaboration.png}
- \end{figure}
- \end{center}
-\newpage
 \title{DOE Quantum Horizons: \\ QIS Research and Innovation for Nuclear Science}
 \maketitle
 \rule{\linewidth}{1mm}
@@ -53,7 +40,7 @@
 {\bf Title: From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body Problem}\newline
 Institution: Facility for Rare Isotope Beams and Michigan State University\newline
 Address: 640 S.~Shaw Lane, East Lansing, MI 48824\newline
-Administrative point of Contact: Chris West, westc@frib.msu.edu (517-908-7757) \newline
+Administrative point of Contact: Craig O'Neill, proposalteam2@osp.msu.edu (517-884-4275) \newline
 Lead Principal Investigator: Morten Hjorth-Jensen\newline
 DOE Funding Opportunity Announcement (FOA) Number: DE-FOA-0002110\newline
 FOA type: Initial\newline
@@ -98,7 +85,7 @@ Shindler & Andrea & Associate Professor & Michigan State University \\
 \end{table}
 
 \newpage
-\tableofcontents
+%\tableofcontents
 \section{Executive Summary}
 
 %Michigan State University (MSU) and the Facility for Rare Ion Beams (FRIB) are submitting 
@@ -118,52 +105,13 @@ How do we connect fundamental physics to forefront experiments?  With new scienc
 waiting to be discovered at experimental facilities such as FRIB, this question is a 
 profound challenge and opportunity for nuclear theory.  We would like to know how nuclear forces emerge from the interactions of quarks and gluons in quantum chromodynamics, what is the internal partonic structure of nucleons, what are the signatures of physics beyond the Standard Model in atomic nuclei, how do we predict nuclear structure and reactions from the microscopic interactions of nucleons, and what are the properties of strongly-interacting matter under extreme conditions.  There have been many important and profound advances in recent years, with some of the most creative and impactful developments led by investigators on this proposal.  But there are limits to what can be done even with the most powerful supercomputers in this soon-to-be era of exascale computing.  Unfortunately, some of the most interesting scientific questions remain unexplored such as the real-time dynamics of hadronic and nuclear reactions, the structure of highly-correlated nuclear systems, and the properties of dense nuclear and neutron matter. For computational methods that construct quantum wave functions, the problem is the curse of large dimensionality and the impossibility of storing exponentially large vectors as classical bits.  For computational methods that rely on Monte Carlo simulations, the obstacle is the Monte Carlo sign problem, where positive and negative contributions cancel to produce exponentially small signals.
 
-Quantum computing has emerged as a new computational paradigm that offers the hope of evading both of these fundamental problems.  By allowing for arbitrary quantum superpositions of tensor products of qubits, one can store exponentially more information than classical bits.  Furthermore, qubits also naturally evolve with unitary real-time dynamics. SBut with these exciting opportunities, there are great challenges as well.  The current digital quantum computing devices available today suffer from short decoherence times and significant readout errors.  On the other hand analog
+Quantum computing has emerged as a new computational paradigm that offers the hope of evading both of these fundamental problems.  By allowing for arbitrary quantum superpositions of tensor products of qubits, one can store exponentially more information than classical bits.  Furthermore, qubits naturally evolve with unitary real-time dynamics. Clearly there are tremendous opportunities in this new paradigm for solving the most profound problems in nuclear physics.  But with these great opportunities, there are enormous challenges to realizing their promise.  All of the currently available digital quantum computing devices suffer from short decoherence times and significant readout errors.  Meanwhile all of the currently available analog quantum simulators have inherent quantum characteristics that are not directly applicable to address systems of relevance to nuclear physics.
 
-To quote, Fey 
-overarching
-challenge is to developa comprehensive description of nuclei and
-their reactions, grounded in the fundamental interactions between the
-constituent nucleons with quantifiable uncertainties to maximize
-predictive power.  As experimental frontiers have shifted to the study
-of rare isotopes, the predictive power of successful phenomenological
-approaches like the shell model and density functional theory is
-challenged by the scarcity of nearby experimental data to constrain
-model parameters. Therefore, it is expected that \emph{ab initio}
-methods will play an increasingly prominent role to help improve the
-predictive power of such ``data driven'' methods as experiment moves
-deeper into largely unexplored regions of the nuclear chart.
+In order to meet these formidable challenges, we have proposed a series of new projects that bridge the gap between quantum computing as it exists today and the targeted territory of unsolved nuclear physics problems.  Some of the projects focus on variational methods and developing new algorithms for optimizing quantum wave functions.  We also explore new applications of error stabilization techniques, machine learning, and quantum compiling to make efficient short-depth quantum circuits. Other proposed projects focus on real-time evolution, the calculation of observables using new algorithms, and creative adaptations of quantum simulators to nuclear physics.  As a whole, we are confident that the scientific output of this collaboration will have a significant and lasting impact on the landscape of quantum computing applied to nuclear physics.
 
-To understand why nuclear matter is stable, and thereby shed light on
-the limits of nuclear stability, is one of the overarching aims and
-intellectual challenges of basic research in nuclear physics. To
-relate the stability of matter to the underlying fundamental forces
-and particles of nature as manifested in nuclear matter, is central to
-present and planned rare isotope facilities such as the DOE facility
-FRIB under construction at Michigan State University.  From a
-theoretical standpoint, this involves understanding how the basic
-building blocks of Nature interact and conspire to build up atomic
-nuclei as we know them, with the aim to understand what makes visible
-matter stable.  The theoretical efforts span from methods like Lattice
-Quantum Chromodynamics, via effective field theories to many-body
-theories applied to atomic nuclei and infinite nuclear matter. All
-these methods rely on theoretical approximations whose applicabilities
-are often limited by the dimensionality of the specific problem being
-studied. In recent years there has been considerable progress in our
-theoretical understanding of algorithms from quantum information
-applied to interacting systems, with the hope to circumvent many of
-the traditional dimensionality problems.
-
-
-{\bf Broader Impacts:} The training received by undergraduates,
-graduate students, and postdoctoral research associates in carrying
-out the proposed activities contributes directly to the building of a
-diverse scientific workforce. The present proposal has a large
-educational component, being part of the nuclear physics program at
-FRIB/MSU that was recently ranked number one in the country. The mix
-of analytical and numerical computations our students must employ is
-an excellent preparation for both academic and industrial research. The
-PIs are committed to diversity in science.
+{\bf Benefit to Society:}  Sustaining future progress in nuclear physics and quantum computing depends on training the next generation of thinkers and innovators.  Towards this purpose, our proposal has designed a very significant educational component involving the Quantum Computing Summer School at Los Alamos, the student-run Quantum Information and Computing (QuIC) seminar series at Michigan State, a proposed Training in Advanced Low Energy Nuclear Theory (TALENT) summer school, as well as student and postdoctoral travel funds for collaborative work between Los Alamos and Michigan State.  The students also benefit from being a part of the nuclear physics program at
+FRIB/MSU that is ranked number one graduate program in the country. The mix of analytical and numerical computations our students must employ provides excellent preparation for both academic and industrial research. All of the PIs are committed to diversity in science.  The training received by undergraduates, graduate students, and postdoctoral research associates in carrying
+out the proposed activities contributes directly to the building of a diverse scientific workforce.
 
 
 \section{Introduction and Scientific Motivation}
@@ -440,33 +388,49 @@ systems.
 
 \section{Proposed Research and Methods}
 
-In order to achieve our scientific goals, our application is divided into five work packages, four of these deal with our scientific goals while work package 5 details our plans for workforce developments. 
+In order to achieve our scientific goals, our application is divided into five work packages, four of these deal with our scientific goals while work package 5 details our plans for workforce developments.  The figure here displays the potential connectivity and links between the work packages.
+\begin{figure}[hbtp]
+ \includegraphics[scale=0.9]{Figures/NP_Collaboration.png}
+\end{figure}
 
 
 \subsection{Work Package 1 (WP1): Quantum Simulation Algorithms}
 
 {\bf Lead Scientists: Patrick Coles (LANL), Matthew Hirn (MSU), and Ryan LaRose (MSU Ph.D. Student)}
 
-\subsubsection{ Introduction}  Current computers are fundamentally limited by physical restrictions on transistor size.  Moore's law is failing. To answer critical questions at the forefront of science, new models of computation need to be developed.  Simple demonstrations of
-quantum chemistry algorithms have been performed on architectures
-ranging from quantum photonics and ion traps to superconducting
-qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
-particular, the variational quantum algorithm
-\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
-inherently robust to certain errors~\cite{OMalley2016}, and is
-considered to be a promising candidate for performing practical
-quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}. With recent developments in quantum computing
-hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
-there is an additional drive to identify early practical problems on
-which these devices might demonstrate an advantage
-\cite{Mohseni2017,Boixo2016}. The challenge of using such devices in
-the near-term is that limited coherence requirements necessitates
-algorithms with extremely low circuit depth. 
-
-Among several promising candidates for future computing technologies (probabilistic \& neuromorphic computing, tensor \& graphical processing units, etc.), quantum computers (QCs) are one of the most exciting. For certain problems, algorithms for QCs (quantum algorithms/QAs) can provide exponential speedups over the best algorithms for current computers (for example, the quantum Fourier transform). With future QCs, such algorithms will enable us to compute in hours what would currently take years. However, current QCs are noisy and have not yet demonstrated clear advantage over classical computers. To do this, we must redesign existing QAs to counteract the noise of current QCs. For the long-term, we must design new QAs to expand the problem set future QCs can efficiently solve.
+\subsubsection{ Introduction} As proposed by Feynman, the holy grail for quantum computers (QCs) is to provide an exponential speedup in simulating quantum systems. Since 2015, small QCs of limited coherence time have become available in the cloud. Additionally, DOE testbed QCs are being constructed for dedicated use by researchers. With recent developments in quantum computing
+hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017}, there is an additional drive to identify early practical problems on which these devices might demonstrate an advantage~\cite{Mohseni2017,Boixo2016}.
 
 
-We propose to use machine learning (ML) to help (re)design QAs. This exciting new idea has been explored in \cite{Mitarai2018,Cincio2018} and our own research \cite{Khatri2018}. ML can redesign existing algorithms for current/near-term QCs and design new algorithms for future QCs.
+These machines are not fault-tolerant and, due to their noise, require short-depth algorithms to perform computations. There exist quantum simulation methods \cite{6-8} tailored for fault-tolerant QCs; however, their gate depth grows with simulation time. This issue makes them infeasible for near-term QCs. This motivates the need for quantum simulation methods that employ short-depth quantum circuits and hence can be implemented in the near-term. 
+
+Machine learning (ML) provide a strategy towards this end. ML can redesign and optimize existing quantum algorithms (QAs) for noisy QCs, and it can also discover new QAs. For example, ML has been used to design an improved QA for computing quantum state overlap \cite{Cincio2018}. ML has also been used to design QAs for mathematical functions, a result that provides important subroutines for other QAs \cite{Mitarai2018}. 
+
+To address the scaling issue of applying ML to quantum sytems, one can consider quantum machine learning (QML) methods. QML involves evaluating the cost function (efficiently) on a quantum computer, and then feeding the result to a classical optimizer, which then adjusts the parameters of the quantum algorithm. Such QML methods are typically called variational hybrid quantum-classical algorithms (VHQCAs). VHQCAs have demonstrated utility for other applications like ground state preparation \cite{Peruzzo2013,McClean2015} and factoring \cite{?}, and our group has developed such algorithms for quantum compiling \cite{Khatri2018}, quantum state diagonalization \cite{LaRose2018}, and characterizing quantum stochastic processes \cite{?}. VHQCAs have been shown experimentally to be inherently robust to certain errors~\cite{OMalley2016}, and are considered to be a promising candidates for performing practical
+quantum computations in the near term~\cite{Wecker2015a,Mueck2015}. 
+
+%Current computers are fundamentally limited by physical restrictions on transistor size.  Moore's law is failing. To answer critical questions at the forefront of science, new models of computation need to be developed.  Simple demonstrations of
+%quantum chemistry algorithms have been performed on architectures
+%ranging from quantum photonics and ion traps to superconducting
+%qubits~\cite{Lanyon2010,Li2011,Wang2014,Peruzzo2013,Shen2015,OMalley2016,Kandala2017}. In
+%particular, the variational quantum algorithm
+%\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
+%inherently robust to certain errors~\cite{OMalley2016}, and is
+%considered to be a promising candidate for performing practical
+%quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}. 
+
+%With recent developments in quantum computing
+%hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
+%there is an additional drive to identify early practical problems on
+%which these devices might demonstrate an advantage
+%\cite{Mohseni2017,Boixo2016}. The challenge of using such %devices in
+%the near-term is that limited coherence requirements %necessitates
+%algorithms with extremely low circuit depth. 
+
+%Among several promising candidates for future computing technologies (probabilistic \& neuromorphic computing, tensor \& graphical processing units, etc.), quantum computers (QCs) are one of the most exciting. For certain problems, algorithms for QCs (quantum algorithms/QAs) can provide exponential speedups over the best algorithms for current computers (for example, the quantum Fourier transform). With future QCs, such algorithms will enable us to compute in hours what would currently take years. However, current QCs are noisy and have not yet demonstrated clear advantage over classical computers. To do this, we must redesign existing QAs to counteract the noise of current QCs. For the long-term, we must design new QAs to expand the problem set future QCs can efficiently solve.
+
+
+%We propose to use machine learning (ML) to help (re)design QAs. This exciting new idea has been explored in \cite{Mitarai2018,Cincio2018} and our own research \cite{Khatri2018}. ML can redesign existing algorithms for current/near-term QCs and design new algorithms for future QCs.
 
 
 \subsubsection{Preliminary work} ML has been used to design QAs for mathematical functions, a result that provides important subroutines for other QAs \cite{Mitarai2018}. ML has also been used to design a QA for computing quantum state overlap \cite{Cincio2018}. In collaboration with the authors of Ref.~\cite{Cincio2018}, we used this result to design a new QA for matrix diagonalization \cite{LaRose2018}.
@@ -756,7 +720,7 @@ normalized wave function for $r>0$, where $r$ is measured in lattice
 units.
      
 
-\begin{figure}
+\begin{figure}[hbtp]
 \centering
 \includegraphics[width=8cm]{v30_even_wavefunctions}
 \caption{Plot of the normalized wave functions
@@ -828,7 +792,7 @@ vertical direction.
   benchmark the adiabatic projection method currently being used for
   nuclear scattering and reactions in lattice effective field theory.
 
-\begin{figure}
+\begin{figure}[hbtp]
 \centering
 \includegraphics[width=8cm]{particle_1}
 \caption{Plot of the real-time dynamics of a single particle released from the left edge of an $L=30$ trap.  We are plotting the particle density for several time snapshots, with later times linearly displaced in the vertical direction.}
@@ -1222,6 +1186,8 @@ In the near-term, the variational quantum eigensolver algorithm is best suited t
 \end{align*}
 where $E_0$ is the ground state. The quantum computer is used to prepare an initial state that one guesses and measure the expectation value of the Hamiltonian in that state. The initial state is then slightly varied by a small change in the parameters $\theta$ and the expectation value is measured again. The classical computer computes some norm of the difference between the iterations of the expectation values and stops when this norm is sufficiently small. The algorithm will converge to the ground state energy of the Hamiltonian. The excited energies can be calculated by shifting the Hamiltonian and repeating the algorithm.
 
+\textbf{Preprocessing the Hamiltonian with Similarity Renormalization Group Methods.} Renormalization group methods have played an important role in enabling the enormous progress in nuclear many-body theory in the past decade, by providing systematic tools for dialing the resolution scales of interactions and quantum states \cite{Bogner:2010pq,Hergert:2016jk,Hergert:2017kx,Stroberg:2019mx}. The resolution scale of the Hamiltonian inherently affects the s
+
 \textbf{Expressing UCC and IMSRG in Terms of Quantum Gates.} Unitary CC and IMSRG can be understood as methods for solving the many-body Schr\"odinger equation by a unitary transformation of the Hamiltonian (and other operators), so that a prepared reference state is mapped onto the true ground state of the quantum system. The UCC ansatz for the many-body wave function has been used in conjunction with the VQE to determine electronic (see, e.g., \cite{Wecker:2015bk,McClean:2016qr,Lee:2019dd}) and nuclear ground state wave functions \cite{Dumitrescu:2018az,Lu:2018aq} \tbd{[More Refs.?]} by optimizing the parameters of the unitary transformation, \tbd{but... [Does it make sense to try direct implementation]}. 
 
 While 
@@ -1264,10 +1230,10 @@ In work package 5 we present our plans for a professional development of the Ph.
 \paragraph{Scientific development}
 The scientific development of the candidates involves several elements, of which some are exit already while other ones need will be developed. 
 \begin{itemize}
-    \item Ph.D. student Ryan Larose (also together with other Ph.D. students at MSU) has developed a well-attended and widely popular seminar series on Quantum Information and Computations (QUIC) at MSU, see \url{https://www.ryanlarose.com/quic-seminar.html}. The QUIC seminar site contains several lectures and introductions that help new students and interested researchers to get started with quantum information theory and computing. This seminar series will be an important element in the dissemination of the results reached by this project and will also serve as an arena where students learn to present and popularize their results.  This project aims at helping in further developing this seminar series into a sustainable series in quantum information theory and computing at MSU. 
-    \item Patrick Coles has during the last years chaired the Los Alamos National Laboratory's (LANL) summer school on Quantum Computing Summer. This is an immersive 10-week curriculum that includes tutorials from world-leading experts in quantum computation as well as one-on-one mentoring from LANL staff scientists who are conducting cutting-edge quantum computing research. For our Ph.D. candidates this summer school offers a unique opportunity to meet world leading experts in Quantum Computing. For more information see \url{https://www.lanl.gov/projects/national-security-education-center/information-science-technology/summer-schools/quantumcomputing/index.php}
-    \item We will also establish a three week intensive Nuclear Talent (Training in Advanced Low Energy Nuclear Theory \url{http://fribtheoryalliance.org/TALENT/}) course on quantum information theory and computing tailored to nuclear physics problems. This course will be offered in the second and third years of the project with the aim to introduce potential new students to the field. The post-doctoral fellow and the Ph.D. students are both likely participants and teaching assistants as well.
-    \item Michigan State University offers, via the newly established department for Computational Mathematics, Science and Engineering (CMSE, see \url{https://cmse.msu.edu/}) a dual Ph.D. program in both Physics and Computational Science. This has important consequences for the possibility to establish a proper educational path in computational skills and competences, spanning from management of large numerical projects and making sustainable code projects to important algorithms and methods. Computational skills and competences are essential to most jobs in the STEM fields, and with quantum computing and quantum information theory as emerging fields, we guarantee thus a proper professional training of our students and post-doctoral fellows. This training will also involve classical computing and classical many-body algorithms and the development of large numerical projects.
+    \item Ph.D. student Ryan Larose (also together with other Ph.D. students at MSU) has developed a well-attended and widely popular seminar series on Quantum Information and Computations (QUIC) at MSU. The QUIC seminar series has had  several lectures and introductions that help new students and interested researchers to get started with quantum information theory and computing. This seminar series will be an important element in the dissemination of the results reached by this project and will also serve as an arena where students learn to present and popularize their results.  This project aims at helping in further developing this seminar series into a sustainable series in quantum information theory and computing at MSU. 
+    \item Patrick Coles has during the last years chaired the Los Alamos National Laboratory's (LANL) summer school on Quantum Computing Summer. This is an immersive 10-week curriculum that includes tutorials from world-leading experts in quantum computation as well as one-on-one mentoring from LANL staff scientists who are conducting cutting-edge quantum computing research. For our Ph.D. candidates this summer school offers a unique opportunity to meet world leading experts in Quantum Computing. 
+    \item We will also establish a three week intensive Nuclear Talent (Training in Advanced Low Energy Nuclear Theory) course on quantum information theory and computing tailored to nuclear physics problems. This course will be offered in the second and third years of the project with the aim to introduce potential new students to the field. The post-doctoral fellow and the Ph.D. students are both likely participants and teaching assistants as well.
+    \item Michigan State University offers, via the newly established department for Computational Mathematics, Science and Engineering (CMSE) a dual Ph.D. program in both Physics and Computational Science. This has important consequences for the possibility to establish a proper educational path in computational skills and competences, spanning from management of large numerical projects and making sustainable code projects to important algorithms and methods. Computational skills and competences are essential to most jobs in the STEM fields, and with quantum computing and quantum information theory as emerging fields, we guarantee thus a proper professional training of our students and post-doctoral fellows. This training will also involve classical computing and classical many-body algorithms and the development of large numerical projects.
     \item With industry partners like IBM, our candidates will also be exposed to possible internship and job possibilities. 
     \item The annual workshops to be held by the network will also allow our students and post-doctoral fellows to get in contact with many of the leading experts in the field. We are also planning for the second and third year a week long Hackathon on quantum computing and quantum information theory.
 \end{itemize}
@@ -1309,8 +1275,7 @@ opportunities outside the traditional academic track. Yearly alumni
 events offer additional interaction of current students and postdocs
 with successful NSCL alumni in a variety of careers.  The FRIB/NSCL
 alumni contact list currently contains the names of 250 alumni who
-offered to be contacted by students and postdocs for career advice
-(\url{http://www.nscl.msu.edu/ourlab/alumni}).  The list can be
+offered to be contacted by students and postdocs for career advice.  The list can be
 filtered by profession and geographic distribution.  Finally, the
 postdocs are an integral part of all laboratory social activities at
 the NSCL which include the Tuesdays coffee and bagel, Thursdays ice
@@ -1338,15 +1303,6 @@ Workshop and Hackathon & & & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bu
 \end{tabular}
 \end{center}
 \end{footnotesize}
-
-
-
-
-
-
-
-
-
 
 
 \section{Timetable of Activities}
@@ -1448,8 +1404,85 @@ through comprehensive outreach activities including user workshops, publications
 external facing code servers.
 \end{itemize}
 
+\section{Additional perspectives}
+
+\subsection{Relevance and Benefit to Society}
+
+The academic environment at MSU provides numerous opportunities for
+the research team and its PIs to attract bright young people to high-level research in
+nuclear physics. For example, the theory group at the NSCL/FRIB is very
+active in mentoring undergraduate students in the NSF sponsored
+Research Experience for Undergraduates (REU) program in the summer
+months, with the PIs successfully supervising two REU students over
+the past three years. Many of the projects in this proposal can be
+tested in prototype toy-model problems that manage to simultaneously
+i) illustrate cutting-edge concepts to the student at a technical
+level appropriate for an undergraduate physics major, and ii) benefit
+the overall progress of the PIs' research program.
+
+One of the primary \emph{broader impacts} of this proposal
+is the development of an
+open source library that can be used by other theorists and serve as a
+educational resource for graduate students and postdoctoral fellows learning about
+advanced many-body methods and quantum information theories and quantum computing.  As an example, several of us (Bogner, Hergert, Hjorth-Jensen and Lee) have in our recent Lecture
+Notes in Physics book~\cite{lnp}, together with earlier graduate
+students and other colleagues, written three long chapters on the
+application of the several many-methods to nuclear physics studies. These
+chapters contain links to our codes, which are fully open source and
+contain benchmark calculations as well, making thereby our science
+reproducible.  As
+we implement the infinite matter projects described in the current
+proposal (e.g., inclusion of NNN forces and approximate triples
+excitations, calculation of spin-isospin response functions, etc.),
+the codes in the repository will be updated accordingly.
+
+The PIs are requesting support for three graduate students plus one
+postdoc to work on the projects outlined above. The methods at the
+center of this proposal are at the forefront of basic research in
+many-body physics and quantum information theories. The many
+collaborations of the PIs with academic institutions world wide
+provides an excellent platform for developing the communication skills
+of the supported students. Global collaboration, and collaboration
+within the local group, requires skills in project management in order
+to adequately communicate the progress of the project and to meet
+deadlines. Participation in international conferences and visits at
+research centers can be expected within the time period the proposed
+project. This will equip the involved participants with skills in
+presentation techniques.  Proper documentation, both internally and in
+peer-reviewed international journals, in writing is expected. The
+project is grounded in nuclear physics but there is a very large
+overlap with computational science and numerical analysis. These two
+complementary aspects will form a natural part of the everyday work
+and therefore add to the total competence of the
+participants. Naturally, this will add to the number of possible
+career paths.
+
+Furthermore, the competences and skills acquired by the Ph.D. candidates and post-doctoral fellows in computational science, quantum computing and quantum information theories will lay the foundation for the education of the next generation of the scientific workforce. 
 
 
+\subsection{Environmental impact}
+
+This project and its realization has no  significant environmental impacts.
+
+\subsection{Ethical perspectives}
+
+This project abides to open source access to codes and data as discussed in the data management section. This has important consequences on how to make scientific results reproducible. Our published results will always have a link to our repositories with codes and simulation data. This will allow researchers from other institutions to benchmark and reproduce our results as well as helping in advancing their own 
+research. The hope is that this will serve as an example to an open and proper ethical conduct in scientific research.  Our codes will also be written in a modular and sustainable way, making it easy to build upon them. 
+Else, we foresee no particular ethical issues. All PIs abide to a sound ethical conduct in research.
+
+\subsection{Gender issues}
+
+
+The project will consist of both male and female researchers, and we
+will actively recruit female students and researchers for the various activities. 
+
+
+\section{Institutional Commitment}
+
+ 
+All investigators in this project are strongly committed to the responsibilities, time tables and objectives listed in the main text. These commitments form important parts of the efforts of the involved researchers and takes the form of uncompensated efforts. In the budget we have prioritized travel and salaries (plus benefits etc) for the Ph.D. students and the post-doctoral fellow since we wish to prioritize their scientific formation. It means that, except for Patrick Coles from LANL, that all other principal investigators will use other funds for travel and salaries. 
+This applies also largely to surplus materials, supplies, or equipment and  the provision of access to facilities at no cost. It implies also mentoring, training and coaching of the Ph.D. students and post-doctoral fellow. 
+\clearpage
 \appendix
 
 \section{Biographical Sketches}
@@ -1495,47 +1528,14 @@ Current and pending support of the senior personnel follow in alphabetical order
 \includepdf[page=-]{support/support_shindler.pdf}
 \clearpage
 
-\section{Institutional Commitment and Budget Justification}
-
-\subsection{Institutional Commitment} 
-All investigators in this project are strongly committed to the responsibilities, time tables and objectives listed in the main text. These commitments form important parts of the efforts of the involved researchers and takes the form of uncompensated efforts. In the budget we have prioritized travel and salaries (plus benefits etc) for the Ph.D. students and the post-doctoral fellow since we wish to prioritize their scientific formation. It means that, except for Patrick Coles from LANL, that all other principal investigators will use other funds for travel and salaries. 
-This applies also largely to surplus materials, supplies, or equipment and  the provision of access to facilities at no cost. It implies also mentoring, training and coaching of the Ph.D. students and post-doctoral fellow. 
-
-\subsection{Budget}
-\subsubsection{Graduate students and post-doctoral fellow}
-
-We are requesting full support for three graduate (PhD) students at MSU, plus one postdoc who will work on the projects in our proposal.  
-There is an excellent pool of graduate students from the Department of Physics and Astronomy at MSU, many of whom come specifically to work in a highly ranked graduate nuclear physics program at the National Superconducting Cyclotron Laboratory. Together, we as a group already have several high-caliber PhD students at MSU.   As detailed in the project description, there is more than enough work in the present proposal to form the basis for three Ph.D. theses in forefront problems in nuclear theory and quantum information and quantum computing. Indeed, the present proposal could probably support up to three or four PhD theses, in addition to the postdoc we are requesting.
-
-\subsubsection{Postdoctoral Research Associate: TBD, PhD (12 calendar months)}
-
-The post-doctoral will be actively involved in the various projects described in the proposal and will work on linking many-body methods (field theoretical approaches and many-body theories) with quantum information theory. 
-
-MSU fringe benefits are based on a specifically identified rate for research associates. Under this system, costs are identified into three categories and accounts will be charged only to the extent that an employee receives those benefits. Categories are; FICA; Other/ Miscellaneous; and Health Costs.
-
-\subsubsection{Three Graduate Research Assistants: TBD (36 calendar months)}
-
-The graduate students will be actively involved in the various projects described in the proposal and will work on linking many-body methods (field theoretical approaches and many-body theories) with quantum information theory. Two of the graduate students will work on linking nuclear theory with quantum information theory while the last graduate student will focus more on quantum information theory and development of quantum computing and quantum information theory algorithms.
-
-Fringe benefits for graduate assistants consist of health benefits at a rate of USD 3115 per year assuming a $6\%$ increase each year (tuition and fees are also provided and are budgeted under Other Direct Costs).
-
-\subsubsection{Travel}
-The graduate students and the post-doctoral fellow are expected to attend the spring APS or fall DNP annual meetings, in addition to relevant domestic conferences such as topical programs at the Institute for Nuclear Theory. In total we ask for 9000 USD per year in travel for the graduate students and the post-doctoral fellow, of which 4000 USD are for national travels and 5000 USD for international travels. Attendance at international meetings and workshops on quantum computing and quantum information theory are important for the professional development of graduate students and the post-doctoral fellows. 
-For Dr. Coles’ travels to MSU we ask for 6500 USD per year. This will cover travel from Los Alamos National Laboratory to Michigan State University to collaborate with the project team. He will also work closely with the graduate students, in particular the graduate student doing quantum information theory. In general, the theory group at the NSCL/FRIB recognizes the importance of travel to the success and professional development of a young physicist's career, and we strongly encourage our graduate students and postdoctoral research associates to attend important workshops and conferences.  
+\section{Bibliography and References Cited}
+% replace with style we want
+\bibliographystyle{h-physrev_mod}
+\bibliography{References.bib}
 
 
-\subsubsection{Other Direct Costs}
 
 
-We request USD 519 in years 1 and 2 and USD 933 in year 3 to purchase computing supplies (software licenses and storage) to be used for the proposed research.
-
-\subsubsection{Graduate Research Assistant Tuition and Fees}
-
-Graduate Assistants at Michigan State University receive tuition and fees at a rate of USD 12881 per year ($4\%$ increase each year).
-
-\subsubsection{Total Direct Costs, Indirect Costs, and Total Direct and Indirect Costs}
-
-Michigan State University has a negotiated indirect cost rate of $55\%$ of modified total direct cost (MTDC). For this proposal, MTDC is equal to total direct costs less graduate research assistant tuition and fees.
 
 
 
@@ -1668,84 +1668,7 @@ analysis and comparison of scientific results.
 
 
 
-\section{Additional perspectives}
 
-%\subsection{Relevance and benefit to society}
-\subsection{Broader Impacts and Relevance and Benefit to Society}
-
-The academic environment at MSU provides numerous opportunities for
-the research team and its PIs to attract bright young people to high-level research in
-nuclear physics. For example, the theory group at the NSCL/FRIB is very
-active in mentoring undergraduate students in the NSF sponsored
-Research Experience for Undergraduates (REU) program in the summer
-months, with the PIs successfully supervising two REU students over
-the past three years. Many of the projects in this proposal can be
-tested in prototype toy-model problems that manage to simultaneously
-i) illustrate cutting-edge concepts to the student at a technical
-level appropriate for an undergraduate physics major, and ii) benefit
-the overall progress of the PIs' research program.
-
-One of the primary \emph{broader impacts} of this proposal
-is the development of an
-open source library that can be used by other theorists and serve as a
-educational resource for graduate students and postdoctoral fellows learning about
-advanced many-body methods and quantum information theories and quantum computing.  As an example, several of us (Bogner, Hergert, Hjorth-Jensen and Lee) have in our recent Lecture
-Notes in Physics book~\cite{lnp}, together with earlier graduate
-students and other colleagues, written three long chapters on the
-application of the several many-methods to nuclear physics studies. These
-chapters contain links to our codes, which are fully open source and
-contain benchmark calculations as well, making thereby our science
-reproducible. They can be accessed via the GitHub link
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src}. As
-we implement the infinite matter projects described in the current
-proposal (e.g., inclusion of NNN forces and approximate triples
-excitations, calculation of spin-isospin response functions, etc.),
-the codes in the repository will be updated accordingly.
-
-The PIs are requesting support for three graduate students plus one
-postdoc to work on the projects outlined above. The methods at the
-center of this proposal are at the forefront of basic research in
-many-body physics and quantum information theories. The many
-collaborations of the PIs with academic institutions world wide
-provides an excellent platform for developing the communication skills
-of the supported students. Global collaboration, and collaboration
-within the local group, requires skills in project management in order
-to adequately communicate the progress of the project and to meet
-deadlines. Participation in international conferences and visits at
-research centers can be expected within the time period the proposed
-project. This will equip the involved participants with skills in
-presentation techniques.  Proper documentation, both internally and in
-peer-reviewed international journals, in writing is expected. The
-project is grounded in nuclear physics but there is a very large
-overlap with computational science and numerical analysis. These two
-complementary aspects will form a natural part of the everyday work
-and therefore add to the total competence of the
-participants. Naturally, this will add to the number of possible
-career paths.
-
-Furthermore, the competences and skills acquired by the Ph.D. candidates and post-doctoral fellows in computational science, quantum computing and quantum information theories will lay the foundation for the education of the next generation of the scientific workforce. 
-
-
-\subsection{Environmental impact}
-
-This project and its realization has no  significant environmental impacts.
-
-\subsection{Ethical perspectives}
-
-This project abides to open source access to codes and data as discussed in the data management section. This has important consequences on how to make scientific results reproducible. Our published results will always have a link to our repositories with codes and simulation data. This will allow researchers from other institutions to benchmark and reproduce our results as well as helping in advancing their own 
-research. The hope is that this will serve as an example to an open and proper ethical conduct in scientific research.  Our codes will also be written in a modular and sustainable way, making it easy to build upon them. 
-Else, we foresee no particular ethical issues. All PIs abide to a sound ethical conduct in research.
-
-\subsection{Gender issues}
-
-
-The project will consist of both male and female researchers, and we
-will actively recruit female students and researchers for the various activities. 
-
-\section{Bibliography and References Cited}
-% replace with style we want
-\bibliographystyle{h-physrev_mod}
-\bibliography{References.bib}
 
 \end{document}
 
