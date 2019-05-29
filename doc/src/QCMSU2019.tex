@@ -109,10 +109,7 @@ Quantum computing has emerged as a new computational paradigm that offers the ho
 
 In order to meet these formidable challenges, we have proposed a series of new projects that bridge the gap between quantum computing as it exists today and the targeted territory of unsolved nuclear physics problems.  Some of the projects focus on variational methods and developing new algorithms for optimizing quantum wave functions.  We also explore new applications of error stabilization techniques, machine learning, and quantum compiling to make efficient short-depth quantum circuits. Other proposed projects focus on real-time evolution, the calculation of observables using new algorithms, and creative adaptations of quantum simulators to nuclear physics.  As a whole, we are confident that the scientific output of this collaboration will have a significant and lasting impact on the landscape of quantum computing applied to nuclear physics.
 
-{\bf Benefit to Society:}  Sustaining future progress in nuclear physics and quantum computing depends on training the next generation of thinkers and innovators.  Towards this purpose, our proposal has designed a very significant educational component involving the Quantum Computing Summer School at Los Alamos, the student-run Quantum Information and Computing (QuIC) seminar series at Michigan State, a proposed Training in Advanced Low Energy Nuclear Theory (TALENT) summer school, as well as student and postdoctoral travel funds for collaborative work between Los Alamos and Michigan State.  The students also benefit from being a part of the nuclear physics program at
-FRIB/MSU that is ranked number one graduate program in the country. The mix of analytical and numerical computations our students must employ provides excellent preparation for both academic and industrial research. All of the PIs are committed to diversity in science.  The training received by undergraduates, graduate students, and postdoctoral research associates in carrying
-out the proposed activities contributes directly to the building of a diverse scientific workforce.
-
+{\bf Benefit to Society:}  Sustaining future progress in nuclear physics and quantum computing depends on training the next generation of thinkers and innovators.  Towards this purpose, our proposal has designed a very significant educational component involving the Quantum Computing Summer School at Los Alamos, the student-run Quantum Information and Computing (QuIC) seminar series at Michigan State, a proposed Training in Advanced Low Energy Nuclear Theory (TALENT) summer school, as well as student and postdoctoral travel funds for collaborative work between Los Alamos and Michigan State.  The students also benefit from being a part of the nuclear physics program at FRIB and MSU, which is ranked the number one graduate program in the country according US News and World Report. The mix of analytical and numerical computational skills that our students learn and implement provides excellent preparation for both academic and industrial research. All of the investigators on this proposal are committed to diversity in science and will seek to promote a diverse scientific workforce and an inclusive climate.
 
 \section{Introduction and Scientific Motivation}
 
@@ -433,9 +430,15 @@ quantum computations in the near term~\cite{Wecker2015a,Mueck2015}.
 %We propose to use machine learning (ML) to help (re)design QAs. This exciting new idea has been explored in \cite{Mitarai2018,Cincio2018} and our own research \cite{Khatri2018}. ML can redesign existing algorithms for current/near-term QCs and design new algorithms for future QCs.
 
 
-\subsubsection{Preliminary work} ML has been used to design QAs for mathematical functions, a result that provides important subroutines for other QAs \cite{Mitarai2018}. ML has also been used to design a QA for computing quantum state overlap \cite{Cincio2018}. In collaboration with the authors of Ref.~\cite{Cincio2018}, we used this result to design a new QA for matrix diagonalization \cite{LaRose2018}.
+\subsubsection{Preliminary work} In a recently published article \cite{Khatri2018}, we presented a VHQCA called quantum-assisted quantum compiling (QAQC), where the goal was to take a long gate sequence $U$ and compile it to a much shorter gate sequence $V$. We proved that evaluating our cost function in QAQC is inefficient on a classical computer but efficient on a quantum computer. Hence QAQC may be useful for reducing the circuit depth of large-scale QAs, i.e., QAs that could not be optimally compiled with classical methods. We implemented QAQC on cloud quantum computers and on classical simulators to redesign several known QAs for current QCs. For example, the quantum Fourier transform (QFT) was redesigned to the hardware constraints of ``ibmqx4'' (a current five-qubit QC). Our redesigned algorithm is more robust to noise/errors on ibmqx4 than the standard QFT algorithm.
 
-Additionally, we used ML to redesign several known QAs for current QCs. This work has been published in a pre-print \cite{Khatri2018} that shows, e.g., the quantum Fourier transform (QFT) redesigned to the hardware constraints of ``ibmqx4'' (a current five-qubit QC). Our redesigned algorithm is more robust to noise/errors on ibmqx4 than the standard QFT algorithm.
+In preliminary work, we have investigated the possibility of using our QAQC algorithm for the purpose of quantum simulation. Our idea is to use QAQC to compile the propagator $U = e^{-iH \Delta t}$, where $\Delta t$ is a very short time, into a form $V$ that can be easily extended to longer times $t$. This easily extendable form is based on diagonalization.
+
+This approach is inspired by the following fact. For some Hamiltonians (e.g., the Ising model) that can be exactly diagonalized, QAs exist for performing quantum simulations that require only a constant number of gates, irrespective of whether the time to be simulated is short or long \cite{6}. 
+
+
+%ML has been used to design QAs for mathematical functions, a result that provides important subroutines for other QAs \cite{Mitarai2018}. ML has also been used to design a QA for computing quantum state overlap \cite{Cincio2018}. In collaboration with the authors of Ref.~\cite{Cincio2018}, we used this result to design a new QA for matrix diagonalization \cite{LaRose2018}.
+
 
 
 \subsubsection{Proposed work} We propose to expand on our prior work to use ML to redesign QAs for near-term QCs and design new QAs for future QCs. A quantum algorithm $\mathcal{A}$ is defined by a set of $N$ gates $\mathcal{A} = \{ G_i(k_i, \theta_i)\}_{i = 1}^{N}$ that describe a unitary matrix. Here, $G_i$ is the $i$th gate that acts on qubits indexed by $k_i$, and $\theta_i$ denotes internal gate parameters.
@@ -1186,7 +1189,10 @@ In the near-term, the variational quantum eigensolver algorithm is best suited t
 \end{align*}
 where $E_0$ is the ground state. The quantum computer is used to prepare an initial state that one guesses and measure the expectation value of the Hamiltonian in that state. The initial state is then slightly varied by a small change in the parameters $\theta$ and the expectation value is measured again. The classical computer computes some norm of the difference between the iterations of the expectation values and stops when this norm is sufficiently small. The algorithm will converge to the ground state energy of the Hamiltonian. The excited energies can be calculated by shifting the Hamiltonian and repeating the algorithm.
 
-\textbf{Preprocessing the Hamiltonian with Similarity Renormalization Group Methods.} Renormalization group methods have played an important role in enabling the enormous progress in nuclear many-body theory in the past decade, by providing systematic tools for dialing the resolution scales of interactions and quantum states \cite{Bogner:2010pq,Hergert:2016jk,Hergert:2017kx,Stroberg:2019mx}. The resolution scale of the Hamiltonian inherently affects the s
+\textbf{Preprocessing Nuclear Hamiltonians with Similarity Renormalization Group Methods.} Similarity Renormalization group (SRG) methods have played an important role in enabling the enormous progress in nuclear many-body theory in the past decade, by providing systematic tools for dialing the resolution scales of interactions and quantum states \cite{Bogner:2010pq,Hergert:2016jk,Hergert:2017kx,Stroberg:2019mx}. The resolution scale of the Hamiltonian will inherently affect the complexity of its quantum-gate representation and the susceptibility of the computation to noise on near-term simulators: This is immediately evident from recent quantum simulations of light nuclei based on low-resolution effective field theory interactions \cite{Dumitrescu:2018az,Lu:2018aq} and previous realistic interactions with high inherent resolution \cite{Roggero:2019sr}.
+
+
+
 
 \textbf{Expressing UCC and IMSRG in Terms of Quantum Gates.} Unitary CC and IMSRG can be understood as methods for solving the many-body Schr\"odinger equation by a unitary transformation of the Hamiltonian (and other operators), so that a prepared reference state is mapped onto the true ground state of the quantum system. The UCC ansatz for the many-body wave function has been used in conjunction with the VQE to determine electronic (see, e.g., \cite{Wecker:2015bk,McClean:2016qr,Lee:2019dd}) and nuclear ground state wave functions \cite{Dumitrescu:2018az,Lu:2018aq} \tbd{[More Refs.?]} by optimizing the parameters of the unitary transformation, \tbd{but... [Does it make sense to try direct implementation]}. 
 
@@ -1513,7 +1519,100 @@ Current and pending support of the senior personnel follow in alphabetical order
 \clearpage
 \includepdf[page=-]{support/support_bogner.pdf}
 \clearpage
-%\includepdf[page=-]{support/support_cosel.pdf}
+\section*{Current and Pending Support for Patrick Coles}
+
+
+\subsection*{Current Support}
+\begin{description}
+
+\item
+\begin{tabularx}{\linewidth}{lX}
+Funding Source:         & LANL LDRD\\
+Title:                  & Machine learning of quantum computing algorithms \\
+Total Cost:             & \$416,000 \\
+Award Period:           & 10/01/18 - 09/30/20 \\
+Person-Months Effort/Year: & 5\\
+Description:            & Develop quantum computing algorithms using machine learning. \\ 
+\end{tabularx}
+
+\item
+\begin{tabularx}{\linewidth}{lX}
+Funding Source:         & LANL LDRD\\
+Title:                  & Taming Defects on Quantum Computers \\
+Total Cost:             & \$4,710,000 \\
+Award Period:           & 10/01/18 - 09/30/21 \\
+Person-Months Effort/Year: & 2.5\\
+Description:            & Develop techniques to mitigate defects on quantum computers. \\
+\end{tabularx}
+
+\item
+\begin{tabularx}{\linewidth}{lX}
+Funding Source:         & DOE, Office of Science\\
+Title:                  & Topological phases of quantum matter and decoherence \\
+Total Cost:             & \$3,489,000 \\
+Award Period:           & 10/01/18 - 09/30/21 \\
+Person-Months Effort/Year: & 1\\
+Description:            & Work on quantum algorithm to study topologically ordered systems. \\
+\end{tabularx}
+
+\item
+\begin{tabularx}{\linewidth}{lX}
+Funding Source:         & DOE, Office of Science\\
+Title:                  & Optimization, Verification and Engineered Reliability of \\
+& Quantum Computers \\
+Total Cost:             & \$3,489,000 \\
+Award Period:           & 10/01/18 - 09/30/22 \\
+Person-Months Effort/Year: & 3\\
+Description:            & Develop noise-resilient algorithms. \\
+\end{tabularx}
+
+
+
+\end{description}
+
+
+
+\subsection*{Pending Support}
+\begin{description}
+
+\item
+\begin{tabularx}{\linewidth}{lX}
+Funding Source: & LANL LDRD\\
+Award Number: & 20200056DR\\
+Title: &  Quantum Chemistry using Quantum Computers\\
+Total Cost: & \$4,800,000k \\
+Award Period: & 10/01/19--09/30/22 \\
+Person-Months Effort/Year: & 2\\
+Description: & Develop quantum algorithms to study problems in quantum chemistry.
+\end{tabularx}
+
+
+\item
+\begin{tabularx}{\linewidth}{lX}
+Funding Source: & LANL LDRD\\
+Award Number: & 20200430ER\\
+Title: &  Seeking quantum computational advantage in the study of \\
+& high-temperature superconductivity\\
+Total Cost: & \$900,000k \\
+Award Period: & 10/01/19--09/30/22 \\
+Person-Months Effort/Year: & 3\\
+Description: & Develop quantum algorithms to study superconductivity.
+\end{tabularx}
+
+\item
+\begin{tabularx}{\linewidth}{lX}
+Funding Source: & DOE, Office of Science\\
+%Award Number: & 0000025458\\
+Title: &  Quantum computing for fusion energy sciences\\
+Total Cost: & \$500,000k \\
+Award Period: & 10/01/19--09/30/21 \\
+Person-Months Effort/Year: & 1\\
+Description: & Develop quantum algorithms to study problems in fusion energy.
+\end{tabularx}
+
+\end{description}
+
+%\includepdf[page=-]{support/support_coles.pdf}
 \clearpage
 \includepdf[page=-]{support/support_hergert.pdf}
 \clearpage
@@ -1671,8 +1770,6 @@ analysis and comparison of scientific results.
 
 
 \end{document}
-
-
 
 
 
