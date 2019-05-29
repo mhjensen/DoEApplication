@@ -348,13 +348,11 @@ quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.
 The various few- and many-body methods mentioned above allow for
 controlled approximations and provide a computational scheme which
 accounts for successive corrections in a systematic way.
-
 However, all these methods face in some form or the other the problem
 of an exponential growth in dimensionality. For a system of $P$
 fermions which can be placed into $N$ levels, the total number of
-basis states are given by
-\[ \left(\begin{array}{c}N\\P\end{array}\right).  \]
-
+basis states are given by $N!/(P!(N-P)!)$.
+%\[ \left(\begin{array}{c}N\\P\end{array}\right).  \]
 The dimensional curse means that most quantum mechanical calculations
 on classical computers have exponential complexity and therefore are
 very hard to solve for larger systems.  If we wish to study for
@@ -1173,57 +1171,6 @@ Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
 \end{center}
 \end{footnotesize}
 
-\subsubsection{}{Broader Impacts}
-
-The academic environment at MSU provides numerous opportunities for
-the PIs to attract bright young people to high-level research in
-nuclear physics. For example, the theory group at the NSCL/FRIB is very
-active in mentoring undergraduate students in the NSF sponsored
-Research Experience for Undergraduates (REU) program in the summer
-months, with the PIs successfully supervising two REU students over
-the past three years. Many of the projects in this proposal can be
-tested in prototype toy-model problems that manage to simultaneously
-i) illustrate cutting-edge concepts to the student at a technical
-level appropriate for an undergraduate physics major, and ii) benefit
-the overall progress of the PIs' research program.
-
-One of the primary \emph{broader impacts} of our previous NSF award,
-which we will continue in the current award, is the development of an
-open source library that can be used by other theorists and serve as a
-educational resource for graduate students and postdocs learning about
-advanced many-body methods like CC and IMSRG.  In our recent Lecture
-Notes in Physics book~\cite{lnp}, we have together with our graduate
-students and other colleagues, written two long chapters on the
-application of the above many-methods to neutron star studies. These
-chapters contain links to our codes, which are fully open source and
-contain benchmark calculations as well, making thereby our science
-reproducible. They can be accessed via the GitHub link
-\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src}. As
-we implement the infinite matter projects described in the current
-proposal (e.g., inclusion of NNN forces and approximate triples
-excitations, calculation of spin-isospin response functions, etc.),
-the codes in the repository will be updated accordingly.
-
-The PIs are requesting support for three graduate students plus one
-postdoc to work on the projects outlined above. The methods at the
-center of this proposal are at the forefront of basic research in
-many-body physics and low-energy nuclear physics.The many
-collaborations of the PIs with academic institutions world wide
-provides an excellent platform for developing the communication skills
-of the supported students. Global collaboration, and collaboration
-within the local group, requires skills in project management in order
-to adequately communicate the progress of the project and to meet
-deadlines. Participation in international conferences and visits at
-research centers can be expected within the time period the proposed
-project. This will equip the involved participants with skills in
-presentation techniques.  Proper documentation, both internally and in
-peer-reviewed international journals, in writing is expected. The
-project is grounded in nuclear physics but there is a very large
-overlap with computational science and numerical analysis. These two
-complementary aspects will form a natural part of the everyday work
-and therefore add to the total competence of the
-participants. Naturally, this will add to the number of possible
-career paths.
 
 
 
@@ -1318,7 +1265,7 @@ research strategies by building fundamental capabilities and tools to arrange si
 algorithmic building blocks toward quantum simulations of nuclear many-body systems.
 \item  Develop and optimize quantum simulation algorithms by focusing on
 key topics of research with relevance to problems of interest to DOE’s Office of Science that
-include: 1) Lattice QCD and  2) Nuclear Mmany-body Physics algorithms.
+include: 1) Lattice QCD and  2) Nuclear Many-body Physics algorithms.
 \item  Synergize quantum and classical algorithms to tackle applications for verification of new
 quantum methods against traditional techniques.
 \item  Catalyze and enrich the quantum computing field by working with an interdisciplinary team
@@ -1497,8 +1444,60 @@ analysis and comparison of scientific results.
 
 \section{Additional perspectives}
 
-\subsection{Relevance and benefit to society}
+%\subsection{Relevance and benefit to society}
+\subsection{Broader Impacts and Relevance and Benefit to Society}
 
+The academic environment at MSU provides numerous opportunities for
+the research team and its PIs to attract bright young people to high-level research in
+nuclear physics. For example, the theory group at the NSCL/FRIB is very
+active in mentoring undergraduate students in the NSF sponsored
+Research Experience for Undergraduates (REU) program in the summer
+months, with the PIs successfully supervising two REU students over
+the past three years. Many of the projects in this proposal can be
+tested in prototype toy-model problems that manage to simultaneously
+i) illustrate cutting-edge concepts to the student at a technical
+level appropriate for an undergraduate physics major, and ii) benefit
+the overall progress of the PIs' research program.
+
+One of the primary \emph{broader impacts} of this proposal
+is the development of an
+open source library that can be used by other theorists and serve as a
+educational resource for graduate students and postdoctoral fellows learning about
+advanced many-body methods and quantum information theories and quantum computing.  As an example, several of us (Bogner, Hergert, Hjorth-Jensen and Lee) have in our recent Lecture
+Notes in Physics book~\cite{lnp}, together with earlier graduate
+students and other colleagues, written three long chapters on the
+application of the several many-methods to nuclear physics studies. These
+chapters contain links to our codes, which are fully open source and
+contain benchmark calculations as well, making thereby our science
+reproducible. They can be accessed via the GitHub link
+\url{https://github.com/ManyBodyPhysics/LectureNotesPhysics/tree/master/doc/src}. As
+we implement the infinite matter projects described in the current
+proposal (e.g., inclusion of NNN forces and approximate triples
+excitations, calculation of spin-isospin response functions, etc.),
+the codes in the repository will be updated accordingly.
+
+The PIs are requesting support for three graduate students plus one
+postdoc to work on the projects outlined above. The methods at the
+center of this proposal are at the forefront of basic research in
+many-body physics and quantum information theories. The many
+collaborations of the PIs with academic institutions world wide
+provides an excellent platform for developing the communication skills
+of the supported students. Global collaboration, and collaboration
+within the local group, requires skills in project management in order
+to adequately communicate the progress of the project and to meet
+deadlines. Participation in international conferences and visits at
+research centers can be expected within the time period the proposed
+project. This will equip the involved participants with skills in
+presentation techniques.  Proper documentation, both internally and in
+peer-reviewed international journals, in writing is expected. The
+project is grounded in nuclear physics but there is a very large
+overlap with computational science and numerical analysis. These two
+complementary aspects will form a natural part of the everyday work
+and therefore add to the total competence of the
+participants. Naturally, this will add to the number of possible
+career paths.
+
+Furthermore, the competences and skills acquired by the Ph.D. candidates and post-doctoral fellows in computational science, quantum computing and quantum information theories will lay the foundation for the education of the next generation of the scientific workforce. 
 
 
 \subsection{Environmental impact}
@@ -1507,7 +1506,9 @@ This project and its realization has no  significant environmental impacts.
 
 \subsection{Ethical perspectives}
 
-Ethical aspects concerning XXX
+This project abides to open source access to codes and data as discussed in the data management section. This has important consequences on how to make scientific results reproducible. Our published results will always have a link to our repositories with codes and simulation data. This will allow researchers from other institutions to benchmark and reproduce our results as well as helping in advancing their own 
+research. The hope is that this will serve as an example to an open and proper ethical conduct in scientific research.  Our codes will also be written in a modular and sustainable way, making it easy to build upon them. 
+Else, we foresee no particular ethical issues. All PIs abide to a sound ethical conduct in research.
 
 \subsection{Gender issues}
 
