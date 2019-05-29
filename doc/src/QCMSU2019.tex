@@ -108,21 +108,21 @@ Shindler & Andrea & Associate Professor & Michigan State University \\
 in nuclear theory, quantum computing, machine learning, and mathematics, with 
 the goal of designing new applications of quantum computing and information theory 
 to the most challenging problems in nuclear physics. The team members are 
-distinguished researchers from Los Alamos National Laboratory; IBM Q; and the 
+distinguished researchers from Los Alamos National Laboratory; IBM; and the 
 Departments of Physics and Astronomy, Computational Mathematics, Science and 
 Engineering (CMSE), and Facility for Rare Ion Beams (FRIB) at 
 Michigan State University (MSU).
 
 {\bf Scientific Goals, Opportunities, and Challenges:} 
 How do we connect fundamental physics to forefront experiments?  With new science 
-waiting to be discovered at laboratories such as FRIB, this question is a 
-profound challenge and opportunity for nuclear theory.   Despite many recent advances, we 
-are still striving to understand how the nuclear forces emerge from the interactions among quarks and gluons in quantum chromodynamics and how nuclear structure and reactions emerge from the interactions among nucleons.
+waiting to be discovered at experimental facilities such as FRIB, this question is a 
+profound challenge and opportunity for nuclear theory.  We would like to know how nuclear forces emerge from the interactions of quarks and gluons in quantum chromodynamics, what is the internal partonic structure of nucleons, what are the signatures of physics beyond the Standard Model in atomic nuclei, how do we predict nuclear structure and reactions from the microscopic interactions of nucleons, and what are the properties of strongly-interacting matter under extreme conditions.  There have been many important and profound advances in recent years, with some of the most creative and impactful developments led by investigators on this proposal.  But there are limits to what can be done even with the most powerful supercomputers in this soon-to-be era of exascale computing.  Unfortunately, some of the most interesting scientific questions remain unexplored such as the real-time dynamics of hadronic and nuclear reactions, the structure of highly-correlated nuclear systems, and the properties of dense nuclear and neutron matter. For computational methods that construct quantum wave functions, the problem is the curse of large dimensionality and the impossibility of storing exponentially large vectors as classical bits.  For computational methods that rely on Monte Carlo simulations, the obstacle is the Monte Carlo sign problem, where positive and negative contributions cancel to produce exponentially small signals.
 
+Quantum computing has emerged as a new computational paradigm that offers the hope of evading both of these fundamental problems.  By allowing for arbitrary quantum superpositions of tensor products of qubits, one can store exponentially more information than classical bits.  Furthermore, qubits also naturally evolve with unitary real-time dynamics. SBut with these exciting opportunities, there are great challenges as well.  The current digital quantum computing devices available today suffer from short decoherence times and significant readout errors.  On the other hand analog
 
-
+To quote, Fey 
 overarching
-challenge is to develop a comprehensive description of nuclei and
+challenge is to developa comprehensive description of nuclei and
 their reactions, grounded in the fundamental interactions between the
 constituent nucleons with quantifiable uncertainties to maximize
 predictive power.  As experimental frontiers have shifted to the study
@@ -931,17 +931,18 @@ H &=& \beta \sum_{n=0}^{N_{f_s}-1} \left[\sigma_n^{+} L_n^- \sigma_{n+1}^{-} +
 \label{eq:schwinger}
 \end{eqnarray}
 where $N_{f_s}$ denotes the number of fermion sites
-and we have defined $\beta = 1/(ag)^2$, $a$ is the lattice spacing and
-$g$ is the gauge coupling. The link acting as raising or lowering operators are
+and  $\beta$ is defined as $1/(ag)^2$ with $a$ and $g$ corresponding to the lattice spacing and
+ the gauge coupling respectively. The link acting as raising or lowering operators are
 denoted with $L_{\pm}$, $L_{\pm} |l\rangle = |l \pm 1 \rangle$
 while the quantized electric flux is parameterized by the integers $l_n$.
 
 The structure of the Hamiltonian in eq.~\eqref{eq:schwinger} adapts well to the
-variational adiabatic method described in sec.~\ref{sssec:vae}. In the strong coupling limit
+variational adiabatic method described in sec.~3.2.1. %~\ref{sssec:vae}. 
+In the strong coupling limit
 $\beta \rightarrow 0$ ( with $m \rightarrow \infty$ and $\beta m = \textrm{const.}$)
 it is possible to determine the ground state exactly.
 The form of the Schwinger Hamiltonian for $\beta = 0$ is almost identical to the
-initial Hamiltonian described in sec.~3.2.1.%\ref{sssec:vae}.
+initial Hamiltonian described in sec.~3.2.1. %\ref{sssec:vae}.
 One could then tune adiabatically the coupling $\beta$ to several values
 $\beta_i$ and for each of them determine the evolved state.
 Following the discussion of sec.~3.2.1.%\ref{sssec:vae} 
@@ -952,6 +953,7 @@ errors generated by imperfect adiabatic evolution
 or the possibility to reduce the
 total time needed in the adiabatic evolution.
 
+%\abtodo{AB: Below is the block that is intended to tie together field theory and methods developed for NP}
 
 While LQCD is a very powerful tool that allows for first-principle
 calculations whose accuracy can be systematically improved,
@@ -975,9 +977,13 @@ through the Fourier transform of the real-time two-point functions
 $D^{>}$ and $D^{<}$ or equivalently as the imaginary part of
 the Fourier transformed retarded
 correlation function \cite{Bellac:2011kqa}
+\begin{equation}
+%\sgh &=& 
+\frac{1}{2 \pi} (D^{>}_H(p_0, \vec{p})-D^{<}_H(p_0, \vec{p}))
+=\frac{1}{\pi} Im D^R_H(p_0, \vec{p}) \label{eq.defspect_1} 
+\end{equation}
+where
 \begin{eqnarray}
-\sgh &=& \frac{1}{2 \pi} (D^{>}_H(p_0, \vec{p})-D^{<}_H(p_0, \vec{p}))
-=\frac{1}{\pi} Im D^R_H(p_0, \vec{p}) \label{eq.defspect_1} \\
 D^{>(<)}_H(p_0, \vec{p}) &=& \int{d^4 p \over (2
 \pi)^4} e^{i p \cdot x} D^{>(<)}_H(x_0,\vec{x}) \label{eq.defspect} \\
 D^{>}_H(x_0,\vec{x}) &=& \langle
@@ -985,9 +991,9 @@ J_H(x_0, \vec{x}), J_H(0, \vec{0}) \rangle \nonumber\\
 D^{<}_H(x_0,\vec{x}) &=&
 \langle J_H(0, \vec{0}), J_H(x_0,\vec{x}) \rangle , x_0>0 \ ,
 \end{eqnarray}
-where the local meson operators are of the form
+and $J_H(t,x)$ is the local meson operators of the form
 %\begin{equation}
-$J_H(t,x)=\bar q(t,x) \Gamma_H q(t,x)$
+$\bar q(t,x) \Gamma_H q(t,x)$, 
 %\label{cont_current}
 %\end{equation}
 with $q$ a continuous real-time fermion position operator and
@@ -1006,8 +1012,9 @@ Inserting a complete set of
 states and using Eq. (\ref{kms}), one gets the expansion
 \begin{eqnarray}
 &
-\sgh = {(2 \pi)^2 \over Z} \sum_{m,n} (e^{-E_n / T} \pm e^{-E_m / T})\times \nonumber\\
-&
+%\sgh = 
+{(2 \pi)^2 \over Z} \sum_{m,n} (e^{-E_n / T} \pm e^{-E_m / T})\times 
+%\nonumber\\ &
 \langle n | J_H(0) | m \rangle|^2 \delta^4(p_\mu - k^n_\mu + k^m_\mu)
 \label{eq.specdef}
 \end{eqnarray}
@@ -1072,7 +1079,9 @@ than the integral equation (\ref{eq.inv_p}).
 Low-dimensional quantum field theories, such as the Schwinger model,
 can serve as benchmark systems for developing the Hamiltonian LQCD.
 Combining the formulation in Eq.~(\ref{eq:schwinger}) with the ideas
-of spectral decomposition in Sec~\abtodo{insert ref to 3.2.2 ``Spectral reconstruction and transition matrix elements''} we propose
+of spectral decomposition 
+%in Sec~\abtodo{insert ref to 3.2.2 ``Spectral reconstruction and transition matrix elements''} 
+we propose
 to develop methods for determining the low-lying part of the spectrum
 in Hamiltonian LQCD and using it to determine the spectral functions
 at finite temperature. The validity of the methods will be tested with the
@@ -1080,9 +1089,9 @@ conventional Monte Carlo as well as with the available exact
 results~\cite{Fayyazuddin:1993ua}.
 If successful, such methods can be generalized for
 multiple situations which in Euclidean QFT lead to inverse problem arising
-from analytic continution to real time.
+from analytic continuation to real time.
 
-
+%\abtodo{****END of AB block}
 
 %\abtodo{maybe add more details on how the method 3.2.2 can be used for
 %spectral function reconstruction; also, can add something on PDFs here --
@@ -1092,19 +1101,20 @@ from analytic continution to real time.
 
 
 The time line for WP3 is summarized in the table here:
+%\abtodo{Need to fix this table: Topics listed are just placeholder}
 \begin{footnotesize}
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2020 } & \multicolumn{4}{c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } \\
 \hline
-Topic 1 &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & & & &  \\
+Spectral  Functions   & $\bullet$&$\bullet$ & $\bullet$&$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & &  &  \\
 \hline
-Topic 2 & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & &  \\
+Schwinger  Model & & &$\bullet$ &$\bullet$ & $\bullet$ &$\bullet$ & $\bullet$ & $\bullet$ &$\bullet$ & &  &  \\
+%\hline
+%Topics 3 & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & &  \\
 \hline
-Topics 3 & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & &  \\
-\hline
-Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
+$2+1$ QFT Tryout & && & & & & & $\bullet$ & $\bullet$ &$\bullet$ & $\bullet$& $\bullet$ \\
 \hline
 
 \end{tabular}
@@ -1319,9 +1329,9 @@ The time line for WP5 is summarized in the table here:
 \hline
 Developing the QUIC seminar &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$  \\
 \hline
-Nuclear Talent course on QI 2 & & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$  \\
+Nuclear Talent course on QI 2 & & & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$  \\
 \hline
-Workshop and Hackathon & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$  \\
+Workshop and Hackathon & & & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$  \\
 \hline
 
 
@@ -1348,20 +1358,20 @@ development and software development.
     \begin{enumerate}
         \item Project kick off meeting at MSU to coordinate logistics, discuss
 specific tasks, and review application targets.
-\item WP1: 
-\item WP2
-\item WP3
+\item WP1: Cost-driven design for current QCs
+\item WP2: Variational Adiabatic Evolution and Spectral Reconstruction
+\item WP3: Spectral functions and Schwinger model
 \item WP4: Rewrite the pairing Hamiltonian in terms of quantum gates and implement QPE and VQE algorithms. Rewrite general two-body Hamiltonian in terms of quantum gates. 
-\item WP5:  Develop and extend the QUIC seminar. Develop educational material which can be used at the LANL summer school.
+\item WP5:  QUIC seminar. Develop educational material which can be used at the LANL summer school.
 \item Public release of developed software tools.
 \item Deliverable Year 1: Results from work packages 1-5 compiled and delivered to the program office
     \end{enumerate}
     \item Year 2: Government Fiscal year 2021
     \begin{enumerate}
         \item Team hackathon meeting at MSU and coordination of logistics, discuss specific tasks and progress. Review and adjustment of targets.
-        \item WP1: 
-\item WP2
-\item WP3
+        \item WP1: Cost-driven design for current QCs and Data-driven design for future QCs 
+\item WP2: Spectral Reconstruction and Transition Matrix Elements. Few-body dynamics
+\item WP3: Schwinger model and $2+1$ QFT tryout
 \item WP4: Develop UCC and IMSRG codes for quantum computing, implement the VQE and PQE algorithms.
 \item WP5: Develop and extend the QUIC seminar and the Nuclear Talent Course as well as further educational material to be offered at for example the LANL summer school.
 \item Public release of developed software tools.
@@ -1370,9 +1380,9 @@ specific tasks, and review application targets.
     \item Year 3: Government Fiscal year 2022
     \begin{enumerate}
         \item  Team hackathon meeting at MSU and coordination of logistics, discuss specific tasks and progress. Review and adjustment of targets.
-        \item WP1: 
-\item WP2
-\item WP3
+        \item WP1: Data-driven design for future QCs 
+\item WP2: Few-body Dynamics and Scattering and Reaction Probabilities
+\item WP3: Schwinger model and $2+1$ QFT tryout
 \item WP4: Perform studies of  infinite systems using developed quantum computing algorithms. Compare with existing classical coupled-cluster and IMSRG codes.
 \item WP5: Develop and extend the QUIC seminar. Develop educational material for intensive Nuclear Talent courses and courses to be taught at MSU and the LANL summer school. 
 \item Public release of developed software tools.
@@ -1488,8 +1498,8 @@ Current and pending support of the senior personnel follow in alphabetical order
 \section{Institutional Commitment and Budget Justification}
 
 \subsection{Institutional Commitment} 
-Applicants are strongly encouraged provide evidence of their commitment to the proposed activity. This commitment may take the form of uncompensated effort; the provision of surplus materials, supplies, or equipment; the provision of access to facilities at no or reduced cost; voluntary cost sharing; mentoring, training, or coaching of personnel; the provision of release time for teaching faculty; the provision of scholarship support for students; or other methods of involving the applicant in the proposed activity.
-Institutional commitment is not a form of cost-sharing: It is intended to ensure that the applicant institution is leveraging existing resources and capabilities to further the public benefit of groundbreaking scientific discovery.
+All investigators in this project are strongly committed to the responsibilities, time tables and objectives listed in the main text. These commitments form important parts of the efforts of the involved researchers and takes the form of uncompensated efforts. In the budget we have prioritized travel and salaries (plus benefits etc) for the Ph.D. students and the post-doctoral fellow since we wish to prioritize their scientific formation. It means that, except for Patrick Coles from LANL, that all other principal investigators will use other funds for travel and salaries. 
+This applies also largely to surplus materials, supplies, or equipment and  the provision of access to facilities at no cost. It implies also mentoring, training and coaching of the Ph.D. students and post-doctoral fellow. 
 
 \subsection{Budget}
 \subsubsection{Graduate students and post-doctoral fellow}
