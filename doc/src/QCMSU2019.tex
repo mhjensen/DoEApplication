@@ -101,10 +101,21 @@ Shindler & Andrea & Associate Professor & Michigan State University \\
 \tableofcontents
 \section{Executive Summary}
 
-Michigan State University (MSU) and the Facility for Rare Ion Beams (FRIB) are submitting 
-a proposal on {\bf From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body Problem}. 
+%Michigan State University (MSU) and the Facility for Rare Ion Beams (FRIB) are submitting 
+%a proposal on {\bf From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body %Problem}. 
 
-{\bf Intellectual merit:} For nuclear theorists, the overarching
+{\bf Collaborative Team:} This proposal assembles a team of leading experts 
+in nuclear theory, quantum computing, machine learning, and mathematics, with 
+the goal of designing new applications of quantum computing and information theory 
+to the most challenging problems in nuclear physics. The team members are 
+researchers from IBM Q; Los Alamos National Laboratory; and the 
+Departments of Physics and Astronomy, Computational Mathematics, Science and 
+Engineering (CMSE), and the National Superconducting Cyclotron Laboratory 
+(NSCL)/Facility for Rare Ion Beams (FRIB) at Michigan State University (MSU).
+
+{\bf Scientific Goals, Opportunities, and Challenges:} 
+The goal is to 
+For nuclear theorists, the overarching
 challenge is to develop a comprehensive description of nuclei and
 their reactions, grounded in the fundamental interactions between the
 constituent nucleons with quantifiable uncertainties to maximize
@@ -137,20 +148,10 @@ theoretical understanding of algorithms from quantum information
 applied to interacting systems, with the hope to circumvent many of
 the traditional dimensionality problems.
 
-
-This proposals unites the efforts of nuclear many-body theorists,
-quantum information theorists and mathematicians, with the aim to
-explore and develop stable algorithms for studying nuclear systems
-using recent progress in quantum information theory. It involves
-researchers from Michigan State University (MSU) and the National
-Superconducting Cyclotron Laboratory (NSCL)/Facility for Rare Ion
-Beams (FRIB) and Los Alamos National Laboratory, with the aim to build
-up an interdisciplinary team of nuclear theorists and quantum
-information theorists in order to explore the feasibility of quantum
-information theory applied to the nuclear many-body problem.
+{\bf Scientific Goals, Opportunities, and Challenges:} 
 
 
-{\bf Broader impacts:} The training received by undergraduates,
+{\bf Broader Impacts:} The training received by undergraduates,
 graduate students, and postdoctoral research associates in carrying
 out the proposed activities contributes directly to the building of a
 diverse scientific workforce. The present proposal has a large
@@ -163,7 +164,7 @@ PIs are committed to diversity in science.
 
 \section{Introduction and Scientific Motivation}
 
-\subsection{The overarching intellectual question(s)}
+\subsection{The Overarching Intellectual Question(s)}
 
 Can we understand nuclei and nuclear matter and the limits of
 stability of matter in terms of the fundamental laws of motion and
@@ -199,7 +200,7 @@ limited the reach of so-called \emph{ab initio}\footnote{The concept
   this has been extended to mean exact or quasi-exact calculations
   with a given input Hamiltonian/Lagrangian. The latter is not
   necessarily the one which relates directly to the fundamental
-  bulding blocks.} calculations to light $p$-shell nuclei. Approximate
+  building blocks.} calculations to light $p$-shell nuclei. Approximate
 (but systematically improvable) methods that scale favorably to larger
 systems, like coupled cluster (CC) theory and many-body perturbation
 theory (MBPT), were largely abandoned in nuclear physics, despite
@@ -406,7 +407,7 @@ applied mathematicians, theoretical nuclear physicists  and quantum computing
 researchers.
 
 
-\paragraph{Strategic relevance}
+\paragraph{Strategic Relevance}
 
 To understand why matter is stable, and thereby shed light on the
 limits of nuclear stability, is one of the overarching aims and
@@ -485,7 +486,7 @@ Our proposed method works as follows. First, we pick a number of qubits $n$ and 
 
 A similar approach was used in \cite{Cincio2018} to learn a new QA for computing state overlap. Our proposed work will design new QAs for computing quantum entropies of quantum states. Such QAs, currently unknown, would be extremely useful for characterizing quantum states produced by, e.g., simulation algorithms on QCs. These functions fit well into our data-driven method because they can be computed classically \& scale naturally to multiple problem sizes. %Such QAs may provide speedups over classical algorithms because of the inherent ``quantum nature'' of quantum entropies.
 
-\subsubsection{Challenges and outlook} 
+\subsubsection{Challenges and Outlook} 
 In both methods, numerical optimization over the parameters $\{G_i(\theta_i), k_i)\}$ is challenging for large algorithm sizes. To overcome this, we can introduce an algorithm ``ansatz,'' or structure, to eliminate the $k_i$ and even $G_i$ parameters. Additionally, for the cost-driven method, we can train over ``sub-algorithms'' (subsets of gates) to limit the large search space while still exploring a larger space than other quantum compiling methods. %Picking a good initial guess for $\mathcal{A}$ and using a ``good'' norm $|| \cdot ||$ are both crucial for training.
 For the data-driven method, deciding which gates to include in training is an open question. Further research is needed to identify the necessary number of training data points (i.e., the $D$ above). Methods from active learning can significantly reduce $D$ for large algorithm sizes.
 
@@ -510,7 +511,7 @@ Data-driven design for future QCs & & & & & & & $\bullet$ & $\bullet$ & $\bullet
 
 
 
-\subsection{Work package 2 (WP2): Quantum state preparation and dynamics}
+\subsection{Work package 2 (WP2): Quantum State Preparation and Dynamics}
 {\bf Lead Scientists: Dean Lee (MSU) and Jacob Watkins (MSU Ph.D. Student)}
 
 The research activity of the Lee group focuses on developing new algorithms for quantum state preparation and time evolution that are sufficiently robust to operate on noisy near-term devices.  These include both digital quantum computers and analog quantum simulators.  The problems we address are designed to probe correlations in nuclear structure, the spectrum of nuclear energy levels, transition matrix elements, and the dynamics of nuclear scattering and reactions.  Graduate  student Jacob Watkins has worked on the topics presented in this proposal and funds would be used to support his continuing research in quantum computing applied to nuclear physics. 
@@ -519,7 +520,7 @@ The research activity of the Lee group focuses on developing new algorithms for 
 
 
 
-\subsubsection{Variational adiabatic evolution}
+\subsubsection{Variational Adiabatic Evolution}
 
 In order to perform calculations of the properties of nuclear systems
 via quantum computing, we need to be able to prepare quantum states in
@@ -654,7 +655,7 @@ eigenvectors and eigenvalues under noise perturbations.  We will
 investigate both the underlying theory and its practical
 implementation.
 
-\subsubsection{Spectral reconstruction and transition matrix elements}
+\subsubsection{Spectral Reconstruction and Transition Matrix Elements}
      
 Quantum phase estimation is one approach to computing the spectrum of
 a Hamiltonian through real-time evolution and the inverse quantum
@@ -776,7 +777,7 @@ different coefficients $c_n$ and thus estimate the magnitude of the
 transition matrix elements
 $|\braket{\phi^{n'}_\odot|O|\phi^n_\odot}|$.
   
-\subsubsection{Scattering, reactions, and few-body dynamics}
+\subsubsection{Scattering, Reactions, and Few-body Dynamics}
 
 We propose to study the real-time dynamics of colliding particles and
 bound states.  The goal is to provide data from analog quantum
@@ -846,15 +847,15 @@ direction.}
 \hline
 \multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2020 } & \multicolumn{4}{c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } \\
 \hline
-Variational adiabatic evolution &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & & & &  \\
+Variational Adiabatic Evolution &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & & & &  \\
 \hline
-Spectral reconstruction & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & &  \\
+Spectral Reconstruction & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & &  \\
 \hline
-Transition matrix elements & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & &   \\
+Transition Matrix Elements & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & &   \\
 \hline
-Few-body dynamics & & & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & &\\
+Few-body Dynamics & & & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & &\\
 \hline
-Scattering and reaction probabilities & & & & & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ \\
+Scattering and Reaction probabilities & & & & & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ \\
 \hline
 
 \end{tabular}
@@ -945,6 +946,145 @@ errors generated by imperfect adiabatic evolution
 or the possibility to reduce the
 total time needed in the adiabatic evolution.
 
+
+While LQCD is a very powerful tool that allows for first-principle
+calculations whose accuracy can be systematically improved,
+the Euclidean nature of the formalism makes a certain class of problems
+hard to solve in practice. In particular, quantities that are related
+to real-time dynamics, such as spectral functions of heavy quarkonia
+\cite{Bazavov:2009us},
+transport properties of quark-gluon plasma (a recent lattice attempt can be found
+in Ref~\cite{Pasztor:2018yae})
+and the hadronic tensor~\cite{Liang:2017mye}
+lead to ill-posed underdetermined
+inverse problems.
+
+Here we illustrate this point with the discussion of
+the relation between the
+Euclidean meson correlators and spectral functions at finite
+temperature\footnote{The zero temperature limit is straightforward.}.
+The spectral function $\sgh$ for a given
+mesonic channel $H$ in a system at temperature $T$ can be defined
+through the Fourier transform of the real-time two-point functions
+$D^{>}$ and $D^{<}$ or equivalently as the imaginary part of
+the Fourier transformed retarded
+correlation function \cite{Bellac:2011kqa}
+\begin{eqnarray}
+\sgh &=& \frac{1}{2 \pi} (D^{>}_H(p_0, \vec{p})-D^{<}_H(p_0, \vec{p}))
+=\frac{1}{\pi} Im D^R_H(p_0, \vec{p}) \label{eq.defspect_1} \\
+D^{>(<)}_H(p_0, \vec{p}) &=& \int{d^4 p \over (2
+\pi)^4} e^{i p \cdot x} D^{>(<)}_H(x_0,\vec{x}) \label{eq.defspect} \\
+D^{>}_H(x_0,\vec{x}) &=& \langle
+J_H(x_0, \vec{x}), J_H(0, \vec{0}) \rangle \nonumber\\
+D^{<}_H(x_0,\vec{x}) &=&
+\langle J_H(0, \vec{0}), J_H(x_0,\vec{x}) \rangle , x_0>0 \ ,
+\end{eqnarray}
+where the local meson operators are of the form
+%\begin{equation}
+$J_H(t,x)=\bar q(t,x) \Gamma_H q(t,x)$
+%\label{cont_current}
+%\end{equation}
+with $q$ a continuous real-time fermion position operator and
+%\begin{equation}
+$\Gamma_H=1,\gamma_5, \gamma_{\mu}, \gamma_5 \gamma_{\mu}, \gamma_{\mu} \gamma_{\nu}$.
+%\end{equation}
+
+The correlators $D^{>(<)}_H(x_0,\vec{x})$ satisfy the
+Kubo-Martin-Schwinger
+(KMS) condition \cite{Bellac:2011kqa}
+\begin{equation}
+D^{>}_H(x_0,\vec{x})=D^{<}_H(x_0+i/T,\vec{x}).
+\label{kms}
+\end{equation}
+Inserting a complete set of
+states and using Eq. (\ref{kms}), one gets the expansion
+\begin{eqnarray}
+&
+\sgh = {(2 \pi)^2 \over Z} \sum_{m,n} (e^{-E_n / T} \pm e^{-E_m / T})\times \nonumber\\
+&
+\langle n | J_H(0) | m \rangle|^2 \delta^4(p_\mu - k^n_\mu + k^m_\mu)
+\label{eq.specdef}
+\end{eqnarray}
+where $Z$ is the partition function, and
+$k^{n(m)}$ refers to the four-momenta of the state $| n (m) \rangle $.
+
+
+In finite-temperature lattice calculations, one computes
+Euclidean time propagators, usually
+projected to a given spatial momentum:
+\begin{equation}
+G_H(\tau, \vec{p}) = \int d^3x e^{i \vec{p}.\vec{x}}
+\langle T_{\tau} J_H(\tau, \vec{x}) J_H(0,
+\vec{0}) \rangle
+\end{equation}
+This quantity is an analytical continuation
+of $D^{>}_H(x_0,\vec{p})$
+\begin{equation}
+G_H(\tau,\vec{p})=D^{>}_H(-i\tau,\vec{p}).
+\end{equation}
+Using this equation and the KMS condition
+one can
+show that $G_H(\tau,\vec{p})$ is related to the
+spectral
+function, Eq. (\ref{eq.defspect_1}), by an integral equation:
+\begin{eqnarray}
+G_H(\tau, \vec{p}) &=& \int_0^{\infty} d \omega
+\sigma_H(\omega,\vec{p}) K(\omega, \tau) \label{eq.spect} \label{eq.inv_p}\\
+K(\omega, \tau) &=& \frac{\cosh(\omega(\tau-1/2
+T))}{\sinh(\omega/2 T)}.
+\label{eq.kernel}
+\end{eqnarray}
+This equation is the basic equation for extracting the spectral
+function from meson correlators.
+
+While the left-hand side of Eq.~(\ref{eq.inv_p}) can be calculated on the
+lattice with a relatively small computational cost (at least, in the mesonic
+sector), solving the integral equation directly is not feasible, because the
+amount of information contained in the lattice Euclidean correlator,
+subject to statistical uncertainties, is insufficient
+for reliable reconstruction of the spectral function
+under the integral. Regularization is necessary and various inverse problems
+methods such as the Maximum Entropy Method~\cite{Jarrell:1996rrw},
+Bayesian Reconstruction Method~\cite{Burnier:2013nla}
+Backus-Gilbert method and
+stochastic optimization methods~\cite{Ding:2017std}
+are often employed.
+The nature of this problem is tightly related to the fact that classical
+LQCD simulations are almost exclusively done in the Lagrangian formalism
+in Euclidean space-time.
+
+The Hamiltonian form of LQCD, while not well-suited for classical computation,
+offers a path to access real-time dynamics. While the problem in the operator
+formalism is impractical for classical computers\footnote{In the Hamiltonian
+formalism of LQCD the Hilbert space of a single gauge link is already
+inifinite-dimensional and the number of degrees of freedom in a realistic
+LQCD simulation is on the order of $O(10^6)$.}, this formulation is natural
+for quantum computers. Moreover, finding the spectrum of the Hamiltonian
+allows one to rely on the spectral decomposition, Eq.~(\ref{eq.specdef}), rather
+than the integral equation (\ref{eq.inv_p}).
+
+Low-dimensional quantum field theories, such as the Schwinger model,
+can serve as benchmark systems for developing the Hamiltonian LQCD.
+Combining the formulation in Eq.~(\ref{eq:schwinger}) with the ideas
+of spectral decomposition in Sec~\abtodo{insert ref to 3.2.2 ``Spectral reconstruction and transition matrix elements''} we propose
+to develop methods for determining the low-lying part of the spectrum
+in Hamiltonian LQCD and using it to determine the spectral functions
+at finite temperature. The validity of the methods will be tested with the
+conventional Monte Carlo as well as with the available exact
+results~\cite{Fayyazuddin:1993ua}.
+If successful, such methods can be generalized for
+multiple situations which in Euclidean QFT lead to inverse problem arising
+from analytic continution to real time.
+
+
+
+%\abtodo{maybe add more details on how the method 3.2.2 can be used for
+%spectral function reconstruction; also, can add something on PDFs here --
+%that could tie nicely QFT, spectral functions and the proposed QC methods ?
+%}
+
+
+
 The time line for WP3 is summarized in the table here:
 \begin{footnotesize}
 \begin{center}
@@ -969,7 +1109,7 @@ Topic 4 & &$\bullet$ & & & &$\bullet$ & & & &$\bullet$ & &  \\
 
 
 
-\subsection{Work Package 4 (WP4): Nuclear structure, from Finite Nuclei to Infinite Nuclear Matter}
+\subsection{Work Package 4 (WP4): Nuclear Structure, from Finite Nuclei to Infinite Nuclear Matter}
 {\bf Lead Scientists: Scott Bogner (MSU), Heiko Hergert (MSU), Morten Hjorth-Jensen (MSU) and Benjamin Hall (MSU Ph.D. student)}
 \paragraph{Simulation of Many-Body Hamiltonians}
 
@@ -1103,7 +1243,16 @@ IMSRG for the HEG and Infinite Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\b
 
 The development of competences and skills in computational science, data science, quantum computing and quantum information theories, machine learning etc is an essential part of the development of a workforce for the future in the STEM (Science, Technology, Engineering and Mathematics) fields. Essentially all jobs in the STEM fields require nowadays a broad spectrum of computational capabilities. 
 
+In work package 5 we present our plans for a professional development of the Ph.D. candidates and the post-doctoral fellow. This is split in two parts, the development of scientific and profession competences and a general mentoring environment which is offered at MSU. 
+
 \paragraph{Scientific development}
+The scientific development of the candidates involves several elements, of which some are exit already while other ones need will be developed. 
+\begin{itemize}
+    \item Ph.D. student Ryan Larose (also together with other Ph.D. students at MSU) has developed a well-attended and widely popular seminar series on Quantum Information and Computations (QUIC) at MSU, see \url{https://www.ryanlarose.com/quic-seminar.html}. The QUIC seminar site contains several lectures and introductions that help new students and interested researchers to get started with quantum information theory and computing. This seminar series will be an important element in the dissemination of the results reached by this project and will also serve as an arena where students learn to present and popularize their results.  This project aims at helping in further developing this seminar series into a sustainable series in quantum information theory and computing at MSU. 
+    \item Patrick Coles has during the last years chaired the Los Alamos National Laboratory's (LANL) summer school on Quantum Computing Summer. This is an immersive 10-week curriculum that includes tutorials from world-leading experts in quantum computation as well as one-on-one mentoring from LANL staff scientists who are conducting cutting-edge quantum computing research. For our Ph.D. candidates this summer school offers a unique opportunity to meet world leading experts in Quantum Computing. For more information see \url{https://www.lanl.gov/projects/national-security-education-center/information-science-technology/summer-schools/quantumcomputing/index.php}
+    \item We will also establish a three week intensive Nuclear Talent (Training in Advanced Low Energy Nuclear Theory \url{http://fribtheoryalliance.org/TALENT/}) course on quantum information theory and computing tailored to nuclear physics problems. This course will be offered in the second and third years of the project with the aim to introduce potential new students to the field. The post-doctoral fellow and the Ph.D. students are both likely participants and teaching assistants as well.
+    \item Michigan State University offers, via the newly established department for Computational Mathematics, Science and Engineering (see \url{https://cmse.msu.edu/}) a dual Ph.D. program in both Physics and Computational Science. This has important consequences for the possibility to establish a proper educational path in computational skills and competences, spanning from management of large numerical projects and making sustainable code projects to important algorithms and methods. 
+\end{itemize}
 - quic
 -lanl summer school
 -talent course
@@ -1297,7 +1446,7 @@ external facing code servers.
 \section{Biographical Sketches}
 
 Biographical sketches of the senior personnel follow in alphabetical order.
-%\includepdf[page=-]{bios/bio_bazavov.pdf}
+\includepdf[page=-]{bios/bio_bazavov.pdf}
 \clearpage
 \includepdf[page=-]{bios/bio_bogner.pdf}
 \clearpage
@@ -1318,7 +1467,7 @@ Biographical sketches of the senior personnel follow in alphabetical order.
 \section{Current and Pending Support}
 
 Current and pending support of the senior personnel follow in alphabetical order.
-%\includepdf[page=-]{support/support_bazavov.pdf}
+\includepdf[page=-]{support/support_bazavov.pdf}
 \clearpage
 \includepdf[page=-]{support/support_bogner.pdf}
 \clearpage
