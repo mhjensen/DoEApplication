@@ -767,7 +767,7 @@ to produce a quantum system with a geometric spectrum and discrete
 scale invariance, we choose $\beta=\alpha-1$. As an example, we
 consider a system with $\alpha = 2$, $\beta = 1$, $J_0 = -1$, and $V_0= -30$.  
 The wave functions for the first twelve even-parity bound
-states are shown in Fig.~\ref{even_wavefunctions}.  We plot the
+states are shown in Fig.~\ref{even_wave functions}.  We plot the
 normalized wave function for $r>0$, where $r$ is measured in lattice
 units.
      
@@ -779,7 +779,7 @@ units.
 for the first twelve even-parity bound states for the case $\alpha =
 2$, $\beta = 1$, $J_0 = -1$, and $V_0 = -30$.  We plot the region
 $r>0$, where $r$ is measured in lattice units.}
-\label{even_wavefunctions}
+\label{even_wave functions}
 \end{figure}
 
 We propose to reconstruct the excitation spectrum of the time fractal
@@ -1138,9 +1138,9 @@ $2+1$ QFT Trails & && & & & & & $\bullet$ & $\bullet$ &$\bullet$ & $\bullet$& $\
 
 The central goal of WP4 is to perform quantum simulations of infinite nuclear matter by formulating classical many-body methods like Coupled Cluster (CC) and Similarity Renormalization Group (SRG) theory in terms of quantum algorithms. In particular, we will work on the so-called Unitary Coupled Cluster (UCC) and In-Medium SRG (IMSRG) approaches. Both methods can provide computationally affordable and systematically improvable wave functions that are suitable for implementation on current and near-term quantum computers as well as existing and future supercomputers. 
 
-We will first implement these approaches for the pairing and pairing plus particle-hole model Hamiltonians \cite{Hjorth-Jensen:2010qf}. These are simplified models of nuclei that nevertheless capture important physical features. This part also links well with what is outlined in work package 1. We will then venture into calculations of the homogeneous electron gas and infinite nuclear matter based on realistic nuclear interactions. These systems have been studied with a variety of many-body methods, including standard Coupled Cluster theory and IMSRG. This offers us with ample opportunity to benchmark our quantum algorithms and allows us to set the stage for quantum computations of dynamical properties like response functions, which are at or beyond the limit of classical computers. An important example is the computation of the response function for neutrinos in nuclei and dense neutron star matter \cite{neutrinoslovato}.
+We will first implement these approaches for the pairing and pairing plus particle-hole model Hamiltonians \cite{Hjorth-Jensen:2010qf}. These are simplified models of nuclei that nevertheless capture important physical features. This part also links well with what is outlined in work package 1. We will then venture into calculations of the homogeneous electron gas and infinite nuclear matter based on realistic nuclear interactions. These systems have been studied with a variety of many-body methods, including standard Coupled Cluster theory and IMSRG. This offers us with ample opportunity to benchmark our quantum algorithms and allows us to set the stage for quantum computations of dynamical properties like response functions, which are at or beyond the limit of classical computers. An important example is the computation of the response function for neutrinos in nuclei and dense neutron star matter \cite{Rocco:2018mwt}.
 
-\paragraph{Classical vs. Quantum Simulation of Many-Body Hamiltonians}
+\paragraph{Classical vs. Quantum Simulations of Many-Body Hamiltonians.}
 Attaining a thorough theoretical understanding of the behavior of many-body systems is a great challenge, but it provides fundamental insights into quantum  mechanics and offers many potential areas of applications.
 However, apart from a few analytically solvable problems, the typical absence of an exactly solvable contribution to the
 many-particle Hamiltonian means that we ultimately need reliable numerical many-body methods.
@@ -1151,8 +1151,7 @@ Typical examples of popular many-body methods, mentioned also in our introductio
 ab initio Density Functional Theory, and large-scale diagonalization methods, to mention just a few.
 All these methods have to face in some form or the other the problem of 
 an exponential growth in dimensionality. This dimensional curse means that most quantum- mechanical calculations on classical computers have exponential
-complexity, and therefore are very hard to solve for larger systems. In contrast, a so-called quantum computer, a particularly dedicated computer,
-can improve greatly on the size of systems that can be simulated, as
+complexity, and therefore are very hard to solve for larger systems. In contrast quantum computer can greatly increase size of systems that can be simulated, as
 foreseen by Feynman \cite{Feynman:1981tf}.  It was shown early on that quantum phase estimation (QPE) provides an
 exponential speed-up over the best ``currently'' known classical algorithms for determining
 the ground state of a given Hamiltonian \cite{aspuru2005simulated}. However, the use
@@ -1164,7 +1163,7 @@ eigensolver (VQE)\cite{peruzzo2014variational,McArdle2018}.
 
 Unlike the quantum phase estimation, VQE requires only a short coherence time.
 This hybrid approach uses a quantum computer to prepare and
-manipulate a parameterized wavefunction, and {embeds this in} a classical optimization
+manipulate a parameterized wave function, and {embeds this in} a classical optimization
 algorithm to minimize the energy of the state as measured on the quantum computer, i.e., 
 \begin{equation}
 E = \min_{\theta} \langle\psi(\theta)|\hat{H}|\psi(\theta)\rangle,
@@ -1177,47 +1176,47 @@ From a nuclear many-body perspective, there are
 two key attractive
 aspects of the VQE framework: 
 \begin{enumerate}
-\item The evaluation of the energy of a wide class of wavefunction ans{\"a}tze which are
+\item The evaluation of the energy of a wide class of wave function ans{\"a}tze which are
   exponentially costly classically (with currently known algorithms) requires only state preparation and measurement of Pauli operators, both of which can be carried out on a quantum processor in polynomial time. These
-wavefunction ans{\"a}tze include the aforementioned UCC wavefunctions,~\cite{evangelista2011alternative, peruzzo2014variational} the deep multi-scale entanglement renormalization ansatz~\cite{kim2017robust}, a Trotterized version of adiabatic state preparation \cite{wecker2015progress}, the Qubit Coupled Cluster approach (QCC) \cite{ryabinkin2018qubit} and various low-depth quantum circuits inspired by the specific constraints of physical devices currently available.~\cite{kandala2017hardware}. The IMSRG approach should also fall under this category, as we aim to demonstrate under the scope of WP4. 
+wave function ans{\"a}tze include the aforementioned UCC wave functions,~\cite{evangelista2011alternative, peruzzo2014variational} the deep multi-scale entanglement renormalization ansatz~\cite{kim2017robust}, a Trotterized version of adiabatic state preparation \cite{wecker2015progress}, the Qubit Coupled Cluster approach (QCC) \cite{ryabinkin2018qubit} and various low-depth quantum circuits inspired by the specific constraints of physical devices currently available.~\cite{kandala2017hardware}. The IMSRG approach should also fall under this category, as we aim to demonstrate under the scope of WP4. 
 
 \item On a quantum processor, an efficient evaluation of the magnitude of the overlap between two
-quantum states is possible even when two states involve exponentially many determinants. Classically, this is a distinct feature only of tensor network~\cite{stoudenmire2012studying} and variational Monte  Carlo \cite{Cyrus1998} approaches.
+quantum states is possible even when two states involve exponentially many determinants. Classically, this is a distinct feature only of tensor network~\cite{stoudenmire2012studying} and variational Monte  Carlo \cite{RevModPhys.87.1067} approaches.
 On a quantum computer, \emph{any} states that can be efficiently prepared will also possess this advantage.
 \end{enumerate}
 
+\paragraph{Quantum Computations for Simplified Nuclear Models.}
 Given the recent progress and near-term prospects in quantum computing
 hardware, and the uniqueness of its capabilities, it is interesting to explore these two aspects from a nuclear many-body perspective and this constitutes a major motivation of WP4.
 
-Given a Hamiltonian in second-quantized form
+Starting from a Hamiltonian in second-quantized form
 \begin{align}
-H=\sum_{pq}h_{pq}\dagg{a_p}a_q+\sum_{pqrs}h_{pqrs}\dagg{a_p}\dagg{a_q}a_sa_r
+H=\sum_{pq}h_{pq}\dagg{a_p}a_q+\sum_{pqrs}h_{pqrs}\dagg{a_p}\dagg{a_q}a_sa_r\,,
 \end{align}
 for example, one can use a quantum computer to estimate the energy eigenvalues of the Hamiltonian $E_n$ where $H\ket{\psi_n}=E_n\ket{\psi_n}$. First, one maps the Hamiltonian to quantum gates via a mapping such as the Jordan-Wigner transformation
 \begin{align}
 \dagg{a_i}&=\sigma_z^{\otimes i-1}\otimes\sigma_+\otimes\mathbb{I}^{\otimes n-i} \\
 \nonumber
-a_i&=\sigma_z^{\otimes i-1}\otimes\sigma_-\otimes\mathbb{I}^{\otimes n-i}
+a_i&=\sigma_z^{\otimes i-1}\otimes\sigma_-\otimes\mathbb{I}^{\otimes n-i}\,.
 \end{align}
-The most efficient mapping is still unknown.
-Then, one must approximate the time-evolution operator
+We note that finding efficient mappings for many types of Hamiltonians and algoirthms is still very much an open problem, which this part of our project will be tightly coupled to the efforts under WP1.
+The next step is the application of the the time-evolution operator
 \begin{align}
-U=e^{-iHt/\hbar}=e^{-i\sum_kH_kt/\hbar}
+U=e^{-iHt/\hbar}=e^{-i\sum_kH_kt/\hbar}\,,
 \end{align}
-using an approximation such as Suzuki-Trotter
+using an approximation such as the Suzuki-Trotter
 \begin{align}
-e^{A+B}=\lim_{n\to\infty}\left(e^{A/n}e^{B/n}\right)^n.
+e^{A+B}=\lim_{n\to\infty}\left(e^{A/n}e^{B/n}\right)^n
 \end{align}
-Which approximation to use for a given problem is an active area of research.
-Next, one maps the time-evolution operator into quantum circuits consisting of 2-qubit gates. The mapping that results in the shortest depth quantum circuit is an open question. Finally, one plugs the quantum circuit for $U$ into the quantum phase estimation algorithm.
-Then, using the quantum phase estimation (QPE) algorithm, one can for example compute the eigenvalues of a simple nuclear pairing Hamiltonian, as done in \cite{ovrum2007}. We have recently repeated these calculations in collaboration with MSU Ph.D. student Benjamin Hall, who also works together with MSU Ph.D. student Ryan Larose on related topics. The first near-term goals are to extend this model to include pairing plus particle-hole excitations and study the variational quantum eigensolver (VQE). As stated above, the latter is a hybrid quantum-classical algorithm that is based on the variational principle of quantum mechanics
-The quantum computer is used to prepare an initial state that one guesses and measure the expectation value of the Hamiltonian in that state. The initial state is then slightly varied by a small change in the parameters $\theta$ and the expectation value is measured again. The classical computer computes some norm of the difference between the iterations of the expectation values and stops when this norm is sufficiently small. The algorithm will converge to the ground state energy of the Hamiltonian. The excited energies can be calculated by shifting the Hamiltonian and repeating the algorithm.
-Exploring the QPE and the VQE applied to a simpler Hamiltonian rewritten in terms of various gates, is thus our first step of WP4. Parts of these results have already been presented in \cite{ovrum2007}. The Hamiltonian is rather simple and these results and computations will also link well with the two main topics in WP1. 
-Based on these results we extend our ambitions to study the design of quantum  algorithms for the IMSRG and UCC theories. The algorithms we develop will be able to run on both existing quantum computers  and classical computers. 
+decomposition. Finding the optimal approximation strategy for a given problem and mapping the resulting operator onto quantum gates is another active area of research, and we plan to apply our RG and many-body experience in that area. In the near term, it is especially important to construct circuits with short depth to control coherence and noise.
+Finally, one plugs the quantum circuit for $U$ into an appropriate algorithm like QPE to compute the eigenvalues of a Hamiltonian, as demonstrated for the nuclear pairing model in \cite{ovrum2007}. 
+
+We have recently repeated the QPE calculation for the pairing model in collaboration with MSU Ph.D. student Benjamin Hall, who also works together with MSU Ph.D. student Ryan Larose on related topics. The first near-term goal of WP4 is to extend this model to include pairing plus particle-hole excitations \cite{Hjorth-Jensen:2010qf} and use VQE instead of the QPE algorithm. 
+% As stated above, the latter is a hybrid quantum-classical algorithm that is based on the variational principle of quantum mechanics.
+The quantum computer is used to prepare an initial state guess and measure the expectation value of the Hamiltonian in that state. The initial state is then slightly varied by a small change in the parameters $\theta$ and the expectation value is measured again. The classical computer computes an appropriate norm of the difference between the iterations of the expectation values and stops once this difference is sufficiently small. The algorithm will converge to the ground state energy of the Hamiltonian. The excited energies can be calculated by shifting the Hamiltonian using the previously attained knowledge of the ground-state energy, and repeating the algorithm. Continuing onward from these results, we will pursue the more ambitious task to design efficient quantum  algorithms for the IMSRG and UCC theories that will be able to run on both existing quantum computers and classical supercomputers. 
 
 \textbf{Designing Quantum Algorithms for In-Medium SRG and Unitary Coupled Cluster.} 
-
-One of our major goals is to develop quantum algorithms that perform SRG flows. A quantum computer is ideally suited for this purpose because SRGs are based on continuous unitary transformations. The IMSRG, in particular, can be used to directly compute individual nuclear eigenstates \cite{Hergert:2016jk,Hergert:2016ij,Hergert:2017kx}. This is achieved by solving a system of coupled non-linear ODEs. While quantum algorithms for such applications exist, the depth of the necessary quantum circuit exceeds the capabilities of current and near-term devices.
+One of our major goals is to develop quantum algorithms that perform SRG evolutions. A quantum computer is ideally suited for this purpose because SRGs are based on continuous unitary transformations. The IMSRG, in particular, can be used to directly compute individual nuclear eigenstates \cite{Hergert:2016jk,Hergert:2016ij,Hergert:2017kx}. This is achieved by solving a system of coupled non-linear ODEs. While quantum algorithms for such applications exist, the depth of the necessary quantum circuit exceeds the capabilities of current and near-term devices.
 
 However, the IMSRG wave function that results from applying the aggregate unitary transformation to a chosen uncorrelated reference state may represent a novel type of ansatz that can be optimized using the VQE \cite{Dawson:2008td}. Using the Magnus expansion, the IMSRG wave function can be written as $\ket{\Psi(s)}=e^{\Omega(s)}\ket{\Phi}$, with a typically uncorrelated reference state $\ket{\Phi}$ and an operator $\Omega(s)$ that changes dynamically as we evolve in the flow parameter $s$ \cite{Morris:2015ve}. This ansatz encompasses the UCC method that has been used successfully in conjunction with the VQE to determine electronic (see, e.g., \cite{Wecker:2015bk,McClean:2016qr,Lee:2019dd}) and nuclear ground state wave functions \cite{Dumitrescu:2018az,Lu:2018aq}. UCC is obtained as the special case in which $\Omega(s)=s(T-T^{\dag})$, where $T$ is determined by a ``global'' variational optimization, and $s$ parameterizes a trivial linear trajectory between the reference state $\ket{\Phi}$ and the UCC wave function. In contrast, the dynamically updated $\Omega(s)$ of the IMSRG approach allows more general, locally optimized trajectories in the manifold of evolving operators that should allow greater control over approximation errors (see \cite{Hergert:2017kx} for a detailed discussion).
 
@@ -1275,7 +1274,7 @@ The scientific development of the candidates involves several elements, of which
     \item Michigan State University offers, via the newly established department for Computational Mathematics, Science and Engineering (CMSE) a dual Ph.D. program in both Physics and Computational Science. This has important consequences for the possibility to establish a proper educational path in computational skills and competences, spanning from management of large numerical projects and making sustainable code projects to important algorithms and methods. Computational skills and competences are essential to most jobs in the STEM fields, and with quantum computing and quantum information theory as emerging fields, we guarantee thus a proper professional training of our students and postdoctoral fellows. This training will also involve classical computing and classical many-body algorithms and the development of large numerical projects.  
     \item The CMSE Department at Michigan State University plans to hire several faculty members over the few years in the areas of quantum information and quantum computing.  As a part of this hiring plan there will be a concerted effort to make connections between the new quantum information/computing faculty and the existing strengths in the CMSE Department in machine learning and data analytics.
     \item With our collaboration partnership with IBM and other industry research venues, our Ph.D. students can take advantage of internship and job opportunities. 
-    \item The annual workshops to be held by the network will also allow our students and postdoctoral fellows to get in contact with many of the leading experts in the field. We are also planning for the second and third year a week long Hackathon on quantum computing and quantum information theory.
+    \item The annual workshops to be held by our project group will also allow our students and postdoctoral fellows to get in contact with many of the leading experts in the field. We are also planning for the second and third year a week long Hackathon on quantum computing and quantum information theory.
 \end{itemize}
 
 \paragraph{Mentoring plan}
@@ -1495,7 +1494,7 @@ Current and pending support of the senior personnel follow in alphabetical order
 \bibliography{References.bib}
 
 
-
+\clearpage
 
 
 
@@ -1621,8 +1620,10 @@ analysis and comparison of scientific results.
 \subsection{Educational Material}
 All educational material developed by the project will be placed at the GitHub repository of the project under the Creative Common licence agreement.
 
+\clearpage
+\section{Letter of Support from IBM Q}
 
-
+\includepdf[page=-]{support/IBMQsupport.pdf}
 
 \end{document}
 
