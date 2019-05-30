@@ -103,7 +103,7 @@ Michigan State University (MSU).
 {\bf Scientific Goals, Opportunities, and Challenges:} 
 How do we connect fundamental physics to forefront experiments?  With new science 
 waiting to be discovered at experimental facilities such as FRIB, this question is a 
-profound challenge and opportunity for nuclear theory.  We would like to know how nuclear forces emerge from the interactions of quarks and gluons in quantum chromodynamics, what is the internal partonic structure of nucleons, what are the signatures of physics beyond the Standard Model in atomic nuclei, how do we predict nuclear structure and reactions from the microscopic interactions of nucleons, and what are the properties of strongly-interacting matter under extreme conditions.  There have been many important and profound advances in recent years, with some of the most creative and impactful developments led by investigators on this proposal.  But there are limits to what can be done even with the most powerful supercomputers in this soon-to-be era of exascale computing.  Unfortunately, some of the most interesting scientific questions remain unexplored such as the real-time dynamics of hadronic and nuclear reactions, the structure of highly-correlated nuclear systems, and the properties of dense nuclear and neutron matter. For computational methods that construct quantum wave functions, the problem is the curse of large dimensionality and the impossibility of storing exponentially large vectors as classical bits.  For computational methods that rely on Monte Carlo simulations, the obstacle is the Monte Carlo sign problem, where positive and negative contributions cancel to produce exponentially small signals.
+profound challenge and opportunity for nuclear theory.  We would like to know how nuclear forces emerge from the interactions of quarks and gluons in quantum chromodynamics, what is the internal partonic structure of nucleons, what are the signatures of physics beyond the Standard Model in atomic nuclei, how do we predict nuclear structure and reactions from the microscopic interactions of nucleons, and what are the properties of strongly-interacting matter under extreme conditions.  There have been many important and profound advances in recent years, with some of the most creative and impactful developments led by investigators on this proposal.  But there are limits to what can be done even with the most powerful supercomputers in this soon-to-be era of exascale computing.  Unfortunately, some of the most interesting scientific questions remain unexplored such as the real-time dynamics of hadronic and nuclear reactions and the properties of dense nuclear and neutron matter. For computational methods that construct quantum wave functions, the problem is the curse of large dimensionality and the impossibility of storing exponentially large vectors as classical bits.  For computational methods that rely on Monte Carlo simulations, the obstacle is the Monte Carlo sign problem, where positive and negative contributions cancel to produce exponentially small signals.
 
 Quantum computing has emerged as a new computational paradigm that offers the hope of evading both of these fundamental problems.  By allowing for arbitrary quantum superpositions of tensor products of qubits, one can store exponentially more information than classical bits.  Furthermore, qubits naturally evolve with unitary real-time dynamics. Clearly there are tremendous opportunities in this new paradigm for solving the most profound problems in nuclear physics.  But with these great opportunities, there are enormous challenges to realizing their promise.  All of the currently available digital quantum computing devices suffer from short decoherence times and significant readout errors.  Meanwhile all of the currently available analog quantum simulators have inherent quantum characteristics that are not directly applicable to address systems of relevance to nuclear physics.
 
@@ -113,14 +113,12 @@ In order to meet these formidable challenges, we have proposed a series of new p
 
 \section{Introduction and Scientific Motivation}
 
-\subsection{Overarching Intellectual Questions}
+\subsection{Grand Challenges in Nuclear Physics and Quantum Computing}
 
 How do we understand nuclei, strongly-interacting matter, and the limits of
 stable matter in terms of the fundamental laws of motion and
 forces?  How do we explain what we observe in experiments from first principles,
-starting from quantum chromodynamics and the fundamental interactions of the quarks and gluons?
-
-One of the key intellectual challenges in nuclear physics is to understand
+starting from quantum chromodynamics and the fundamental interactions of the quarks and gluons?  One of the key intellectual challenges in nuclear physics is to understand
 why nucleonic matter is stable, how it comes into being, how it
 evolves and organizes itself, and what phenomena emerge. The task
 facing nuclear theorists is to develop the tools to help answer these
@@ -170,12 +168,12 @@ three-nucleon forces, targeting excited states and observables besides
 energy, and moving into the more
 challenging terrain of open-shell and unstable
 nuclei. % add references
-The recent work of Jansen {\em et al} \cite{jansenprl2016} on the structure of $^{78}$Ni and nearby nuclei represents some of the progress which has been made recently in pushing the limits of first principle methods. Remarkably,
+The recent work of Morris {\em et al.} \cite{Morris:2017vxi} on the structure of $^{78}$Ni and nearby nuclei represents some of the progress which has been made recently in pushing the limits of first principle methods. Remarkably,
 progress on the many-body front has been so swift in recent years that
 inadequacies of the current-generation chiral two- and three-nucleon
 interactions, rather than the many-body calculations themselves, are
 the primary obstacles to systematic calculations across the
-medium-mass region~\cite{Ekstrom2015}.
+medium-mass region~\cite{Ekstrom:2015rta}.
 
 \begin{figure}[t!]
 \centering
@@ -224,36 +222,39 @@ spacings and volumes that can match EFT calculations.  This will allow
 us to link properly LQCD, via EFT based Hamiltonians, with few- and
 many-body theories used to study nuclear systems, providing thereby a
 theoretical platform for understanding nuclear systems in terms of the
-underlying theory for the strong force, as shown schematically in the
-figure here.
+underlying theory for the strong force, as shown schematically in Fig.~\ref{forces}.
 
 \begin{figure}[hbtp]
 \begin{center}
   \includegraphics[width=.6\linewidth]{Figures/manybody.png}
 \end{center}
-\caption{A first principle approach to nuclei and nuclear matter, linking QCD with few- and many-body methods. (Image by APS/Alan Stonebraker.)}
+\caption{A first principles approach to nuclei and nuclear matter, linking QCD with few- and many-body methods. (Image by APS/Alan Stonebraker.)}
+\label{forces}
 \end{figure}
 
-The problem of many-body systems like those we encounter in nuclear physics, from nuclei to the properties of dense nuclear matter,  is to simulate the stationary and dynamical 
-properties of nucleons interacting via the strong or effective representations thereof. The solution of this problem has wide implications for many areas in Physics since these many-body methods can be applied to areas such as
-quantum chemistry, condensed matter physics, and materials science,
-and is of industrial relevance in the design and engineering of for example new materials. 
+%The problem of many-body systems like those we encounter in nuclear physics, from nuclei %to the properties of dense nuclear matter,  is to simulate the stationary and dynamical 
+%properties of nucleons interacting via the strong or effective representations thereof. %The solution of this problem has wide implications for many areas in physics since these %many-body methods can be applied to areas such as
+%quantum chemistry, condensed matter physics, and materials science,
+%and is of industrial relevance in the design and engineering of for example new %materials. 
+
+In spite of the rapid developments and profound progress in nuclear theory over the past few years, there are some problems in nuclear physics which remain out of reach of even the most advanced computational methods running on the most powerful supercomputers.  Some examples include first principles calculations of the real-time dynamics of nonequilibrium processes such as hadronic and nuclear reactions and electroweak response functions.  Some other extremely challenging problems include the calculation of atomic nuclei directly from lattice QCD and the properties of dense nuclear and neutron matter.  
+
+In classical computing there are two main approaches to computing interacting quantum systems. Some computational methods explicitly construct quantum wave functions, either exactly or by approximate methods.  For very large systems the problem with this approach is the practical limit of computer memory when storing vectors with dimensions that grow exponentially with the number of degrees of freedom.  On the other hand, some other computational methods rely on Monte Carlo simulations, which is the use of random numbers to sample over quantum amplitudes.  In this case the main challenge is the Monte Carlo sign problem, where positive and negative contributions cancel to produce signals that become exponentially small with increasing system size.
+
 Recently, quantum computers
-have emerged as promising tools for tackling this challenge, offering
-the potential to access difficult electronic structure with reduced
-computational complexity. However as the age of ``quantum supremacy''
-dawns, so has the realization that many ``efficient'' quantum
-algorithms still require more resources than will be available in the
-near-term.
-Originally proposed by Feynman~\cite{Feynman1982}, the efficient
+have emerged as a promising new paradigm that can evade both of these problems, thereby offering
+the potential to address the most challenging problems of large-scale quantum systems with reduced
+computational complexity. But as we await the dawning of the age of ``quantum supremacy'', we must learn to face the reality of the current era of noisy devices with short decoherence times and non-negligible readout errors.
+
+Originally proposed by Feynman~\cite{Feynman:1981tf}, the efficient
 simulation of quantum systems by other, more controllable quantum
 systems formed the basis for modern constructions of quantum
 computation.  This early insight has since been refined to encompass
 more universal and versatile constructions of
 simulation~\cite{Lloyd1996,Abrams1997}. By combining quantum phase
-estimation~\cite{Kitaev1995} with these techniques, Aspuru-Guzik et
+estimation~\cite{Kitaev:1995qy} with these techniques, Aspuru-Guzik et
 al. showed the first efficient quantum algorithm for solving quantum
-chemistry problems~\cite{Aspuru-Guzik2005}. This initial algorithm was
+chemistry problems~\cite{Aspuru-Guzik1704}. This initial algorithm was
 based on adiabatic state preparation combined with Trotter-Suzuki
 decomposition of the unitary time-evolution operator
 \cite{Trotter1959,Suzuki1993} in second quantization.
@@ -294,92 +295,109 @@ quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.
 
 \subsection{Project Goals}
 
-The various few- and many-body methods mentioned above allow for
-controlled approximations and provide a computational scheme which
-accounts for successive corrections in a systematic way.
-However, all these methods face in some form or the other the problem
-of an exponential growth in dimensionality. For a system of $P$
-identical fermions which can be placed into $N$ levels, the total number of
-basis states are given by $N!/(P!(N-P)!)$.
+%The various few- and many-body methods mentioned %above allow for
+%controlled approximations and provide a computational %scheme which
+%accounts for successive corrections in a systematic %way.
+%However, all these methods face in some form or the %other the problem
+%of an exponential growth in dimensionality. For a %system of $P$
+%identical fermions which can be placed into $N$ %levels, the total number of
+%basis states are given by $N!/(P!(N-P)!)$.
 %\[ \left(\begin{array}{c}N\\P\end{array}\right).  \]
-The dimensional curse means that most quantum mechanical calculations
-on classical computers have exponential complexity and therefore are
-very hard to solve for larger systems.  If we wish to study for
-example nuclei close to the limit of stability, the increased degrees
-of freedom (both in terms of possible excitations as well as the
-inclusion of at least two- and three-body Hamiltonians) pose severe
-challenges to essentially all existing classical many-body methods.
-On the other hand, a so-called quantum computer, a particularly
-dedicated computer, can improve greatly on the size of systems that
-can be simulated, as foreseen by Feynman
-\cite{feynman1982,feynman1986}. A quantum computer does not need an
-exponential amount of memory to represent a quantum state.  The basic
-unit of information for a quantum computer is the so-called qubit or
-quantum bit. Any suitable two-level quantum system can be a qubit, but
-the standard model of quantum computation is a model where two-level
-quantum systems are located at different points in space, and are
-manipulated by a small universal set of operations.  These operations
-are called gates in the same fashion as operations on bits in
-classical computers are called gates.
+%The dimensional curse means that most quantum %mechanical calculations
+%on classical computers have exponential complexity %and therefore are
+%very hard to solve for larger systems.  If we wish to %study for
+%example nuclei close to the limit of stability, the %increased degrees
+%of freedom (both in terms of possible excitations as %well as the
+%inclusion of at least two- and three-body %Hamiltonians) pose severe
+%challenges to essentially all existing classical %many-body methods.
+%On the other hand, a so-called quantum computer, a %particularly
+%dedicated computer, can improve greatly on the size of systems that
+%can be simulated, as foreseen by Feynman
+%\cite{feynman1982,feynman1986}. A quantum computer %does not need an
+%exponential amount of memory to represent a quantum %state.  The basic
+%unit of information for a quantum computer is the %so-called qubit. Any suitable two-level quantum %system can be a qubit, but
+%the standard model of quantum computation is a model %where two-level
+%quantum systems are located at different points in %space, and are
+%manipulated by a small universal set of operations.  %These operations
+%are called gates in the same fashion as operations on %bits in
+%classical computers are called gates.
+%The aim of this project/proposal is thus to explore and develop algorithms based on quantum computing in order to study nuclear systems. 
+%\begin{comment}
+%The first aim is to implement these algorithms on %classical
+%computers utilizing state-of-the art technologies with %both CPUs and
+%GPUs. We will in particular focus on quantum algorithms %that can be
+%applied to
+%\begin{itemize}
+%\item Lattice QCD simulations of quantum field theories, with the aim to perform calculations at the physical point with relevant lattice spacings. 
+%\item Develop theory that allows for hybrid and multiscale %simulations of LQCD and EFT on the lattice, linking %thereby quark and gluonic degrees of freedom with nucleons %and pions as effective degrees of freedom.
+%\item The link between LQCD and lattice EFT will also %explore quantum machine learning algorithms, using LQCD %results and experimental data on few-nucleon systems to %constrain Hamiltonians for few- and many-body methods. 
+%\item With the pertinent effective Hamiltonians, including %two- and three-body forces from EFT, we aim at developing %quantum algorithms for studying nuclear few- and many-body %problems. The feasibility of these algorithms will be %compared to existing many-body methods like Coupled %Cluster theory and in-medium Similarity Renormalization %Group approaches on classical high-performance computing %facilities 
+%\end{itemize}
+%We propose thus to develop, analyze and implement quantum %algorithms for simulating the dynamics and structure of nuclear %many-body systems, spanning from interacting quarks to the %equation of state for infinite matter as seen in dense objects %like neutron stars. These algorithms will run on available and %near-term quantum hardware as standalone applications and as a %many-body quantum algorithm to be run on existing %high-performance computing facilities. The algorithms to be %studied can easily be transferred to other interacting %quantum-mechanical systems such as the homogeneous electron gas, %systems in quantum chemistry, condensed matter physics and %materials science.  
+%Enabling simulations of large-scale many-body systems is indeed a %long-standing problem in scientific computing. Recent progress in %quantum computing and algorithms promise to enable the exciting %possibility of of performing simulations that are beyond the %reach of all existing and future classical supercomputers. %Despite the progress, there is still a gap between the
+%resources required by state-of-the-art quantum algorithms and the %resources offered by available and near-future
+%quantum hardware. It may take decades of quantum hardware %development and engineering before
+%the current quantum algorithms will outperform classical Exascale %class simulations. Therefore, to impact
+%scientific computing on a more relevant time scale, improving the %scalability and efficiency of
+%quantum simulation algorithms is of the highest importance. This %proposal aims 1) bridging
+%the gap between quantum algorithms  and hardware by developing %novel algorithmic approaches to quantum
+%simulations and 2) developing a software tool chain that enables %utilization of the proposed quantum algorithms as a
+%part of  existing high-performance computing simulation codes. %Our quantum algorithms will be  designed to operate on a %combination of quantum digital and analog
+%hardware. This approach reduces hardware requirements, making %quantum simulations of interacting
+%nucleons possible with the existing and near-term quantum devices %expected to be a part of
+%the future DOE quantum computing test bed. The proposed solution %is, thus, heterogeneous across
+%quantum hardware and classical and quantum algorithms.
+%To accomplish our objectives, we have assembled a %multidisciplinary team of 
+%applied mathematicians, theoretical nuclear physicists  and %quantum computing
+%researchers.
 
-The aim of this project/proposal is thus to explore and develop
-algorithms based on quantum computing in order to study nuclear
-systems. The first aim is to implement these algorithms on classical
-computers utilizing state-of-the art technologies with both CPUs and
-GPUs. We will in particular focus on quantum algorithms that can be
-applied to
+We have proposed a series of new projects that bridge the gap between the current state of quantum computing on noisy devices and the grand challenge nuclear physics problems we endeavor to address in the future.  Several of the projects we propose use variational methods where we develop novel algorithms for optimizing quantum wave functions.  In some other projects we explore new applications of error stabilization techniques, machine learning, and quantum compiling to make efficient short-depth quantum circuits. In the other remaining proposed projects we study real-time evolution, the calculation of observables using new algorithms, and creative adaptations of quantum simulators to nuclear physics. 
+
+While our scientific focus is on applications to nuclear physics, all of the projects we propose involve new algorithms and methods of general applicability, with an equally important impact on nuclear physics and on quantum computing and quantum information science.  The following is a list of our main project objectives.
 
 \begin{itemize}
-\item Lattice QCD simulations of quantum field theories, with the aim to perform calculations at the physical point with relevant lattice spacings. 
-\item Develop theory that allows for hybrid and multiscale simulations of LQCD and EFT on the lattice, linking thereby quark and gluonic degrees of freedom with nucleons and pions as effective degrees of freedom.
-\item The link between LQCD and lattice EFT will also explore quantum machine learning algorithms, using LQCD results and experimental data on few-nucleon systems to constrain Hamiltonians for few- and many-body methods. 
-\item With the pertinent effective Hamiltonians, including two- and three-body forces from EFT, we aim at developing quantum algorithms for studying nuclear few- and many-body problems. The feasibility of these algorithms will be compared to existing many-body methods like Coupled Cluster theory and in-medium Similarity Renormalization Group approaches on classical high-performance computing facilities 
+
+\item Make the grand scientific challenges of nuclear physics known and visible to the quantum computing and quantum information communities.
+
+\item  Develop and optimize quantum computing algorithms to address unsolved problems in nuclear physics, especially in the areas of lattice QCD and nuclear many-body physics.
+
+\item  Explore new synergies and hybrid approaches connecting quantum and classical computing paradigms while benchmarking new methods against existing techniques.
+
+\item Develop new fundamental tools designed for nuclear physics but of general character and importance that can impact the fields of quantum computing and information science.
+
+\item  Build an interdisciplinary team
+that brings together innovators from different communities, and which recruits and develops new talent in quantum computing and nuclear physics.
+
+\item  Play a formative role in the development of quantum computing in nuclear physics by contributing to the identification of key missing elements in the architecture of future quantum computing platforms and strategies.
+
+\item  Share discoveries, results, and resources with the nuclear physics and quantum computing communities
+through comprehensive outreach activities including summer schools, publications, research talks, public lectures, and open code access.
 \end{itemize}
-
-We propose thus to develop, analyze and implement quantum algorithms for simulating the dynamics and structure of nuclear many-body systems, spanning from interacting quarks to the equation of state for infinite matter as seen in dense objects like neutron stars. These algorithms will run on available and near-term quantum hardware as standalone applications and as a many-body quantum algoritm to be run on existing high-performance computing facilities. The algorithms to be studied can easily be transferred to other interacting quantum-mechanical systems such as the homogeneous electron gas, systems in quantum chemistry, condensed matter physics and materials science.  
-Enabling simulations of large-scale many-body systems is indeed a long-standing problem in scientific computing. Recent progress in quantum computing and algorithms promise to enable the exciting possibility of of performing simulations that are beyond the reach of all existing and future classical supercomputers. Despite the progress, there is still a gap between the
-resources required by state-of-the-art quantum algorithms and the resources offered by available and near-future
-quantum hardware. It may take decades of quantum hardware development and engineering before
-the current quantum algorithms will outperform classical Exascale class simulations. Therefore, to impact
-scientific computing on a more relevant time scale, improving the scalability and efficiency of
-quantum simulation algorithms is of the highest importance. This proposal aims 1) bridging
-the gap between quantum algorithms  and hardware by developing novel algorithmic approaches to quantum
-simulations and 2) developing a software tool chain that enables utilization of the proposed quantum algorithms as a
-part of  existing high-performance computing simulation codes. Our quantum algorithms will be  designed to operate on a combination of quantum digital and analog
-hardware. This approach reduces hardware requirements, making quantum simulations of interacting
-nucleons possible with the existing and near-term quantum devices expected to be a part of
-the future DOE quantum computing test bed. The proposed solution is, thus, heterogeneous across
-quantum hardware and classical and quantum algorithms.
-To accomplish our objectives, we have assembled a multidisciplinary team of 
-applied mathematicians, theoretical nuclear physicists  and quantum computing
-researchers.
-
-
-\paragraph{Strategic Relevance}
-
-To understand why matter is stable, and thereby shed light on the
-limits of nuclear stability, is one of the overarching aims and
-intellectual challenges of basic research in nuclear physics. To
-relate the stability of matter to the underlying fundamental forces
-and particles of nature as manifested in nuclear matter, is central to
-present and planned rare isotope facilities such as the DOE facility
-FRIB under construction at Michigan State University.
-
-To understand the stability of nuclear matter in order to interpret
-the wealth of data that will come from facilities like FRIB, requires
-theoretical methods that span many energy and length scales\footnote{A
-  description of properties of nuclei and neutrons stars in terms of
-  hadronic degrees of freedom spans over 19 orders of magnitude in
-  length scale, from approximately the $10^{-15}$ m of the proton and
-  neutron radii to the few kilometers which determine the radius of a
-  neutron star.}. To relate the theoretical interpretations with the
-underlying fundamental forces poses a severe challenge to first
-principle descriptions of nuclear systems.  The theoretical modeling
-of nuclear matter requires thus a multiscale approach, where different
-degrees of freedom are present. Exploring algorithms based on quantum
-computing and present and future high-performance computing facilities
-is an essential part of our efforts to understand properly nuclear
-systems.
+%\paragraph{Strategic Relevance}
+%
+%To understand why matter is stable, and thereby shed light on the
+%limits of nuclear stability, is one of the overarching aims and
+%intellectual challenges of basic research in nuclear physics. To
+%relate the stability of matter to the underlying fundamental forces
+%and particles of nature as manifested in nuclear matter, is central to
+%present and planned rare isotope facilities such as the DOE facility
+%FRIB under construction at Michigan State University.
+%
+%To understand the stability of nuclear matter in order to interpret
+%the wealth of data that will come from facilities like FRIB, requires
+%theoretical methods that span many energy and length scales\footnote{A
+%  description of properties of nuclei and neutrons stars in terms of
+%  hadronic degrees of freedom spans over 19 orders of magnitude in
+%  length scale, from approximately the $10^{-15}$ m of the proton and
+%  neutron radii to the few kilometers which determine the radius of a
+%  neutron star.}. To relate the theoretical interpretations with the
+%underlying fundamental forces poses a severe challenge to first
+%principle descriptions of nuclear systems.  The theoretical modeling
+%of nuclear matter requires thus a multiscale approach, where different
+%degrees of freedom are present. Exploring algorithms based on quantum
+%computing and present and future high-performance computing facilities
+%is an essential part of our efforts to understand properly nuclear
+%systems.
 
 
 \section{Proposed Research and Methods}
@@ -517,7 +535,7 @@ The research activity of the Lee group focuses on developing new algorithms for 
 
 
 
-\subsubsection{Variational Adiabatic Evolution}
+\subsubsection{Variational Adiabatic Evolution}\label{sec_VAE}
 
 In order to perform calculations of the properties of nuclear systems
 via quantum computing, we need to be able to prepare quantum states in
@@ -652,7 +670,7 @@ eigenvectors and eigenvalues under noise perturbations.  We will
 investigate both the underlying theory and its practical
 implementation.
 
-\subsubsection{Spectral Reconstruction and Transition Matrix Elements}
+\subsubsection{Spectral Reconstruction and Transition Matrix Elements}\label{sec_SRTME}
      
 Quantum phase estimation is one approach to computing the spectrum of
 a Hamiltonian through real-time evolution and the inverse quantum
@@ -930,7 +948,7 @@ denoted with $L_{\pm}$, $L_{\pm} |l\rangle = |l \pm 1 \rangle$
 while the quantized electric flux is parameterized by the integers $l_n$.
 
 The structure of the Hamiltonian in eq.~\eqref{eq:schwinger} adapts well to the
-variational adiabatic method described in sec.~3.2.1. %~\ref{sssec:vae}. 
+variational adiabatic method described in Sec.~\ref{sec_VAE}. %~\ref{sssec:vae}. 
 In the strong coupling limit
 $\beta \rightarrow 0$ ( with $m \rightarrow \infty$ and $\beta m = \textrm{const.}$)
 it is possible to determine the ground state exactly.
@@ -938,7 +956,7 @@ The form of the Schwinger Hamiltonian for $\beta = 0$ is almost identical to the
 initial Hamiltonian described in sec.~3.2.1. %\ref{sssec:vae}.
 One could then tune adiabatically the coupling $\beta$ to several values
 $\beta_i$ and for each of them determine the evolved state.
-Following the discussion of sec.~3.2.1.%\ref{sssec:vae} 
+Following the discussion of Sec.~\ref{sec_VAE}, 
 one can then apply the variational
 principle to determine the ground state with the target $\beta$.
 We plan to investigate the possibility to reduce
@@ -971,9 +989,9 @@ $D^{>}$ and $D^{<}$ or equivalently as the imaginary part of
 the Fourier transformed retarded
 correlation function \cite{Bellac:2011kqa}
 \begin{equation}
-%\sgh &=& 
+\sigma_H(p_0,\vec{p}) =
 \frac{1}{2 \pi} (D^{>}_H(p_0, \vec{p})-D^{<}_H(p_0, \vec{p}))
-=\frac{1}{\pi} Im D^R_H(p_0, \vec{p}) \label{eq.defspect_1} 
+=\frac{1}{\pi} {\rm Im} D^R_H(p_0, \vec{p}) \label{eq.defspect_1} 
 \end{equation}
 where
 \begin{eqnarray}
@@ -1002,15 +1020,13 @@ D^{>}_H(x_0,\vec{x})=D^{<}_H(x_0+i/T,\vec{x}).
 \label{kms}
 \end{equation}
 Inserting a complete set of
-states and using Eq. (\ref{kms}), one gets the expansion
-\begin{eqnarray}
-&
-%\sgh = 
-{(2 \pi)^2 \over Z} \sum_{m,n} (e^{-E_n / T} \pm e^{-E_m / T})\times 
-%\nonumber\\ &
-\langle n | J_H(0) | m \rangle|^2 \delta^4(p_\mu - k^n_\mu + k^m_\mu)
+states and using Eq.~(\ref{kms}), one gets the expansion
+\begin{equation}
+\sigma_H(p_0,\vec{p}) 
+= \frac{(2 \pi)^2}{Z} \sum_{m,n} (e^{-E_n / T} \pm e^{-E_m / T})
+|\langle n | J_H(0) | m \rangle|^2 \delta^4(p_\mu - k^n_\mu + k^m_\mu)
 \label{eq.specdef}
-\end{eqnarray}
+\end{equation}
 where $Z$ is the partition function, and
 $k^{n(m)}$ refers to the four-momenta of the state $| n (m) \rangle $.
 
@@ -1021,7 +1037,7 @@ projected to a given spatial momentum:
 \begin{equation}
 G_H(\tau, \vec{p}) = \int d^3x e^{i \vec{p}.\vec{x}}
 \langle T_{\tau} J_H(\tau, \vec{x}) J_H(0,
-\vec{0}) \rangle
+\vec{0}) \rangle.
 \end{equation}
 This quantity is an analytical continuation
 of $D^{>}_H(x_0,\vec{p})$
@@ -1032,7 +1048,7 @@ Using this equation and the KMS condition
 one can
 show that $G_H(\tau,\vec{p})$ is related to the
 spectral
-function, Eq. (\ref{eq.defspect_1}), by an integral equation:
+function, Eq.~(\ref{eq.defspect_1}), by an integral equation:
 \begin{eqnarray}
 G_H(\tau, \vec{p}) &=& \int_0^{\infty} d \omega
 \sigma_H(\omega,\vec{p}) K(\omega, \tau) \label{eq.spect} \label{eq.inv_p}\\
@@ -1051,8 +1067,8 @@ subject to statistical uncertainties, is insufficient
 for reliable reconstruction of the spectral function
 under the integral. Regularization is necessary and various inverse problems
 methods such as the Maximum Entropy Method~\cite{Jarrell:1996rrw},
-Bayesian Reconstruction Method~\cite{Burnier:2013nla}
-Backus-Gilbert method and
+Bayesian Reconstruction Method~\cite{Burnier:2013nla},
+Backus-Gilbert method~\cite{Bulava:2019kbi} and
 stochastic optimization methods~\cite{Ding:2017std}
 are often employed.
 The nature of this problem is tightly related to the fact that classical
@@ -1073,23 +1089,16 @@ Low-dimensional quantum field theories, such as the Schwinger model,
 can serve as benchmark systems for developing the Hamiltonian LQCD.
 Combining the formulation in Eq.~(\ref{eq:schwinger}) with the ideas
 of spectral decomposition 
-%in Sec~\abtodo{insert ref to 3.2.2 ``Spectral reconstruction and transition matrix elements''} 
+in Secю~\ref{sec_SRTME}
 we propose
 to develop methods for determining the low-lying part of the spectrum
 in Hamiltonian LQCD and using it to determine the spectral functions
 at finite temperature. The validity of the methods will be tested with the
-conventional Monte Carlo as well as with the available exact
+conventional Monte Carlo as well as with the available analytical
 results~\cite{Fayyazuddin:1993ua}.
 If successful, such methods can be generalized for
 multiple situations which in Euclidean QFT lead to inverse problem arising
 from analytic continuation to real time.
-
-%\abtodo{****END of AB block}
-
-%\abtodo{maybe add more details on how the method 3.2.2 can be used for
-%spectral function reconstruction; also, can add something on PDFs here --
-%that could tie nicely QFT, spectral functions and the proposed QC methods ?
-%}
 
 
 
@@ -1251,10 +1260,10 @@ Magnus Expansion of Time Evolution Operator & && & &   &  &   &   &$\bullet$  &$
 
 The development of competences and skills in computational science, data science, quantum computing and quantum information theories, machine learning etc is an essential part of the development of a workforce for the future in the STEM (Science, Technology, Engineering and Mathematics) fields. Essentially all jobs in the STEM fields require nowadays a broad spectrum of computational capabilities. 
 
-In work package 5 we present our plans for a professional development of the Ph.D. candidates and the postdoctoral fellow. This is split in two parts, the development of scientific and profession competences and a general mentoring environment which is offered at MSU. 
+In work package 5 we present our plans for a professional development of the Ph.D. candidates and the postdoctoral fellow. This is split in two parts, the development of scientific and professional competences and a general mentoring environment which is offered at MSU. 
 
 \paragraph{Scientific development}
-The scientific development of the candidates involves several elements, of which some are exit already while other ones need will be developed. 
+The scientific development of the candidates involves several elements, of which some exist already while other ones will be developed by this project. 
 \begin{itemize}
     \item Ph.D. student Ryan Larose (also together with other Ph.D. students at MSU) has developed a well-attended and widely popular seminar series on Quantum Information and Computations (QuIC) at MSU. The QuIC seminar series has had  several lectures and introductions that help new students and interested researchers to get started with quantum information theory and computing. This seminar series will be an important element in the dissemination of the results reached by this project and will also serve as an arena where students learn to present and popularize their results.  This project aims at helping in further developing this seminar series into a sustainable series in quantum information theory and computing at MSU. 
     \item Patrick Coles has during the last few years chaired the Los Alamos National Laboratory's (LANL) Quantum Computing Summer School. This is an immersive 10-week curriculum that includes tutorials from world-leading experts in quantum computation as well as one-on-one mentoring from LANL staff scientists who are conducting cutting-edge quantum computing research. For our Ph.D. candidates this summer school offers a unique opportunity to meet world leading experts in Quantum Computing. 
@@ -1272,14 +1281,15 @@ The mentoring of the graduate students and postdoctoral fellow
 participanting in this project at the 
 FRIB/NSCL facility will be fully incorporated in the existing
 mentoring program of FRIB/NSCL. At any time there are about 15
-experimental and theoretical postdocs and approximately 100 graduate
+experimental and theoretical post-doctoral fellows and approximately 100 graduate
 students at the FRIB/NSCL. It is an ideal research environment which
 will enable the graduate students and postdoc to work and interact
-with students, postdocs and more senior researches with diverse
-backgrounds on a daily basis. A few years ago FRIB/NSCL strengthened
-and improved the mentoring of graduate students and postdocs at the
+with students, post-doctoral fellows and more senior researches with diverse
+backgrounds on a daily basis. 
+A few years ago FRIB/NSCL strengthened
+and improved the mentoring of graduate students and post-doctoral fellows at the
 FRIB/NSCL with the appointment of an Associate Director for
-Education. A formal half-year review of all postdocs was initiated. It
+Education. A formal half-year review of all post-doctoral fellows was initiated. It
 begins with an entry interview where the postdoc and supervisor
 discuss expectations and future career plans of the postdoc guided by
 a form containing standard topics and questions related to the
@@ -1287,30 +1297,28 @@ research activities. This initial discussion is then followed but by
 similar meetings every 6 months. These reviews occur in April and
 October of each year and are required and monitored by the Associate
 Director for Education.  The Associate Director for Education meets
-with all FRIB/NSCL postdocs on a monthly basis to keep them informed
+with all FRIB/NSCL post-doctoral fellows on a monthly basis to keep them informed
 about FRIB/NSCL related news and activities. During these meetings the
 representative of the various committees also report back to the
-group. Postdocs also maintain their own website, where they share
-experiences, hints and collect and list job openings. Postdocs are
+group. post-doctoral fellows also maintain their own website, where they share
+experiences, hints and collect and list job openings. post-doctoral fellows are
 also encouraged to participate in activities and programs offered by
 the University and the professional societies. For example, recent
-postdocs have been participating in an MSU sponsored Work/Life balance
+post-doctoral fellows have been participating in an MSU sponsored Work/Life balance
 workshop and the APS professional development workshops. The FRIB/NSCL
 especially focuses on career planning. Every semester two seminar
 speakers are especially chosen to present a broad view of career
 opportunities outside the traditional academic track. Yearly alumni
-events offer additional interaction of current students and postdocs
-with successful NSCL alumni in a variety of careers.  The FRIB/NSCL
+events offer additional interaction of current students and post-doctoral fellows
+with successful FRIB/NSCL alumni in a variety of careers.  The FRIB/NSCL
 alumni contact list currently contains the names of 250 alumni who
-offered to be contacted by students and postdocs for career advice.  The list can be
+offered to be contacted by students and post-doctoral fellows for career advice.  The list can be
 filtered by profession and geographic distribution.  Finally, the
-postdocs are an integral part of all laboratory social activities at
-the NSCL which include the Tuesdays coffee and bagel, Thursdays ice
+post-doctoral fellows are an integral part of all laboratory social activities at
+the FRIB/NSCL which include the Tuesdays coffee and bagel, Thursdays ice
 cream social, as well as summer BBQs and welcome receptions. These
 activities further foster the interaction between all laboratory
 employees.
-
-
 
 The timeline for WP5 is summarized in the table here:
 \begin{footnotesize}
@@ -1333,7 +1341,7 @@ Workshop and Hackathon & & & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bu
 
 
 \section{Timetable of Activities}
-We propose a three-year project to develop quantum simulation algorithms for scientific computing applications in nuclear physics. The project consists of the five work packages discussed above and this section summarize the timetable outlined in the above tables. Our tasks include the development of classical algorithms, quantum algorithms, and software.
+We propose a three-year project to develop quantum simulation algorithms for scientific computing applications in nuclear physics. The project consists of the five work packages discussed above and this section summarizes the timetable outlined in the above tables. Our tasks include the development of classical algorithms, quantum algorithms, and software.
 
 \begin{itemize}
     \item Year 1: Government fiscal year 2020
@@ -1377,7 +1385,7 @@ specific tasks, and review application targets.
 We will manage project research activities through a combination of weekly meetings including
 video teleconferences, online collaborative software such as GitHub, and the team’s slack channel.
 Every year MSU will host team workshops devoted to specific topics, including kickoff,
-algorithm development, and software development. The Lead Principal Investigators from each will provide the project leader with monthly status updates on financial and programmatic
+algorithm development, and software development. The Lead Principal Investigators from each will work package provide the project leader with monthly status updates on financial and programmatic
 topics. The task leaders will provide the project leader and the other investigators
 with monthly reports on technical progress and challenges. The project leader will provide the
 DOE program manager with quarterly status reports via email as well as the written annual report.
@@ -1420,11 +1428,11 @@ contribute her expertise in the lattice QCD domain to work package  3 as well as
 \item Develop new fundamental tools designed for nuclear physics but of general character and importance that can impact the fields of quantum computing and information science.
 
 \item  Build an interdisciplinary team
-that brings together innovators from starkly different communities, which recruits and develops new talent in quantum computing and nuclear physics.
+that brings together innovators from different communities, and which recruits and develops new talent in quantum computing and nuclear physics.
 
 \item  Play a formative role in the development of quantum computing in nuclear physics by contributing to the identification of key missing elements in the architecture of future quantum computing platforms and strategies.
 
-\item  Share our discoveries, results, and resources with the nuclear physics and quantum computing communities
+\item  Share discoveries, results, and resources with the nuclear physics and quantum computing communities
 through comprehensive outreach activities including summer schools, publications, research talks, public lectures, and open code access.
 \end{itemize}
 
@@ -1432,42 +1440,17 @@ through comprehensive outreach activities including summer schools, publications
 
 \subsection{Relevance and Benefit to Society}
 
-The academic environment at MSU provides numerous opportunities for
-the research team and its PIs to attract bright young people to high-level research in
-nuclear physics. For example, the theory group at the FRIB/NSCL is very
-active in mentoring undergraduate students in the NSF sponsored
-Research Experience for Undergraduates (REU) program in the summer
-months.
-with the PIs successfully supervising two REU students over
-the past three years. Many of the projects in this proposal can be
-tested in prototype toy-model problems that manage to simultaneously
-i) illustrate cutting-edge concepts to the student at a technical
-level appropriate for an undergraduate physics major, and ii) benefit
-the overall progress of the PIs research program.
-
-One of the primary \emph{broader impacts} of this proposal
+One of the benefits of this proposal to the scientific community 
 is the development of an
-open source library that can be used by other theorists and serve as a
-educational resource for graduate students and postdoctoral fellows learning about
-advanced many-body methods and quantum information theories and quantum computing.  As an example, several of us (Bogner, Hergert, Hjorth-Jensen and Lee) have in our recent Lecture
-Notes in Physics book~\cite{lnp}, together with earlier graduate
-students and other colleagues, written three long chapters on the
-application of the several many-methods to nuclear physics studies. These
-chapters contain links to our codes, which are fully open source and
-contain benchmark calculations as well, making thereby our science
-reproducible.  As
-we implement the infinite matter projects described in the current
-proposal (e.g., inclusion of NNN forces and approximate triples
-excitations, calculation of spin-isospin response functions, etc.),
-the codes in the repository will be updated accordingly.
+open source library that can be used by researchers and serve as an
+educational resource for graduate students and postdoctoral fellows learning about advanced nuclear theory and quantum computing.  As an example, several members of the proposal team (Bogner, Hergert, Hjorth-Jensen and Lee) have, together with graduate
+students and colleagues, written three chapters on
+applications of several different many-body methods to nuclear physics studies in a recent Lecture
+Notes in Physics book~\cite{lnp}. These chapters contain links to fully open source computer codes and benchmark calculations, thereby making the underlying science
+transparent and reproducible.  This will be the model for the dissemination of work products associated with this proposal.
 
-The PIs are requesting support for three graduate students plus one
-postdoc to work on the projects outlined above. The methods at the
-center of this proposal are at the forefront of basic research in
-many-body physics and quantum information theories. The many
-collaborations of the PIs with academic institutions world wide
-provides an excellent platform for developing the communication skills
-of the supported students. Global collaboration, and collaboration
+The PIs have many collaborations with academic institutions worldwide. This 
+provides possibilities for scientific exchanges, communications, and future opportunities for the students and postdoctoral fellow. Global collaboration, and collaboration
 within the local group, requires skills in project management in order
 to adequately communicate the progress of the project and to meet
 deadlines. Participation in international conferences and visits at
@@ -1475,14 +1458,12 @@ research centers can be expected within the time period the proposed
 project. This will equip the involved participants with skills in
 presentation techniques.  Proper documentation, both internally and in
 peer-reviewed international journals, in writing is expected. The
-project is grounded in nuclear physics but there is a very large
+project is grounded in nuclear physics and quantum information theories but there is a very large
 overlap with computational science and numerical analysis. These two
 complementary aspects will form a natural part of the everyday work
 and therefore add to the total competence of the
 participants. Naturally, this will add to the number of possible
-career paths.
-
-Furthermore, the competences and skills acquired by the Ph.D. candidates and postdoctoral fellows in computational science, quantum computing and quantum information theories will lay the foundation for the education of the next generation of the scientific workforce. 
+career paths.  Furthermore, the competences and skills acquired by the Ph.D. candidates and postdoctoral fellows in computational science, quantum computing and quantum information theories will lay the foundation for the education of the next generation of the scientific workforce. 
 
 \subsection{Environmental Impact}
 
@@ -1580,8 +1561,7 @@ is offered free of charge for working groups.
 
 \section{Data Management plan}
 The project investigators  have determined the following data to be subject to the data management plan
-(DMP), and includes the following list of DMP elements (as recommended by Suggested Elements
-for a DMP).
+(DMP), and includes the following list of DMP elements.
 The primary data collected or created during this project include source codes, intermediate output from large runs and final results to
 be used in publications. All this data will be stored in digital form
 at the Facility of Rare Ion Beams(FRIB)/National Superconducting
@@ -1597,30 +1577,30 @@ directory. More details are outlined here.
 
 
 \subsection{Data types and sources}
-This project will produce computational tools for quantum scientific computing, resulting in four
+This project will produce computational tools for quantum scientific computing and nuclear many-body physics problems, resulting in four
 types of data which will be made available through a project website hosted at FRIB/NSCL. Output from
-simulation and experiment will be organized and documented so that users elsewhere can access
+simulation and various numerical experiments will be organized and documented so that users elsewhere can access
 that output in a form that makes it easy for them to use for comparisons to their own data, or as
 input for related codes that they have developed. Once research results are published, source codes
 that produce the data will be worked on so that they are readable and well documented and then
 made available for downloading.
 \subsection{Content and format}
 Our open source software will be written in standard programming languages and scripting languages,
-including C, C++, Fortran, Julia and Python. Software documentation will use standard
+including C/C++, Fortran and Python. Software documentation will use standard
 tools such as Doxygen to generate much documentation automatically. Other
 documentation, including Manual pages, user guides, administrator guides, etc., will be written in
 English and made available on project website and as PDF documents. Graphs and tables will be
-generated using standard libraries in Python, gnuplot, and others. Our publications will be made
+generated using standard libraries like Matplotlib in Python, gnuplot, and others. Our publications will be made
 available in PDF format. Presentations will be provided in PDF formats.
 \subsection{Sharing and preservation}
 All relevant project data will be made publicly available through a project website, database,
 and software repository based on the traditional software outlets immediately after being designed/generated and tested. The repository will also contain all relevant publications describing
 the mathematical and algorithmic techniques that either utilize or generate the stored data. Our
-software, documentation and publications will be made available on a project website for long-term
+software, documentation and publications will be made available on the project website for long-term
 availability. We will provide web-based tools that enable use of our tool suite on cloud computing
 resources. Any software will be released for
-free under the Apache v.2 open source license. It will be shared with any parties who agree to
-use the software under the terms of the open source license. All participants in this proposal will
+free under the Apache v.2 open source license. Educational material will be placed under the Creative Commons licence. This material will be shared with any parties who agree to
+use the software and educational material under the terms of the open source license. All participants in this proposal will
 conduct research and publish the results of their work. Papers will be published in a peer-reviewed
 scientific journal or book that publishes in English. We will
 make all publications available on our website, except where prohibited by the copyright of the
@@ -1644,7 +1624,8 @@ website.
 The software tool suite provided through the public project websites may be used as specified
 under the open source license Apache v.2. Raw data provided on the website may be used for
 analysis and comparison of scientific results.
-
+\subsection{Educational Material}
+All educational material developed by the project will be placed at the GitHub repository of the project under the Creative Common licence agreement.
 
 
 
