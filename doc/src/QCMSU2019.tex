@@ -97,28 +97,28 @@ the goal of designing new applications of quantum computing and information theo
 to the most challenging problems in nuclear physics. The team members are 
 distinguished researchers from Los Alamos National Laboratory; IBM; and the 
 Departments of Physics and Astronomy, Computational Mathematics, Science and 
-Engineering (CMSE), and Facility for Rare Ion Beams (FRIB) at 
+Engineering (CMSE), and Facility for Rare Isotope Beams (FRIB) / National Superconducting Cyclotron Laboratory (NSCL) at 
 Michigan State University (MSU).
 
 {\bf Scientific Goals, Opportunities, and Challenges:} 
 How do we connect fundamental physics to forefront experiments?  With new science 
 waiting to be discovered at experimental facilities such as FRIB, this question is a 
-profound challenge and opportunity for nuclear theory.  We would like to know how nuclear forces emerge from the interactions of quarks and gluons in quantum chromodynamics, what is the internal partonic structure of nucleons, what are the signatures of physics beyond the Standard Model in atomic nuclei, how do we predict nuclear structure and reactions from the microscopic interactions of nucleons, and what are the properties of strongly-interacting matter under extreme conditions.  There have been many important and profound advances in recent years, with some of the most creative and impactful developments were led by investigators on this proposal.  But there are limits to what can be done even with the most powerful supercomputers in this soon-to-be era of exascale computing.  Unfortunately, some of the most interesting scientific questions remain unexplored such as the real-time dynamics of hadronic and nuclear reactions, the structure of highly-correlated nuclear systems, and the properties of dense nuclear and neutron matter. For computational methods that construct quantum wave functions, the problem is the curse of large dimensionality and the impossibility of storing exponentially large vectors as classical bits.  For computational methods that rely on Monte Carlo simulations, the obstacle is the Monte Carlo sign problem, where positive and negative contributions cancel to produce exponentially small signals.
+profound challenge and opportunity for nuclear theory.  We would like to know how nuclear forces emerge from the interactions of quarks and gluons in quantum chromodynamics, what is the internal partonic structure of nucleons, what are the signatures of physics beyond the Standard Model in atomic nuclei, how do we predict nuclear structure and reactions from the microscopic interactions of nucleons, and what are the properties of strongly-interacting matter under extreme conditions.  There have been many important and profound advances in recent years, with some of the most creative and impactful developments led by investigators on this proposal.  But there are limits to what can be done even with the most powerful supercomputers in this soon-to-be era of exascale computing.  Unfortunately, some of the most interesting scientific questions remain unexplored such as the real-time dynamics of hadronic and nuclear reactions, the structure of highly-correlated nuclear systems, and the properties of dense nuclear and neutron matter. For computational methods that construct quantum wave functions, the problem is the curse of large dimensionality and the impossibility of storing exponentially large vectors as classical bits.  For computational methods that rely on Monte Carlo simulations, the obstacle is the Monte Carlo sign problem, where positive and negative contributions cancel to produce exponentially small signals.
 
 Quantum computing has emerged as a new computational paradigm that offers the hope of evading both of these fundamental problems.  By allowing for arbitrary quantum superpositions of tensor products of qubits, one can store exponentially more information than classical bits.  Furthermore, qubits naturally evolve with unitary real-time dynamics. Clearly there are tremendous opportunities in this new paradigm for solving the most profound problems in nuclear physics.  But with these great opportunities, there are enormous challenges to realizing their promise.  All of the currently available digital quantum computing devices suffer from short decoherence times and significant readout errors.  Meanwhile all of the currently available analog quantum simulators have inherent quantum characteristics that are not directly applicable to address systems of relevance to nuclear physics.
 
-In order to meet these formidable challenges, we have proposed a series of new projects that bridge the gap between quantum computing as it exists today and the targeted territory of unsolved nuclear physics problems.  Some of the projects focus on variational methods and developing new algorithms for optimizing quantum wave functions.  We also explore new applications of error stabilization techniques, machine learning, and quantum compiling to make efficient short-depth quantum circuits. Other proposed projects focus on real-time evolution, the calculation of observables using new algorithms, and creative adaptations of quantum simulators to nuclear physics.  We are confident that the scientific output of this collaboration will have a significant and lasting impact on the landscape of quantum computing applied to nuclear physics.
+In order to meet these formidable challenges, we have proposed a series of new projects that bridge the gap between quantum computing as it exists today and the targeted territory of unsolved nuclear physics problems.  Some of the projects focus on variational methods and developing new algorithms for optimizing quantum wave functions.  We also explore new applications of error stabilization techniques, machine learning, and quantum compiling to make efficient short-depth quantum circuits. Other proposed projects focus on real-time evolution, the calculation of observables using new algorithms, and creative adaptations of quantum simulators to nuclear physics.  We are confident that the scientific output of this collaboration will have a significant and lasting impact on the landscape of quantum computing applied to nuclear physics.  While the focus is on applications to nuclear physics, all of the work products are new algorithms and methods of general applicability, and so they should have an equally important impact on quantum computing and quantum information science.
 
 {\bf Benefit to Society:}  Sustaining future progress in nuclear physics and quantum computing depends on training the next generation of thinkers and innovators.  Towards this purpose, our proposal has designed a very significant educational component involving the Quantum Computing Summer School at Los Alamos National Laboratory, the student-run Quantum Information and Computing (QuIC) seminar series at Michigan State University, a proposed Training in Advanced Low Energy Nuclear Theory (TALENT) summer school, as well as student and postdoctoral travel funds for collaborative work between Los Alamos and Michigan State.  The students also benefit from being a part of the nuclear physics program at FRIB and Michigan State, which is currently ranked the number one graduate program in the country according US News and World Report. The mix of analytical and computational skills that the students learn and implement provides excellent preparation for both academic and industrial research. All of the investigators on this proposal are committed to diversity in science and will seek to build a diverse scientific workforce and an inclusive environment for learning and research.
 
 \section{Introduction and Scientific Motivation}
 
-\subsection{The Overarching Intellectual Questions}
+\subsection{Overarching Intellectual Questions}
 
 How do we understand nuclei, strongly-interacting matter, and the limits of
 stable matter in terms of the fundamental laws of motion and
 forces?  How do we explain what we observe in experiments from first principles,
-starting from Quantum Chromodynamics and the fundamental interactions of the quarks and gluons?
+starting from quantum chromodynamics and the fundamental interactions of the quarks and gluons?
 
 One of the key intellectual challenges in nuclear physics is to understand
 why nucleonic matter is stable, how it comes into being, how it
@@ -213,7 +213,7 @@ with nuclear Hamiltonians derived from EFT, ranging from a proper
 understanding of three- and many-nucleon forces to the link with the
 underlying theory of the strong force.
 
-We are however now in a situation where progress in Lattice Quantum
+We are however now in a situation where progress in lattice Quantum
 Chromodynamics (LQCD) \cite{lqcd1,lqcd2} allows us to link
 theoretically EFT derived Hamiltonians with LQCD calculations. The
 LQCD calculations are presently performed away from the physical
@@ -292,7 +292,7 @@ inherently robust to certain errors~\cite{OMalley2016}, and is
 considered to be a promising candidate for performing practical
 quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}.
 
-\subsection{Aims}
+\subsection{Project Goals}
 
 The various few- and many-body methods mentioned above allow for
 controlled approximations and provide a computational scheme which
@@ -491,7 +491,7 @@ The idea of ML for QA design has demonstrated initial success in \cite{Mitarai20
 Methods for designing QAs for future QCs do not exist. Our proposed data-driven method could produce many new QAs with applications in many fields. The recent success of this approach in \cite{Cincio2018} necessitates further study. Our knowledge of both ML and QAs is ideal for these methods.
 
 
-The time line for WP1 is summarized in the table here:
+The timeline for WP1 is summarized in the table here:
 \begin{footnotesize}
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
@@ -837,7 +837,7 @@ direction.}
 \label{dimer_particle}
 \end{figure}
 
- The time line for the development of the various elements of WP2 is
+ The timeline for the development of the various elements of WP2 is
 \begin{footnotesize}
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
@@ -852,18 +852,18 @@ Transition Matrix Elements & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ 
 \hline
 Few-body Dynamics & & & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & &\\
 \hline
-Scattering and Reaction probabilities & & & & & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ \\
+Scattering and Reaction Probabilities & & & & & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ \\
 \hline
 
 \end{tabular}
 \end{center}
 \end{footnotesize}
 
-\subsection{Work Package 3 (WP3): Lattice Quantum ChromoDynamics (QCD) and Quantum Information Theories}
+\subsection{Work Package 3 (WP3): Lattice Quantum Chromodynamics (QCD) and Quantum Information Theories}
 {\bf Lead Scientists: Alexei Bazavov (MSU), Huey-Wen Lin (MSU) and Andrea Shindler (MSU)}
 
 The strong interaction between quarks and gluons is
-described by a local quantum field theory, Quantum Chromodynamics (QCD).
+described by a local quantum field theory, quantum chromodynamics (QCD).
 QCD also describes the properties of baryons and ultimately the interaction between them.
 While at high energy the smallness of the
 strong interaction coupling constant (asymptotic freedom) allows a perturbative
@@ -1093,7 +1093,7 @@ from analytic continuation to real time.
 
 
 
-The time line for WP3 is summarized in the table here:
+The timeline for WP3 is summarized in the table here:
 %\abtodo{Need to fix this table: Topics listed are just placeholder}
 \begin{footnotesize}
 \begin{center}
@@ -1142,8 +1142,8 @@ exponential speed-up over the best ``currently'' known classical algorithms for 
 the ground state of a given Hamiltonian \cite{aspuru2005simulated}. However, the use
 of this approach is believed to require large, error-corrected, quantum
 computers to surpass what is possible classically~\cite{reiher2017elucidating,babbush2018encoding}.
-A more promising path to exploring such a ``quantum supremacy''\cite{boixo2018characterizing,harrow2017quantum} for, say two-body Hamiltonians on near-term quantum
-devices is a quantum-classical hybrid algorithm that is referred to as the variational quantum
+A more promising path to exploring such a ``quantum supremacy''\cite{boixo2018characterizing,harrow2017quantum} for, say, two-body Hamiltonians on near-term quantum
+devices, is a quantum-classical hybrid algorithm that is referred to as the variational quantum
 eigensolver (VQE)\cite{peruzzo2014variational,McArdle2018}.
 
 Unlike the quantum phase estimation, VQE requires only a short coherence time.
@@ -1163,16 +1163,15 @@ aspects of the VQE framework:
 \begin{enumerate}
 \item The evaluation of the energy of a wide class of wavefunction ans{\"a}tze which are
   exponentially costly classically \insertnew{(with currently known algorithms)} requires only state preparation and measurement of Pauli operators, both of which can be carried out on a quantum processor in polynomial time. These
-wavefunction ans{\"a}tze include unitary coupled-cluster 
-(UCC) wavefunctions,~\cite{evangelista2011alternative, peruzzo2014variational} the deep multi-scale entanglement renormalization ansatz (DMERA),~\cite{kim2017robust} a Trotterized version of adiabatic state preparation (TASP),~\cite{wecker2015progress} \revision{the qubit coupled cluster approach (QCC),\cite{ryabinkin2018qubit}} and various low-depth quantum circuits inspired by the specific constraints of physical devices currently available.~\cite{kandala2017hardware}. Furthermore, the IMSRG approach should also fall undr this category. This is also one the scopes of WP4, that is to explore the VQE with the IMSRG method. 
+wavefunction ans{\"a}tze include the aforementioned UCC wavefunctions,~\cite{evangelista2011alternative, peruzzo2014variational} the deep multi-scale entanglement renormalization ansatz (DMERA),~\cite{kim2017robust} a Trotterized version of adiabatic state preparation (TASP),~\cite{wecker2015progress} \revision{the Qubit Coupled Cluster approach (QCC),\cite{ryabinkin2018qubit}} and various low-depth quantum circuits inspired by the specific constraints of physical devices currently available.~\cite{kandala2017hardware}. The IMSRG approach should also fall under this category, as we aim to demonstrate under the scope of WP4. 
 
-\item On a quantum processor, efficient evaluation of the magnitude of the overlap between two
-states is possible even when two states involve exponentially many determinants. Classically, this is a distinct feature only of tensor network~\cite{stoudenmire2012studying} and variational Monte  Carlo \cite{Cyrus1998} approaches.
-However on a quantum computer, any states that can be efficiently prepared will also possess this advantage.
+\item On a quantum processor, an efficient evaluation of the magnitude of the overlap between two
+quantum states is possible even when two states involve exponentially many determinants. Classically, this is a distinct feature only of tensor network~\cite{stoudenmire2012studying} and variational Monte  Carlo \cite{Cyrus1998} approaches.
+On a quantum computer, \emph{any} states that can be efficiently prepared will also possess this advantage.
 \end{enumerate}
 
 Given the recent progress and near-term prospects in quantum computing
-hardware, and the uniqueness of these capabilities, it is interesting to explore these two aspects from a nuclear many-body  perspective and this constitutes the major motivation of WP4.
+hardware, and the uniqueness of its capabilities, it is interesting to explore these two aspects from a nuclear many-body  perspective and this constitutes the major motivation of WP4.
 
 
 
@@ -1193,12 +1192,10 @@ U=e^{-iHt/\hbar}=e^{-i\sum_kH_kt/\hbar}
 \end{align}
 using an approximation such as Suzuki-Trotter
 \begin{align}
-e^{A+B}=\lim_{n\to\infty}\left(e^{A/n}e^{B/n}\right)^n
+e^{A+B}=\lim_{n\to\infty}\left(e^{A/n}e^{B/n}\right)^n.
 \end{align}
 Which approximation to use for a given problem is an active area of research.
 Next, one maps the time-evolution operator into quantum circuits consisting of 2-qubit gates. The mapping that results in the shortest depth quantum circuit is an open question. Finally, one plugs the quantum circuit for $U$ into the phase estimation algorithm.
-
-
 
 In the near-term, the variational quantum eigensolver algorithm is best suited to solve problems. It is a hybrid quantum-classical algorithm that is based on the variational principle of quantum mechanics
 \begin{align*}
@@ -1217,7 +1214,7 @@ However, the IMSRG wave function that results from applying the aggregate unitar
 With its explicit flow parameter, i.e., renormalization scale, dependence the IMSRG wave function is \emph{conceptually} analogous to certain types of tensor network states. These states have not only been extremely powerful tools in real-space or lattice RG approaches, but they can also be translated into quantum circuits in a fairly easy manner (see, e.g., \cite{Dawson:2008td}). Instead of describing the entanglement of lattice sites under rather simple short-range interactions, the IMSRG wave function encodes the entanglement of modes in momentum space (e.g., in a plane-wave basis) or a more general configuration space. The entanglement patterns of such modes are often more complex than those of lattice systems, especially when symmetries need to be taken into account \cite{Legeza:2015la}, hence a quantum circuit based on the IMSRG wave function will have features that are distinct from lattice tensor network states. 
 
 \textbf{UCC and IMSRG for the Homogeneous Electron Gas and Infinite Nuclear Matter.}
-
+\tbd{[Babbush et al. did calculations in plane-wave bases \cite{Babbush:2018wy}.]}
 
 \textbf{Magnus Methods as an Alternative to Trotterization.}
 In the Magnus formulation of the IMSRG, the unitary transformation is expressed as true operator exponential $U(s)=e^{\Omega(s)}$ rather than a Dyson series and evolutions for multiple observables are replaced by a single evolution of the anti-Hermitian operator $\Omega(s)$ \cite{Morris:2015ve}. Since the unitarity of the IMSRG transformation is made explicit by the Magnus ansatz, the flow equation for $\Omega(s)$ can be solved reliably with methods as simple as a first-order forward Euler integration, while taking large time steps. This is the reason why entire classes of numerical ODE integration methods are based on the Magnus expansion (see, e.g,. \cite{Blanes:2009fk}).
@@ -1225,7 +1222,7 @@ In the Magnus formulation of the IMSRG, the unitary transformation is expressed 
 Continuing along those lines, we will investigate whether Magnus methods --- possibly augmented with (S)RG ideas, e.g., a dynamical optimization for different time evolution scales --- can be a complement or a viable alternative to Trotterization.
 
 
-The time line for WP4 is summarized in the table here:
+The timeline for WP4 is summarized in the table here:
 \begin{footnotesize}
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
@@ -1242,6 +1239,8 @@ Implement generalized two-body Hamiltonian & & &$\bullet$  & $\bullet$ & & & & &
 UCC for the HEG and Infinite Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
 \hline
 IMSRG for the HEG and Infinite Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
+\hline
+Magnus Expansion of Time Evolution Operator & && & &   &  &   &   &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
 \hline
 
 \end{tabular}
@@ -1261,8 +1260,8 @@ The scientific development of the candidates involves several elements, of which
     \item Patrick Coles has during the last few years chaired the Los Alamos National Laboratory's (LANL) Quantum Computing Summer School. This is an immersive 10-week curriculum that includes tutorials from world-leading experts in quantum computation as well as one-on-one mentoring from LANL staff scientists who are conducting cutting-edge quantum computing research. For our Ph.D. candidates this summer school offers a unique opportunity to meet world leading experts in Quantum Computing. 
     \item We will also establish a three week intensive Nuclear TALENT (Training in Advanced Low Energy Nuclear Theory) course on quantum information theory and computing tailored to nuclear physics problems. This course will be offered in the second and third years of the project with the aim to introduce potential new students to the field. The postdoctoral fellow and the Ph.D. students are both likely participants and teaching assistants as well.
     \item Michigan State University offers, via the newly established department for Computational Mathematics, Science and Engineering (CMSE) a dual Ph.D. program in both Physics and Computational Science. This has important consequences for the possibility to establish a proper educational path in computational skills and competences, spanning from management of large numerical projects and making sustainable code projects to important algorithms and methods. Computational skills and competences are essential to most jobs in the STEM fields, and with quantum computing and quantum information theory as emerging fields, we guarantee thus a proper professional training of our students and postdoctoral fellows. This training will also involve classical computing and classical many-body algorithms and the development of large numerical projects.  
-    \item The CMSE Department at Michigan State plans to hire several faculty members over the few years in the areas of quantum information and quantum computing.  As a part of this hiring plan there will be a concerted effort to make connections between the new quantum information/computing faculty and the existing strengths in the CMSE Department in machine learning and data analytics.
-    \item With our collaboration partnership at IBM and other industry research venues, our Ph.D. students can take advantage of internship and job opportunities. 
+    \item The CMSE Department at Michigan State University plans to hire several faculty members over the few years in the areas of quantum information and quantum computing.  As a part of this hiring plan there will be a concerted effort to make connections between the new quantum information/computing faculty and the existing strengths in the CMSE Department in machine learning and data analytics.
+    \item With our collaboration partnership with IBM and other industry research venues, our Ph.D. students can take advantage of internship and job opportunities. 
     \item The annual workshops to be held by the network will also allow our students and postdoctoral fellows to get in contact with many of the leading experts in the field. We are also planning for the second and third year a week long Hackathon on quantum computing and quantum information theory.
 \end{itemize}
 
@@ -1313,7 +1312,7 @@ employees.
 
 
 
-The time line for WP5 is summarized in the table here:
+The timeline for WP5 is summarized in the table here:
 \begin{footnotesize}
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
@@ -1334,38 +1333,37 @@ Workshop and Hackathon & & & & &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ &$\bu
 
 
 \section{Timetable of Activities}
-We propose a three-year project to develop quantum simulation algorithms for scientific computing applications in nuclear physics. The project consists of the five work packages discussed above and this section summarize the timetable outlined in the above tables. Our tasks include classical and quantum algorithms
-development and software development.
+We propose a three-year project to develop quantum simulation algorithms for scientific computing applications in nuclear physics. The project consists of the five work packages discussed above and this section summarize the timetable outlined in the above tables. Our tasks include the development of classical algorithms, quantum algorithms, and software.
 
 \begin{itemize}
-    \item Year 1: Government Fiscal year 2020
+    \item Year 1: Government fiscal year 2020
     \begin{enumerate}
         \item Project kick off meeting at MSU to coordinate logistics, discuss
 specific tasks, and review application targets.
 \item WP1: Cost-driven design for current QCs
-\item WP2: Variational Adiabatic Evolution and Spectral Reconstruction
+\item WP2: Variational adiabatic evolution and spectral reconstruction
 \item WP3: Spectral functions and Schwinger model
 \item WP4: Rewrite the pairing Hamiltonian in terms of quantum gates and implement QPE and VQE algorithms. Rewrite general two-body Hamiltonian in terms of quantum gates. 
 \item WP5:  QuIC seminar. Develop educational material which can be used at the LANL summer school.
 \item Public release of developed software tools.
 \item Deliverable Year 1: Results from work packages 1-5 compiled and delivered to the program office
     \end{enumerate}
-    \item Year 2: Government Fiscal year 2021
+    \item Year 2: Government fiscal year 2021
     \begin{enumerate}
         \item Team hackathon meeting at MSU and coordination of logistics, discuss specific tasks and progress. Review and adjustment of targets.
-        \item WP1: Cost-driven design for current QCs and Data-driven design for future QCs 
-\item WP2: Spectral Reconstruction and Transition Matrix Elements. Few-body dynamics
+        \item WP1: Cost-driven design for current QCs and data-driven design for future QCs 
+\item WP2: Spectral reconstruction and transition matrix elements. Few-body dynamics.
 \item WP3: Schwinger model and $2+1$ QFT tryout
 \item WP4: Develop UCC and IMSRG codes for quantum computing, implement the VQE and PQE algorithms.
 \item WP5: Develop and extend the QuIC seminar and the Nuclear TALENT Course as well as further educational material to be offered at for example the LANL summer school.
 \item Public release of developed software tools.
 \item Deliverable Year 2: Results from work packages 1-5 compiled and delivered to the program office.
     \end{enumerate}
-    \item Year 3: Government Fiscal year 2022
+    \item Year 3: Government fiscal year 2022
     \begin{enumerate}
         \item  Team hackathon meeting at MSU and coordination of logistics, discuss specific tasks and progress. Review and adjustment of targets.
         \item WP1: Data-driven design for future QCs 
-\item WP2: Few-body Dynamics and Scattering and Reaction Probabilities
+\item WP2: Few-body dynamics and scattering and reaction probabilities
 \item WP3: Schwinger model and $2+1$ QFT tryout
 \item WP4: Perform studies of  infinite systems using developed quantum computing algorithms. Compare with existing classical coupled-cluster and IMSRG codes.
 \item WP5: Develop and extend the QuIC seminar. Develop educational material for intensive Nuclear TALENT courses and courses to be taught at MSU and the LANL summer school. 
@@ -1388,12 +1386,12 @@ description of individual responsibilities.
 
 \subsection{Responsibilities of Key Personnel}
 \begin{itemize}
-\item Morten Hjorth-Jensen is the project leader and primary contact responsible for communications with the DOE program manager on behalf of all participants. Hjorth-Jensen will serve as Lead Principal Investigator for MSU and he will lead work package 5 {\bf Work Force development} }. He will also contribute his expertise in many-body physics and computational physics across all tasks.
+\item Morten Hjorth-Jensen is the project leader and primary contact responsible for communications with the DOE program manager on behalf of all participants. Hjorth-Jensen will serve as Lead Principal Investigator for MSU and he will lead work package 5 {\bf Work Force development} . He will also contribute his expertise in many-body physics and computational physics across all tasks.
 
-\item Patrick Coles is the leader of work package 1 {\bf Quantum Simulation Algorithms}. He is a leading quantum information theorist and will provide his expertise across all work packages making thus sure that there is a proper link between quantum information theory and the three nuclear many-body problem work packages. He will also oversee the development of competencies in quantum information theories in the work package 5 on work force development.
-\item Dean Lee is the task leader of work package 2 {\bf Quantum State Preparation and Dynamics}. He will also contribute to the other work packages with his expertise in various many-body methods, quantum information theory and computational physics.
+\item Patrick Coles is the leader of work package 1 {\bf Quantum Simulation Algorithms}. He is a leading quantum information theorist and will provide his expertise across all work packages thus making sure that there is a proper link between quantum information theory and the three nuclear many-body problem work packages. He will also oversee the development of competencies in quantum information theories in work package 5 on work force development.
+\item Dean Lee is the leader of work package 2 {\bf Quantum State Preparation and Dynamics}. He will also contribute to the other work packages with his expertise in various many-body methods, quantum information theory and computational physics.
 He will also oversee that there is a proper link between all work packages. He will supervise a full-time postdoctoral fellow that contributes to the work packages 1, 2 and 3.  
-\item Alexei Bazavov is the leader of work package 3 {\bf Lattice QuantumChromoDynamics (QCD) and Quantum Information Theories}. Bazavov will contribute his expertise in Lattice QCD and computational physics and link with recent advances in quantum information theories and  work packages 1, 2 and 3 as well as developing competences in quantum field theories to  work package 5.
+\item Alexei Bazavov is the leader of work package 3 {\bf Lattice QuantumChromoDynamics (QCD) and Quantum Information Theories}. Bazavov will contribute his expertise in lattice QCD and computational physics and link with recent advances in quantum information theories and  work packages 1, 2 and 3 as well as developing competences in quantum field theories to  work package 5.
 \item Scott Bogner will serve as project authority with responsibility for proper conduct of the research and oversee the work force development package across tasks. 
 He will  lead work package 4 {\bf Nuclear Structure, from Finite Nuclei to Infinite Nuclear Matter}
 He will
@@ -1401,10 +1399,10 @@ contribute his expertise in the nuclear many-body physics domain to work package
 \item Heiko Hergert  will
 contribute his expertise in the nuclear many-body physics domain to work package  4 and all other work packages.
 \item Andrea Shindler will
-contribute his expertise in the Lattice QCD domain to work package  3 as well as developing competences in quantum field theories to  work package 5. He will also be responsible for the link between work packages 1, 2 and 3. 
-\item Matthew Hirn is a mathematician expert in machine learning and will actively contribute to the development of quantum information theories in work package 1 and oversee the development of the pertinent work force competences in work package 5.
+contribute his expertise in the lattice QCD domain to work package  3 as well as developing competences in quantum field theories to  work package 5. He will also be responsible for the link between work packages 1, 2 and 3. 
+\item Matthew Hirn is a mathematician with expertise in machine learning and will actively contribute to the development of quantum information theories in work package 1 and oversee the development of the pertinent work force competences in work package 5.
 \item Huey-Wen Lin will
-contribute her expertise in the Lattice QCD domain to work package  3 as well as developing competences in quantum field theories to  work package 5. She will also be responsible for the link between work packages 1, 2 and 3. 
+contribute her expertise in the lattice QCD domain to work package  3 as well as developing competences in quantum field theories to  work package 5. She will also be responsible for the link between work packages 1, 2 and 3. 
 
 \item Jennifer Glick will serve as non-senior personnel and quantum computing scientific liasion at IBM for the researchers at Los Alamos National Laboratory and Michigan State University.  She has expertise in the quantum computing platforms available at IBM Q as well as a background in nuclear physics from her time as a Ph.D. student at Michigan State University.
 
@@ -1412,24 +1410,22 @@ contribute her expertise in the Lattice QCD domain to work package  3 as well as
 
 \section{Project Objectives}
 \begin{itemize}
-\item Take a broad view of the quantum computing for scientific applications and devise overarching
-research strategies by building fundamental capabilities and tools to arrange simple
-algorithmic building blocks toward quantum simulations of nuclear many-body systems.
-\item  Develop and optimize quantum simulation algorithms by focusing on
-key topics of research with relevance to problems of interest to DOE’s Office of Science that
-include: 1) Lattice QCD and  2) Nuclear Many-body Physics algorithms.
-\item  Synergize quantum and classical algorithms to tackle applications for verification of new
-quantum methods against traditional techniques.
-\item  Catalyze and enrich the quantum computing field by working with an interdisciplinary team
-that brings in new talent and ideas from team members who represent starkly different communities
-unaccustomed to working together.
-\item  Play an important role in informing the planning of a quantum computing basic research
-agenda in nuclear physics by contributing to the identification of missing elements in the basic design
-principles for an overall system architecture of future quantum computing platforms, that
-would connect high-level science goals to hardware and software.
-\item  Make our approach and resulting tools and resources available to the nuclear many-body physics and quantum information theory  communities
-through comprehensive outreach activities including user workshops, publications and
-external facing code servers.
+
+\item Make the grand scientific challenges of nuclear physics known and visible to the quantum computing and quantum information communities.
+
+\item  Develop and optimize quantum computing algorithms to address unsolved problems in nuclear physics, especially in the areas of lattice QCD and nuclear many-body physics.
+
+\item  Explore new synergies and hybrid approaches connecting quantum and classical computing paradigms while benchmarking new methods against existing techniques.
+
+\item Develop new fundamental tools designed for nuclear physics but of general character and importance that can impact the fields of quantum computing and information science.
+
+\item  Build an interdisciplinary team
+that brings together innovators from starkly different communities, which recruits and develops new talent in quantum computing and nuclear physics.
+
+\item  Play a formative role in the development of quantum computing in nuclear physics by contributing to the identification of key missing elements in the architecture of future quantum computing platforms and strategies.
+
+\item  Share our discoveries, results, and resources with the nuclear physics and quantum computing communities
+through comprehensive outreach activities including summer schools, publications, research talks, public lectures, and open code access.
 \end{itemize}
 
 \section{Additional Perspectives}
@@ -1438,15 +1434,16 @@ external facing code servers.
 
 The academic environment at MSU provides numerous opportunities for
 the research team and its PIs to attract bright young people to high-level research in
-nuclear physics. For example, the theory group at the NSCL/FRIB is very
+nuclear physics. For example, the theory group at the FRIB/NSCL is very
 active in mentoring undergraduate students in the NSF sponsored
 Research Experience for Undergraduates (REU) program in the summer
-months, with the PIs successfully supervising two REU students over
+months.
+with the PIs successfully supervising two REU students over
 the past three years. Many of the projects in this proposal can be
 tested in prototype toy-model problems that manage to simultaneously
 i) illustrate cutting-edge concepts to the student at a technical
 level appropriate for an undergraduate physics major, and ii) benefit
-the overall progress of the PIs' research program.
+the overall progress of the PIs research program.
 
 One of the primary \emph{broader impacts} of this proposal
 is the development of an
@@ -1487,29 +1484,20 @@ career paths.
 
 Furthermore, the competences and skills acquired by the Ph.D. candidates and postdoctoral fellows in computational science, quantum computing and quantum information theories will lay the foundation for the education of the next generation of the scientific workforce. 
 
+\subsection{Environmental Impact}
 
-\subsection{Environmental impact}
-
-This project and its realization has no  significant environmental impacts.
+This project and its realization are expected to have no significant environmental impacts.
 
 \subsection{Ethical Perspectives}
 
-This project abides to open source access to codes and data as discussed in the data management section. This has important consequences on how to make scientific results reproducible. Our published results will always have a link to our repositories with codes and simulation data. This will allow researchers from other institutions to benchmark and reproduce our results as well as helping in advancing their own 
-research. The hope is that this will serve as an example to an open and proper ethical conduct in scientific research.  Our codes will also be written in a modular and sustainable way, making it easy to build upon them. 
-Else, we foresee no particular ethical issues. All PIs abide to a sound ethical conduct in research.
+This project will provide open source access to codes and data as discussed in the data management section. This has important consequences for open intellectual exchange and ensuring that scientific results are reproducible. Our published results will have a link to our repositories with codes and simulation data. This will allow researchers from other institutions to benchmark and reproduce our results, as well as help advance research progress across the field. We will strive to write our codes in a modular format, thereby making them easily adaptable for future purposes.  All PIs are committed to sound ethical conduct in research.  We hope to serve as an example of open and proper ethical conduct in scientific research.  
 
-\subsection{Gender Issues}
-
-
-The project will consist of both male and female researchers, and we
-will actively recruit female students and researchers for the various activities. 
-
+\subsection{Commitment to Diversity}
+All of the project team members are committed to diversity in science and will seek to build a diverse scientific workforce and an inclusive environment for learning and research.  We plan to actively recruit students and postdoctoral candidates from diverse backgrounds, in particular, under-represented minorities and women.  This will be a priority for all of the training programs as well as the research projects.
 
 \section{Institutional Commitment}
 
- 
-All investigators in this project are strongly committed to the responsibilities, time tables and objectives listed in the main text. These commitments form important parts of the efforts of the involved researchers and takes the form of uncompensated efforts. In the budget we have prioritized travel and salaries (plus benefits etc) for the Ph.D. students and the postdoctoral fellow since we wish to prioritize their scientific formation. It means that, except for Patrick Coles from LANL, that all other principal investigators will use other funds for travel and salaries. 
-This applies also largely to surplus materials, supplies, or equipment and  the provision of access to facilities at no cost. It implies also mentoring, training and coaching of the Ph.D. students and postdoctoral fellow. 
+All investigators in this project are committed to the responsibilities, timetables and objectives stated in the proposal. These commitments from the involved researchers are essential for the successful completion of the research work products and take the form of uncompensated efforts. In the budget we have prioritized financial support and travel for the Ph.D. students and postdoctoral fellow.  We wish to prioritize their scientific growth and development.  Except for travel funds for Patrick Coles (LANL) to collaborate with other team members and present results to the quantum computing and information science communities, all other principal investigators will use other funds for travel and salaries.  This applies also largely to surplus materials, supplies, or equipment, and the provision of access to facilities at no cost. It implies also the mentoring and training of the Ph.D. students and postdoctoral fellow. 
 \clearpage
 \appendix
 
@@ -1541,7 +1529,7 @@ Current and pending support of the senior personnel follow in alphabetical order
 
 \section{Facilities, Equipment and Other Resources}
 
-This project group will have access to the various supercomputing resources at MSU that are listed here.
+This project group will have access to high performance computing resources at MSU that are listed here.
 \subsection{Institute for Cyber-Enabled Research}
 
 MSU's Institute for Cyber-Enabled Research (ICER), was originally launched as
@@ -1571,30 +1559,23 @@ user base.
 \subsubsection{Compute Resources}
 \textbf{Laconia} is MSU's primary computing resource, operated and maintained
 by the Institute for Cyber-Enabled Research (ICER). The cluster consists
-of 370 compute nodes powered by dual 14-core Intel \emph{Broadwell} CPUs.
-50 of these nodes are equipped with four Nvidia Tesla K80 GPUs. The theoretical
-peak performance of the system is  $\sim$370 teraflops from CPUs only, and
-754 teraflops with GPUs. In 2016, the system was benchmarked using the LINPACK
-benchmark at 535 teraflops. The majority of the nodes are equipped with 128GB
+of 400 compute nodes powered by dual 14-core Intel \emph{Broadwell} CPUs.
+45 of these nodes are equipped with four Nvidia Tesla K80 GPUs. The theoretical
+peak performance of the system is  $\sim$400 teraflops from CPUs only, and
+754 teraflops with GPUs. In 2016, the system was benchmarked using the LINPACK benchmark at 535 teraflops, entering the TOP500 and Green500 supercomputer lists. The majority of the nodes are equipped with 128GB
 RAM. 24 of the CPU nodes and the 50 GPU nodes have 256GB RAM.
 
-ICER also operates \textbf{Intel14} cluster, consisting of 220 compute nodes
-with dual Intel \emph{Ivy Bridge} 10-core processors. Nodes with 64 GB, 128 GB,
-and 256 GB RAM are available. 40 nodes are equipped with two Nvidia Tesla K20
-GPUs, 28 with Intel Xeon Phi MIC accelerators. The total peak performance of
-the system is 235.8 teraflops, including the accelerators.
+Secondary resources are the \textbf{Intel18} cluster with 144 compute nodes of dual 20-core Intel Xeon Gold (\emph{Skylake}) and 384--768GB of memory, including 7 nodes with four NVidia Volta V100 GPUs, and the \textbf{Intel14} cluster, consisting of 192 compute nodes
+with dual Intel \emph{Ivy Bridge} 10-core processors and 128--256 GB memory. 40 Intel14 nodes are equipped with two Nvidia Tesla K20
+GPUs, 14 with Intel Xeon Phi accelerators. 
 
 \subsubsection{Storage Infrastructure}
 ICER's data infrastructure offers 2 PB of scratch space on a Lustre
-file system that is accessible by all computing resources. The facility offers
-2.1PB multiply-redundant, backed-up storage, eliminating the risk of data loss.
+file system that is accessible by all computing resources. The facility offers 2.1PB multiply-redundant, backed-up storage, eliminating the risk of data loss.
 Free storage of up to 1TB is provided to all ICER user accounts, which is
 sufficient to meet most of the day-to-day needs of the applications that
 will be used for this project. An additional 1TB of project storage
 is offered free of charge for working groups.
-
-
-
 
 
 \section{Data Management plan}
