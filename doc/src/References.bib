@@ -1,3 +1,18 @@
+@article{Abrams1997,
+  title = {Simulation of Many-Body Fermi Systems on a Universal Quantum Computer},
+  author = {Abrams, Daniel S. and Lloyd, Seth},
+  journal = {Phys. Rev. Lett.},
+  volume = {79},
+  issue = {13},
+  pages = {2586--2589},
+  numpages = {0},
+  year = {1997},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.79.2586},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.79.2586}
+}
+
 @ARTICLE{Abrams:1999,
        author = {{Abrams}, Daniel S. and {Lloyd}, Seth},
         title = "{Quantum Algorithm Providing Exponential Speed Increase for Finding Eigenvalues and Eigenvectors}",
@@ -32,6 +47,69 @@ archivePrefix = {arXiv},
 	journal = {Science}
 }
 
+
+@article{BabbushAQChem,
+	Author = {Babbush, Ryan and Love, Peter J. and Aspuru-Guzik, Al{\'a}n},
+	Date = {2014/10/13/online},
+	Date-Added = {2019-05-30 13:41:54 +0000},
+	Date-Modified = {2019-05-30 13:41:54 +0000},
+	Day = {13},
+	Journal = {Scientific Reports},
+	L3 = {10.1038/srep06603; },
+	M3 = {Article},
+	Month = {10},
+	Pages = {6603 EP  -},
+	Publisher = {The Author(s) SN  -},
+	Title = {Adiabatic Quantum Simulation of Quantum Chemistry},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/srep06603},
+	Volume = {4},
+	Year = {2014},
+	Bdsk-Url-1 = {https://doi.org/10.1038/srep06603}}
+
+@article{BabbushSparse1,
+	doi = {10.1088/1367-2630/18/3/033032},
+	url = {https://doi.org/10.1088%2F1367-2630%2F18%2F3%2F033032},
+	year = 2016,
+	month = {mar},
+	publisher = {{IOP} Publishing},
+	volume = {18},
+	number = {3},
+	pages = {033032},
+	author = {Ryan Babbush and Dominic W Berry and Ian D Kivlichan and Annie Y Wei and Peter J Love and Al{\'{a}}n Aspuru-Guzik},
+	title = {Exponentially more precise quantum simulation of fermions in second quantization},
+	journal = {New Journal of Physics},
+	abstract = {We introduce novel algorithms for the quantum simulation of fermionic systems which are dramatically more efficient than those based on the LieâTrotterâSuzuki decomposition. We present the first application of a general technique for simulating Hamiltonian evolution using a truncated Taylor series to obtain logarithmic scaling with the inverse of the desired precision. The key difficulty in applying algorithms for general sparse Hamiltonian simulation to fermionic simulation is that a query, corresponding to computation of an entry of the Hamiltonian, is costly to compute. This means that the gate complexity would be much higher than quantified by the query complexity. We solve this problem with a novel quantum algorithm for on-the-fly computation of integrals that is exponentially faster than classical sampling. While the approaches presented here are readily applicable to a wide class of fermionic models, we focus on quantum chemistry simulation in second quantization, perhaps the most studied application of Hamiltonian simulation. Our central result is an algorithm for simulating an N spinâorbital system that requires  gates. This approach is exponentially faster in the inverse precision and at least cubically faster in N than all previous approaches to chemistry simulation in the literature.}
+}
+@article{BabbushSparse2,
+	doi = {10.1088/2058-9565/aa9463},
+	url = {https://doi.org/10.1088%2F2058-9565%2Faa9463},
+	year = 2017,
+	month = {dec},
+	publisher = {{IOP} Publishing},
+	volume = {3},
+	number = {1},
+	pages = {015006},
+	author = {Ryan Babbush and Dominic W Berry and Yuval R Sanders and Ian D Kivlichan and Artur Scherer and Annie Y Wei and Peter J Love and Al{\'{a}}n Aspuru-Guzik},
+	title = {Exponentially more precise quantum simulation of fermions in the configuration interaction representation},
+	journal = {Quantum Science and Technology},
+	abstract = {We present a quantum algorithm for the simulation of molecular systems that is asymptotically more efficient than all previous algorithms in the literature in terms of the main problem parameters. As in Babbush et al (2016 New Journal of Physics 18, 033032), we employ a recently developed technique for simulating Hamiltonian evolution using a truncated Taylor series to obtain logarithmic scaling with the inverse of the desired precision. The algorithm of this paper involves simulation under an oracle for the sparse, first-quantized representation of the molecular Hamiltonian known as the configuration interaction (CI) matrix. We construct and query the CI matrix oracle to allow for on-the-fly computation of molecular integrals in a way that is exponentially more efficient than classical numerical methods. Whereas second-quantized representations of the wavefunction require  qubits, where N is the number of single-particle spin-orbitals, the CI matrix representation requires  qubits, where  is the number of electrons in the molecule of interest. We show that the gate count of our algorithm scales at most as .}
+}
+@article{BabbushTrotter,
+  title = {Chemical basis of Trotter-Suzuki errors in quantum chemistry simulation},
+  author = {Babbush, Ryan and McClean, Jarrod and Wecker, Dave and Aspuru-Guzik, Al\'an and Wiebe, Nathan},
+  journal = {Phys. Rev. A},
+  volume = {91},
+  issue = {2},
+  pages = {022311},
+  numpages = {16},
+  year = {2015},
+  month = {Feb},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.91.022311},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.91.022311}
+}
+
 @article{Babbush:2018wy,
 	Author = {Babbush, Ryan and Gidney, Craig and Berry, Dominic W. and Wiebe, Nathan and McClean, Jarrod and Paler, Alexandru and Fowler, Austin and Neven, Hartmut},
 	Date-Added = {2019-05-28 19:01:03 -0400},
@@ -47,6 +125,25 @@ archivePrefix = {arXiv},
 	Url = {https://link.aps.org/doi/10.1103/PhysRevX.8.041015},
 	Volume = {8},
 	Year = {2018}}
+
+
+@article{Barends2016,
+	Author = {Barends, R. and Shabani, A. and Lamata, L. and Kelly, J. and Mezzacapo, A. and Heras, U. Las and Babbush, R. and Fowler, A. G. and Campbell, B. and Chen, Yu and Chen, Z. and Chiaro, B. and Dunsworth, A. and Jeffrey, E. and Lucero, E. and Megrant, A. and Mutus, J. Y. and Neeley, M. and Neill, C. and O'Malley, P. J. J. and Quintana, C. and Roushan, P. and Sank, D. and Vainsencher, A. and Wenner, J. and White, T. C. and Solano, E. and Neven, H. and Martinis, John M.},
+	Date = {2016/06/08/online},
+	Date-Added = {2019-05-30 14:48:36 +0000},
+	Date-Modified = {2019-05-30 14:48:36 +0000},
+	Day = {08},
+	Journal = {Nature},
+	L3 = {10.1038/nature17658; https://www.nature.com/articles/nature17658#supplementary-information},
+	Month = {06},
+	Pages = {222 EP  -},
+	Publisher = {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved. SN  -},
+	Title = {Digitized adiabatic quantum computing with a superconducting circuit},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/nature17658},
+	Volume = {534},
+	Year = {2016},
+	Bdsk-Url-1 = {https://doi.org/10.1038/nature17658}}
 
 @article{Blanes:2009fk,
 	Author = {S. Blanes and F. Casas and J.A. Oteo and J. Ros},
@@ -75,6 +172,63 @@ archivePrefix = {arXiv},
 	Volume = {65},
 	Year = {2010}}
 
+
+@article{Boixo2016,
+	Abstract = {A critical question for quantum computing in the near future is whether quantum devices without error correction can perform a well-defined computational task beyond the capabilities of supercomputers. Such a demonstration of what is referred to as quantum supremacy requires a reliable evaluation of the resources required to solve tasks with classical approaches. Here, we propose the task of sampling from the output distribution of random quantum circuits as a demonstration of quantum supremacy. We extend previous results in computational complexity to argue that this sampling task must take exponential time in a classical computer. We introduce cross-entropy benchmarking to obtain the experimental fidelity of complex multiqubit dynamics. This can be estimated and extrapolated to give a success metric for a quantum supremacy demonstration. We study the computational cost of relevant classical algorithms and conclude that quantum supremacy can be achieved with circuits in a two-dimensional lattice of 7 ×7 qubits and around 40 clock cycles. This requires an error rate of around 0.5{\%} for two-qubit gates (0.05{\%} for one-qubit gates), and it would demonstrate the basic building blocks for a fault-tolerant quantum computer.},
+	Author = {Boixo, Sergio and Isakov, Sergei V. and Smelyanskiy, Vadim N. and Babbush, Ryan and Ding, Nan and Jiang, Zhang and Bremner, Michael J. and Martinis, John M. and Neven, Hartmut},
+	Da = {2018/06/01},
+	Date-Added = {2019-05-30 14:57:41 +0000},
+	Date-Modified = {2019-05-30 14:57:41 +0000},
+	Doi = {10.1038/s41567-018-0124-x},
+	Id = {Boixo2018},
+	Isbn = {1745-2481},
+	Journal = {Nature Physics},
+	Number = {6},
+	Pages = {595--600},
+	Title = {Characterizing quantum supremacy in near-term devices},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/s41567-018-0124-x},
+	Volume = {14},
+	Year = {2018},
+	Bdsk-Url-1 = {https://doi.org/10.1038/s41567-018-0124-x},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1038/s41567-018-0124-x}}
+
+@ARTICLE{Bravyi2017,
+       author = {{Bravyi}, Sergey and {Gambetta}, Jay M. and {Mezzacapo}, Antonio and
+         {Temme}, Kristan},
+        title = "{Tapering off qubits to simulate fermionic Hamiltonians}",
+      journal = {arXiv e-prints},
+     keywords = {Quantum Physics},
+         year = "2017",
+        month = "Jan",
+          eid = {arXiv:1701.08213},
+        pages = {arXiv:1701.08213},
+archivePrefix = {arXiv},
+       eprint = {1701.08213},
+ primaryClass = {quant-ph},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv170108213B},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@article{Corcoles2015,
+	Author = {C{\'o}rcoles, A. D. and Magesan, Easwar and Srinivasan, Srikanth J. and Cross, Andrew W. and Steffen, M. and Gambetta, Jay M. and Chow, Jerry M.},
+	Date = {2015/04/29/online},
+	Date-Added = {2019-05-30 14:43:52 +0000},
+	Date-Modified = {2019-05-30 14:43:52 +0000},
+	Day = {29},
+	Journal = {Nature Communications},
+	L3 = {10.1038/ncomms7979; https://www.nature.com/articles/ncomms7979#supplementary-information},
+	M3 = {Article},
+	Month = {04},
+	Pages = {6979 EP  -},
+	Publisher = {The Author(s) SN  -},
+	Title = {Demonstration of a quantum error detection code using a square lattice of four superconducting qubits},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/ncomms7979},
+	Volume = {6},
+	Year = {2015},
+	Bdsk-Url-1 = {https://doi.org/10.1038/ncomms7979}}
 
 @article{Dawson:2008td,
 	Author = {Dawson, C. M. and Eisert, J. and Osborne, T. J.},
@@ -223,7 +377,36 @@ archivePrefix = {arXiv},
 	Url = {https://link.aps.org/doi/10.1103/PhysRevLett.110.100402},
 	Volume = {110},
 	Year = {2013}}
-
+	
+@ARTICLE{Hastings2015,
+	series = {Quantum Information & Computation},
+	volume = {15},
+	author = {Hastings, Matthew B. and Wecker, Dave and Bauer, Bela and Troyer, Matthias},
+	publisher = {Rinton Press},
+	year = {2015-01},
+	language = {en},
+	abbrev_source_title = {Quantum inf. comput.},
+	issn = {1533-7146},
+	number = {1-2},
+	adress = {Princeton, NJ},
+	title = {Improving quantum algorithms for quantum chemistry},
+	PAGES = {1 - 21},
+	Note = {.}
+}
+@article{Havlicek2017,
+  title = {Operator locality in the quantum simulation of fermionic models},
+  author = {Havl\'{\i}\ifmmode \check{c}\else \v{c}\fi{}ek, Vojt\ifmmode \check{e}\else \v{e}\fi{}ch and Troyer, Matthias and Whitfield, James D.},
+  journal = {Phys. Rev. A},
+  volume = {95},
+  issue = {3},
+  pages = {032332},
+  numpages = {9},
+  year = {2017},
+  month = {Mar},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.95.032332},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.95.032332}
+}
 
 @article{Hergert:2016jk,
 	Author = {Hergert, H. and Bogner, S. K. and Morris, T. D. and Schwenk, A. and Tsukiyama, K.},
@@ -268,6 +451,17 @@ archivePrefix = {arXiv},
       SLACcitation   = "%%CITATION = ARXIV:1612.08315;%%"
 }
 
+
+@article{Hjorth-Jensen:2010qf,
+    Author = {M Hjorth-Jensen and D J Dean and G Hagen and S Kvaal},
+	Journal = {J. Phys. G},
+	Number = {6},
+	Pages = {064035},
+	Title = {Many-body interactions and nuclear structure},
+	Url = {http://stacks.iop.org/0954-3899/37/i=6/a=064035},
+	Volume = {37},
+	Year = {2010}}
+
 @article {Islam:2013a,
 	author = {Islam, R. and Senko, C. and Campbell, W. C. and Korenblit, S. and Smith, J. and Lee, A. and Edwards, E. E. and Wang, C.-C. J. and Freericks, J. K. and Monroe, C.},
 	title = {Emergence and Frustration of Magnetism with Variable-Range Interactions in a Quantum Simulator},
@@ -291,6 +485,61 @@ archivePrefix = {arXiv},
       year           = "2019",
       pages          = "491-495"
 }
+
+@article {Kassal2008,
+	author = {Kassal, Ivan and Jordan, Stephen P. and Love, Peter J. and Mohseni, Masoud and Aspuru-Guzik, Al{\'a}n},
+	title = {Polynomial-time quantum algorithm for the simulation of chemical dynamics},
+	volume = {105},
+	number = {48},
+	pages = {18681--18686},
+	year = {2008},
+	doi = {10.1073/pnas.0808245105},
+	publisher = {National Academy of Sciences},
+	abstract = {The computational cost of exact methods for quantum simulation using classical computers grows exponentially with system size. As a consequence, these techniques can be applied only to small systems. By contrast, we demonstrate that quantum computers could exactly simulate chemical reactions in polynomial time. Our algorithm uses the split-operator approach and explicitly simulates all electron-nuclear and interelectronic interactions in quadratic time. Surprisingly, this treatment is not only more accurate than the Born{\textendash}Oppenheimer approximation but faster and more efficient as well, for all reactions with more than about four atoms. This is the case even though the entire electronic wave function is propagated on a grid with appropriately short time steps. Although the preparation and measurement of arbitrary states on a quantum computer is inefficient, here we demonstrate how to prepare states of chemical interest efficiently. We also show how to efficiently obtain chemically relevant observables, such as state-to-state transition probabilities and thermal reaction rates. Quantum computers using these techniques could outperform current classical computers with 100 qubits.},
+	issn = {0027-8424},
+	URL = {https://www.pnas.org/content/105/48/18681},
+	eprint = {https://www.pnas.org/content/105/48/18681.full.pdf},
+	journal = {Proceedings of the National Academy of Sciences}
+}
+
+
+@article{Kelly2015,
+	Author = {Kelly, J. and Barends, R. and Fowler, A. G. and Megrant, A. and Jeffrey, E. and White, T. C. and Sank, D. and Mutus, J. Y. and Campbell, B. and Chen, Yu and Chen, Z. and Chiaro, B. and Dunsworth, A. and Hoi, I. -C. and Neill, C. and O'Malley, P. J. J. and Quintana, C. and Roushan, P. and Vainsencher, A. and Wenner, J. and Cleland, A. N. and Martinis, John M.},
+	Date = {2015/03/04/online},
+	Date-Added = {2019-05-30 14:47:34 +0000},
+	Date-Modified = {2019-05-30 14:47:34 +0000},
+	Day = {04},
+	Journal = {Nature},
+	L3 = {10.1038/nature14270; https://www.nature.com/articles/nature14270#supplementary-information},
+	Month = {03},
+	Pages = {66 EP  -},
+	Publisher = {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved. SN  -},
+	Title = {State preservation by repetitive error detection in a superconducting quantum circuit},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/nature14270},
+	Volume = {519},
+	Year = {2015},
+	Bdsk-Url-1 = {https://doi.org/10.1038/nature14270}}
+
+
+@article{Kandala2017,
+	Author = {Kandala, Abhinav and Mezzacapo, Antonio and Temme, Kristan and Takita, Maika and Brink, Markus and Chow, Jerry M. and Gambetta, Jay M.},
+	Date = {2017/09/13/online},
+	Date-Added = {2019-05-30 15:50:16 +0000},
+	Date-Modified = {2019-05-30 15:50:16 +0000},
+	Day = {13},
+	Journal = {Nature},
+	L3 = {10.1038/nature23879; https://www.nature.com/articles/nature23879#supplementary-information},
+	Month = {09},
+	Pages = {242 EP  -},
+	Publisher = {Macmillan Publishers Limited, part of Springer Nature. All rights reserved. SN  -},
+	Title = {Hardware-efficient variational quantum eigensolver for small molecules and quantum magnets},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/nature23879},
+	Volume = {549},
+	Year = {2017},
+	Bdsk-Url-1 = {https://doi.org/10.1038/nature23879}}
+
 @article{Kitaev:1995qy,
       author         = "Kitaev, A. {\relax Yu}.",
       title          = "{Quantum measurements and the Abelian stabilizer
@@ -300,6 +549,20 @@ archivePrefix = {arXiv},
       archivePrefix  = "arXiv",
       primaryClass   = "quant-ph",
       SLACcitation   = "%%CITATION = QUANT-PH/9511026;%%"
+}
+@article{Kivlichan2016,
+	doi = {10.1088/1751-8121/aa77b8},
+	url = {https://doi.org/10.1088%2F1751-8121%2Faa77b8},
+	year = 2017,
+	month = {jun},
+	publisher = {{IOP} Publishing},
+	volume = {50},
+	number = {30},
+	pages = {305301},
+	author = {Ian D Kivlichan and Nathan Wiebe and Ryan Babbush and Al{\'{a}}n Aspuru-Guzik},
+	title = {Bounding the costs of quantum simulation of many-body physics in real space},
+	journal = {Journal of Physics A: Mathematical and Theoretical},
+	abstract = {We present a quantum algorithm for simulating the dynamics of a first-quantized Hamiltonian in real space based on the truncated Taylor series algorithm. We avoid the possibility of singularities by applying various cutoffs to the system and using a high-order finite difference approximation to the kinetic energy operator. We find that our algorithm can simulate Î· interacting particles using a number of calculations of the pairwise interactions that scales, for a fixed spatial grid spacing, as , versus the  time required by previous methods (assuming the number of orbitals is proportional to Î·), and scales super-polynomially better with the error tolerance than algorithms based on the LieâTrotterâSuzuki product formula. Finally, we analyze discretization errors that arise from the spatial grid and show that under some circumstances these errors can remove the exponential speedups typically afforded by quantum simulation.}
 }
 
 @article{Kogut:1974ag,
@@ -315,6 +578,25 @@ archivePrefix = {arXiv},
       SLACcitation   = "%%CITATION = PHRVA,D11,395;%%"
 }
 
+
+@article{Lanyon2010,
+	Author = {Lanyon, B. P. and Whitfield, J. D. and Gillett, G. G. and Goggin, M. E. and Almeida, M. P. and Kassal, I. and Biamonte, J. D. and Mohseni, M. and Powell, B. J. and Barbieri, M. and Aspuru-Guzik, A. and White, A. G.},
+	Date = {2010/01/10/online},
+	Date-Added = {2019-05-30 15:42:52 +0000},
+	Date-Modified = {2019-05-30 15:42:52 +0000},
+	Day = {10},
+	Journal = {Nature Chemistry},
+	L3 = {10.1038/nchem.483; https://www.nature.com/articles/nchem.483#supplementary-information},
+	M3 = {Article},
+	Month = {01},
+	Pages = {106 EP  -},
+	Publisher = {Nature Publishing Group SN  -},
+	Title = {Towards quantum chemistry on a quantum computer},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/nchem.483},
+	Volume = {2},
+	Year = {2010},
+	Bdsk-Url-1 = {https://doi.org/10.1038/nchem.483}}
 
 @article{Lee:2019gtc,
       author         = "Lee, Dean and Watkins, Jacob and Frame, Dillon and Given,
@@ -376,6 +658,41 @@ archivePrefix = {arXiv},
 	Title = {{A quantum algorithm to solve nonlinear differential equations}},
 	Year = {2008}}
 
+@article{Li2011,
+	Author = {Li, Zhaokai and Yung, Man-Hong and Chen, Hongwei and Lu, Dawei and Whitfield, James D. and Peng, Xinhua and Aspuru-Guzik, Al{\'a}n and Du, Jiangfeng},
+	Date = {2011/09/09/online},
+	Date-Added = {2019-05-30 15:45:05 +0000},
+	Date-Modified = {2019-05-30 15:45:05 +0000},
+	Day = {09},
+	Journal = {Scientific Reports},
+	L3 = {10.1038/srep00088; https://www.nature.com/articles/srep00088#supplementary-information},
+	M3 = {Article},
+	Month = {09},
+	Pages = {88 EP  -},
+	Publisher = {The Author(s) SN  -},
+	Title = {Solving Quantum Ground-State Problems with Nuclear Magnetic Resonance},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/srep00088},
+	Volume = {1},
+	Year = {2011},
+	Bdsk-Url-1 = {https://doi.org/10.1038/srep00088}}
+
+@article {Lloyd1996,
+	author = {Lloyd, Seth},
+	title = {Universal Quantum Simulators},
+	volume = {273},
+	number = {5278},
+	pages = {1073--1078},
+	year = {1996},
+	doi = {10.1126/science.273.5278.1073},
+	publisher = {American Association for the Advancement of Science},
+	abstract = {Feynman{\textquoteright}s 1982 conjecture, that quantum computers can be programmed to simulate any local quantum system, is shown to be correct.},
+	issn = {0036-8075},
+	URL = {https://science.sciencemag.org/content/273/5278/1073},
+	eprint = {https://science.sciencemag.org/content/273/5278/1073.full.pdf},
+	journal = {Science}
+}
+
 @article{Lu:2018aq,
 	Archiveprefix = {arXiv},
 	Author = {{Lu}, Hsuan-Hao and {Klco}, Natalie and {Lukens}, Joseph M. and {Morris}, Titus D. and {Bansal}, Aaina and {Ekstr{\"o}m}, Andreas and {Hagen}, Gaute and {Papenbrock}, Thomas and {Weiner}, Andrew M. and {Savage}, Martin J. and {Lougovski}, Pavel},
@@ -388,6 +705,34 @@ archivePrefix = {arXiv},
 	Primaryclass = {quant-ph},
 	Title = {{Simulations of Subatomic Many-Body Physics on a Quantum Frequency Processor}},
 	Year = {2018}}
+
+
+@article{McClean2014,
+	Annote = {doi: 10.1021/jz501649m},
+	Author = {McClean, Jarrod R. and Babbush, Ryan and Love, Peter J. and Aspuru-Guzik, Al{\'a}n},
+	Booktitle = {The Journal of Physical Chemistry Letters},
+	Da = {2014/12/18},
+	Date = {2014/12/18},
+	Date-Added = {2019-05-30 14:28:00 +0000},
+	Date-Modified = {2019-05-30 14:28:00 +0000},
+	Doi = {10.1021/jz501649m},
+	Isbn = {1948-7185},
+	Journal = {The Journal of Physical Chemistry Letters},
+	Journal1 = {J. Phys. Chem. Lett.},
+	M3 = {doi: 10.1021/jz501649m},
+	Month = {12},
+	Number = {24},
+	Pages = {4368--4380},
+	Publisher = {American Chemical Society},
+	Title = {Exploiting Locality in Quantum Computation for Quantum Chemistry},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1021/jz501649m},
+	Volume = {5},
+	Year = {2014},
+	Year1 = {2014},
+	Bdsk-Url-1 = {https://doi.org/10.1021/jz501649m},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1021/jz501649m}}
+
 
 @article{McClean:2016qr,
 	Author = {Jarrod R McClean and Jonathan Romero and Ryan Babbush and Al{\'a}n Aspuru-Guzik},
@@ -447,6 +792,40 @@ archivePrefix = {arXiv},
       SLACcitation   = "%%CITATION = ARXIV:1709.02786;%%"
 }
 
+
+@article{Mueck2015,
+	Author = {Mueck, Leonie},
+	Date = {2015/04/22/online},
+	Date-Added = {2019-05-30 15:59:24 +0000},
+	Date-Modified = {2019-05-30 15:59:24 +0000},
+	Day = {22},
+	Journal = {Nature Chemistry},
+	L3 = {10.1038/nchem.2248; },
+	Month = {04},
+	Pages = {361 EP  -},
+	Publisher = {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved. SN  -},
+	Title = {Quantum reform},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/nchem.2248},
+	Volume = {7},
+	Year = {2015},
+	Bdsk-Url-1 = {https://doi.org/10.1038/nchem.2248}}
+
+@article{OMalley2016,
+  title = {Scalable Quantum Simulation of Molecular Energies},
+  author = {O'Malley, P. J. J. and Babbush, R. and Kivlichan, I. D. and Romero, J. and McClean, J. R. and Barends, R. and Kelly, J. and Roushan, P. and Tranter, A. and Ding, N. and Campbell, B. and Chen, Y. and Chen, Z. and Chiaro, B. and Dunsworth, A. and Fowler, A. G. and Jeffrey, E. and Lucero, E. and Megrant, A. and Mutus, J. Y. and Neeley, M. and Neill, C. and Quintana, C. and Sank, D. and Vainsencher, A. and Wenner, J. and White, T. C. and Coveney, P. V. and Love, P. J. and Neven, H. and Aspuru-Guzik, A. and Martinis, J. M.},
+  journal = {Phys. Rev. X},
+  volume = {6},
+  issue = {3},
+  pages = {031007},
+  numpages = {13},
+  year = {2016},
+  month = {Jul},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevX.6.031007},
+  url = {https://link.aps.org/doi/10.1103/PhysRevX.6.031007}
+}
+
 @article{Papenbrock:2005kx,
 	Author = {T Papenbrock and D J Dean},
 	Date-Added = {2018-06-19 02:45:36 +0000},
@@ -462,6 +841,77 @@ archivePrefix = {arXiv},
 	Year = {2005}}
 
 
+@article{Peruzzo2013,
+	Author = {Peruzzo, Alberto and McClean, Jarrod and Shadbolt, Peter and Yung, Man-Hong and Zhou, Xiao-Qi and Love, Peter J. and Aspuru-Guzik, Al{\'a}n and O'Brien, Jeremy L.},
+	Date = {2014/07/23/online},
+	Date-Added = {2019-05-30 14:05:11 +0000},
+	Date-Modified = {2019-05-30 14:05:11 +0000},
+	Day = {23},
+	Journal = {Nature Communications},
+	L3 = {10.1038/ncomms5213; https://www.nature.com/articles/ncomms5213#supplementary-information},
+	M3 = {Article},
+	Month = {07},
+	Pages = {4213 EP  -},
+	Publisher = {The Author(s) SN  -},
+	Title = {A variational eigenvalue solver on a photonic quantum processor},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/ncomms5213},
+	Volume = {5},
+	Year = {2014},
+	Bdsk-Url-1 = {https://doi.org/10.1038/ncomms5213}}
+
+@article{Poulin2014,
+ author = {Poulin, David and Hastings, Matthew B. and Wecker, Dave and Wiebe, Nathan and Doberty, Andrew C. and Troyer, Matthias},
+ title = {The Trotter Step Size Required for Accurate Quantum Simulation of Quantum Chemistry},
+ journal = {Quantum Info. Comput.},
+ issue_date = {April 2015},
+ volume = {15},
+ number = {5-6},
+ month = apr,
+ year = {2015},
+ issn = {1533-7146},
+ pages = {361--384},
+ numpages = {24},
+ url = {http://dl.acm.org/citation.cfm?id=2871401.2871402},
+ acmid = {2871402},
+ publisher = {Rinton Press, Incorporated},
+ address = {Paramus, NJ},
+} 
+
+@article{Riste2015,
+	Author = {Rist{\`e}, D. and Poletto, S. and Huang, M. -Z. and Bruno, A. and Vesterinen, V. and Saira, O. -P. and DiCarlo, L.},
+	Date = {2015/04/29/online},
+	Date-Added = {2019-05-30 14:45:19 +0000},
+	Date-Modified = {2019-05-30 14:45:19 +0000},
+	Day = {29},
+	Journal = {Nature Communications},
+	L3 = {10.1038/ncomms7983; https://www.nature.com/articles/ncomms7983#supplementary-information},
+	M3 = {Article},
+	Month = {04},
+	Pages = {6983 EP  -},
+	Publisher = {The Author(s) SN  -},
+	Title = {Detecting bit-flip errors in a logical qubit using stabilizer measurements},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/ncomms7983},
+	Volume = {6},
+	Year = {2015},
+	Bdsk-Url-1 = {https://doi.org/10.1038/ncomms7983}}
+
+
+@article{Romero2017,
+	doi = {10.1088/2058-9565/aad3e4},
+	url = {https://doi.org/10.1088%2F2058-9565%2Faad3e4},
+	year = 2018,
+	month = {oct},
+	publisher = {{IOP} Publishing},
+	volume = {4},
+	number = {1},
+	pages = {014008},
+	author = {Jonathan Romero and Ryan Babbush and Jarrod R McClean and Cornelius Hempel and Peter J Love and Al{\'{a}}n Aspuru-Guzik},
+	title = {Strategies for quantum computing molecular energies using the unitary coupled cluster ansatz},
+	journal = {Quantum Science and Technology},
+	abstract = {The variational quantum eigensolver (VQE) algorithm combines the ability of quantum computers to efficiently compute expectation values with a classical optimization routine in order to approximate ground state energies of quantum systems. In this paper, we study the application of VQE to the simulation of molecular energies using the unitary coupled cluster (UCC) ansatz. We introduce new strategies to reduce the circuit depth for the implementation of UCC and improve the optimization of the wavefunction based on efficient classical approximations of the cluster amplitudes. Additionally, we propose an analytical method to compute the energy gradient that reduces the sampling cost for gradient estimation by several orders of magnitude compared to numerical gradients. We illustrate our methodology with numerical simulations for a system of four hydrogen atoms that exhibit strong correlation and show that the circuit depth of VQE using a UCC ansatz can be reduced without introducing significant loss of accuracy in the final wavefunctions and energies.}
+}
 @article{Rotureau:2009ml,
 	Author = {Rotureau, J. and Michel, N. and Nazarewicz, W. and P\l{}oszajczak, M. and Dukelsky, J.},
 	Doi = {10.1103/PhysRevC.79.014304},
@@ -475,6 +925,161 @@ archivePrefix = {arXiv},
 	Url = {https://link.aps.org/doi/10.1103/PhysRevC.79.014304},
 	Volume = {79},
 	Year = {2009}}
+
+@article{Roushan2017,
+	Author = {Roushan, P. and Neill, C. and Megrant, A. and Chen, Y. and Babbush, R. and Barends, R. and Campbell, B. and Chen, Z. and Chiaro, B. and Dunsworth, A. and Fowler, A. and Jeffrey, E. and Kelly, J. and Lucero, E. and Mutus, J. and O'Malley, P. J. J. and Neeley, M. and Quintana, C. and Sank, D. and Vainsencher, A. and Wenner, J. and White, T. and Kapit, E. and Neven, H. and Martinis, J.},
+	Date = {2016/10/31/online},
+	Date-Added = {2019-05-30 14:50:28 +0000},
+	Date-Modified = {2019-05-30 14:50:28 +0000},
+	Day = {31},
+	Journal = {Nature Physics},
+	L3 = {10.1038/nphys3930; https://www.nature.com/articles/nphys3930#supplementary-information},
+	M3 = {Article},
+	Month = {10},
+	Pages = {146 EP  -},
+	Publisher = {Nature Publishing Group SN  -},
+	Title = {Chiral ground-state currents of interacting photons in a synthetic magnetic field},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1038/nphys3930},
+	Volume = {13},
+	Year = {2016},
+	Bdsk-Url-1 = {https://doi.org/10.1038/nphys3930}}
+
+	
+@article{Seeley2012,
+author = {Seeley,Jacob T.  and Richard,Martin J.  and Love,Peter J. },
+title = {The Bravyi-Kitaev transformation for quantum computation of electronic structure},
+journal = {The Journal of Chemical Physics},
+volume = {137},
+number = {22},
+pages = {224109},
+year = {2012},
+doi = {10.1063/1.4768229},
+
+URL = { 
+        https://doi.org/10.1063/1.4768229
+    
+},
+eprint = { 
+        https://doi.org/10.1063/1.4768229
+    
+}
+
+}
+
+@article{Shen2015,
+  title = {Quantum implementation of the unitary coupled cluster for simulating molecular electronic structure},
+  author = {Shen, Yangchao and Zhang, Xiang and Zhang, Shuaining and Zhang, Jing-Ning and Yung, Man-Hong and Kim, Kihwan},
+  journal = {Phys. Rev. A},
+  volume = {95},
+  issue = {2},
+  pages = {020501},
+  numpages = {5},
+  year = {2017},
+  month = {Feb},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.95.020501},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.95.020501}
+}
+
+	
+@article{Suzuki1993,
+title = "Improved Trotter-like formula",
+journal = "Physics Letters A",
+volume = "180",
+number = "3",
+pages = "232 - 234",
+year = "1993",
+issn = "0375-9601",
+doi = "https://doi.org/10.1016/0375-9601(93)90701-Z",
+url = "http://www.sciencedirect.com/science/article/pii/037596019390701Z",
+author = "Masuo Suzuki",
+abstract = "A new higher-order approximant of the trace of exponential operators is proposed, namely Tr exp([x(A+B)]= Tr{(exA2nexBnexA2n)nexp[(x38n2)S3]}+O(1n4), where S3=16[2A+B,[B,A]]. This can be applied to quantum Monte Carlo simulations. This new formula has the great merit that the decomposition parameters of higher order are all positive except the term S3."
+}
+
+@article{Toloui2013,
+       author = {{Toloui}, Borzu and {Love}, Peter J.},
+        title = "{Quantum Algorithms for Quantum Chemistry based on the sparsity of the CI-matrix}",
+      journal = {arXiv e-prints},
+     keywords = {Quantum Physics},
+         year = "2013",
+        month = "Dec",
+          eid = {arXiv:1312.2579},
+        pages = {arXiv:1312.2579},
+archivePrefix = {arXiv},
+       eprint = {1312.2579},
+ primaryClass = {quant-ph},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2013arXiv1312.2579T},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+@article{Tranter2015,
+author = {Tranter, Andrew and Sofia, Sarah and Seeley, Jake and Kaicher, Michael and McClean, Jarrod and Babbush, Ryan and Coveney, Peter V. and Mintert, Florian and Wilhelm, Frank and Love, Peter J.},
+title = {The BravyiâKitaev transformation: Properties and applications},
+journal = {International Journal of Quantum Chemistry},
+volume = {115},
+number = {19},
+pages = {1431-1441},
+keywords = {quantum chemistry, quantum simulation, quantum computing},
+doi = {10.1002/qua.24969},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.24969},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/qua.24969},
+abstract = {Quantum chemistry is an important area of application for quantum computation. In particular, quantum algorithms applied to the electronic structure problem promise exact, efficient methods for determination of the electronic energy of atoms and molecules. The BravyiâKitaev transformation is a method of mapping the occupation state of a fermionic system onto qubits. This transformation maps the Hamiltonian of n interacting fermions to an -local Hamiltonian of n qubits. This is an improvement in locality over the JordanâWigner transformation, which results in an O(n)-local qubit Hamiltonian. We present the BravyiâKitaev transformation in detail, introducing the sets of qubits which must be acted on to change occupancy and parity of states in the occupation number basis. We give recursive definitions of these sets and of the transformation and inverse transformation matrices, which relate the occupation number basis and the BravyiâKitaev basis. We then compare the use of the JordanâWigner and BravyiâKitaev Hamiltonians for the quantum simulation of methane using the STO-6G basis. Â© 2015 Wiley Periodicals, Inc.},,
+year = {2015}
+}
+@article{Trotter1959,
+ ISSN = {00029939, 10886826},
+ URL = {http://www.jstor.org/stable/2033649},
+ author = {H. F. Trotter},
+ journal = {Proceedings of the American Mathematical Society},
+ number = {4},
+ pages = {545--551},
+ publisher = {American Mathematical Society},
+ title = {On the Product of Semi-Groups of Operators},
+ volume = {10},
+ year = {1959}
+}
+
+
+@article{Wang2014,
+	Annote = {doi: 10.1021/acsnano.5b01651},
+	Author = {Wang, Ya and Dolde, Florian and Biamonte, Jacob and Babbush, Ryan and Bergholm, Ville and Yang, Sen and Jakobi, Ingmar and Neumann, Philipp and Aspuru-Guzik, Al{\'a}n and Whitfield, James D. and Wrachtrup, J{\"o}rg},
+	Booktitle = {ACS Nano},
+	Da = {2015/08/25},
+	Date = {2015/08/25},
+	Date-Added = {2019-05-30 15:46:39 +0000},
+	Date-Modified = {2019-05-30 15:46:39 +0000},
+	Doi = {10.1021/acsnano.5b01651},
+	Isbn = {1936-0851},
+	Journal = {ACS Nano},
+	Journal1 = {ACS Nano},
+	M3 = {doi: 10.1021/acsnano.5b01651},
+	Month = {08},
+	Number = {8},
+	Pages = {7769--7774},
+	Publisher = {American Chemical Society},
+	Title = {Quantum Simulation of Helium Hydride Cation in a Solid-State Spin Register},
+	Ty = {JOUR},
+	Url = {https://doi.org/10.1021/acsnano.5b01651},
+	Volume = {9},
+	Year = {2015},
+	Year1 = {2015},
+	Bdsk-Url-1 = {https://doi.org/10.1021/acsnano.5b01651},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1021/acsnano.5b01651}}
+
+@article{Wecker2014,
+  title = {Gate-count estimates for performing quantum chemistry on small quantum computers},
+  author = {Wecker, Dave and Bauer, Bela and Clark, Bryan K. and Hastings, Matthew B. and Troyer, Matthias},
+  journal = {Phys. Rev. A},
+  volume = {90},
+  issue = {2},
+  pages = {022305},
+  numpages = {13},
+  year = {2014},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.90.022305},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.90.022305}
+}
 
 @article{Wecker:2015bk,
 	Author = {Wecker, Dave and Hastings, Matthew B. and Troyer, Matthias},
@@ -490,6 +1095,43 @@ archivePrefix = {arXiv},
 	Volume = {92},
 	Year = {2015},
 	Bdsk-Url-1 = {https://doi.org/10.1103/PhysRevA.92.042303}}
+
+@article{Whitfield2010,
+author = { James D.   Whitfield  and  Jacob   Biamonte  and  AlÃ¡n   Aspuru-Guzik },
+title = {Simulation of electronic structure Hamiltonians using quantum computers},
+journal = {Molecular Physics},
+volume = {109},
+number = {5},
+pages = {735-750},
+year  = {2011},
+publisher = {Taylor & Francis},
+doi = {10.1080/00268976.2011.552441},
+
+URL = { 
+        https://doi.org/10.1080/00268976.2011.552441
+    
+},
+eprint = { 
+        https://doi.org/10.1080/00268976.2011.552441
+    
+}
+
+}
+@article{Whitfield2016,
+  title = {Local spin operators for fermion simulations},
+  author = {Whitfield, James D. and Havl\'{\i}\ifmmode \check{c}\else \v{c}\fi{}ek, Vojt\ifmmode \check{e}\else \v{e}\fi{}ch and Troyer, Matthias},
+  journal = {Phys. Rev. A},
+  volume = {94},
+  issue = {3},
+  pages = {030301},
+  numpages = {5},
+  year = {2016},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.94.030301},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.94.030301}
+}
+
 
 @article{Zhang:2017a,
 	Author = {Zhang, J. and Hess, P. W. and Kyprianidis, A. and Becker, P. and Lee, A. and Smith, J. and Pagano, G. and Potirniche, I. -D. and Potter, A. C. and Vishwanath, A. and Yao, N. Y. and Monroe, C.},
@@ -2803,3 +3445,23 @@ SLACcitation   = "%%CITATION = CHPHD,C40,100001;%%"
 
 % See More from Morten Hjorth-Jensen
 
+@article{McClean2016, title={Hybrid Quantum-Classical Hierarchy for Mitigation of Decoherence and Determination of Excited States}, volume={95}, ISSN={2469-9926, 2469-9934}, DOI={10.1103/PhysRevA.95.042308}, note={arXiv: 1603.05681}, number={4}, journal={Physical Review A}, author={McClean, Jarrod R. and Schwartz, Mollie E. and Carter, Jonathan and de Jong, Wibe A.}, year={2017}, month={Apr}, pages={042308} }
+
+ @article{Arrasmith2018, title={Variational Consistent Histories: A Hybrid Algorithm for Quantum Foundations}, url={http://arxiv.org/abs/1812.10759}, note={arXiv: 1812.10759}, journal={arXiv:1812.10759 [quant-ph]}, author={Arrasmith, Andrew and Cincio, Lukasz and Sornborger, Andrew T. and Zurek, Wojciech H. and Coles, Patrick J.}, year={2018}, month={Dec} }
+ 
+ @article{Mohseni2017, title={Commercialize quantum technologies in five years}, volume={543}, DOI={10.1038/543171a}, number={7644}, journal={Nature News}, author={Mohseni, Masoud and Read, Peter and Neven, Hartmut and Boixo, Sergio and Denchev, Vasil and Babbush, Ryan and Fowler, Austin and Smelyanskiy, Vadim and Martinis, John}, year={2017}, month={Mar}, pages={171} }
+
+ @article{Boixo2016, title={Characterizing Quantum Supremacy in Near-Term Devices}, volume={14}, ISSN={1745-2473, 1745-2481}, DOI={10.1038/s41567-018-0124-x}, note={arXiv: 1608.00263}, number={6}, journal={Nature Physics}, author={Boixo, Sergio and Isakov, Sergei V. and Smelyanskiy, Vadim N. and Babbush, Ryan and Ding, Nan and Jiang, Zhang and Bremner, Michael J. and Martinis, John M. and Neven, Hartmut}, year={2018}, month={Jun}, pages={595–600} }
+
+ @article{Cincio2018, title={Learning the quantum algorithm for state overlap}, url={https://arxiv.org/abs/1803.04114v2}, DOI={10.1088/1367-2630/aae94a}, author={Cincio, Lukasz and Subaşı, Yiğit and Sornborger, Andrew T. and Coles, Patrick J.}, year={2018}, month={Mar} }
+
+ @article{OMalley2016, title={Scalable Quantum Simulation of Molecular Energies}, volume={6}, ISSN={2160-3308}, url={http://arxiv.org/abs/1512.06860}, DOI={10.1103/PhysRevX.6.031007}, note={arXiv: 1512.06860}, number={3}, journal={Physical Review X}, author={O’Malley, P. J. J. and Babbush, R. and Kivlichan, I. D. and Romero, J. and McClean, J. R. and Barends, R. and Kelly, J. and Roushan, P. and Tranter, A. and Ding, N. and et al.}, year={2016}, month={Jul} }
+
+ @article{Wecker2015a, title={Towards Practical Quantum Variational Algorithms}, volume={92}, ISSN={1050-2947, 1094-1622}, DOI={10.1103/PhysRevA.92.042303}, note={arXiv: 1507.08969}, number={4}, journal={Physical Review A}, author={Wecker, D. and Hastings, M. B. and Troyer, M.}, year={2015}, month={Oct}, pages={042303} }
+
+ @article{Anschuetz2018, title={Variational Quantum Factoring}, url={http://arxiv.org/abs/1808.08927}, note={arXiv: 1808.08927}, journal={arXiv:1808.08927 [quant-ph]}, author={Anschuetz, Eric R. and Olson, Jonathan P. and Aspuru-Guzik, Alán and Cao, Yudong}, year={2018}, month={Aug} }
+ 
+ @article{6,title={Quantum circuits for strongly correlated quantum systems},journal={Physical Review A},volume={79},pages={032316},year={2009},author={F. Verstraete, J.I. Cirac, J.I. Latorre.} }
+ @article{14,title={Simulating Hamiltonian Dynamics with a Truncated Taylor Series},author={D. W. Berry, A. M. Childs, R. Cleve, R. Kothari, and R. D. Somma},year={2015}, volume={114},journal={Physical Review Letters},pages={09502}}
+ 
+ 
