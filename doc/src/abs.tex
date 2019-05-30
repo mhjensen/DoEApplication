@@ -1,0 +1,70 @@
+\documentclass[aps,twocolumn,showpacs,floatfix,nofootinbib,preprintnumbers,superscriptaddress,amsmath,amssymb]{revtex4-1}
+%\documentclass[10pt]{article}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage[dvips]{graphicx}
+\usepackage{pst-plot}
+\usepackage{mathrsfs}
+\usepackage{epic,eepic}
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage{braket}
+\usepackage{tabto}
+% set up paper size
+\setlength{\textwidth}{17.59cm}
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\textheight}{24.05cm}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\oddsidemargin}{-0.04cm}
+\setlength{\topmargin}{-.04cm}
+\usepackage{pdfpages} 
+
+\renewcommand{\baselinestretch}{1.1}
+\DeclareMathOperator{\sgn}{sgn}
+
+\newcommand{\dagg}[1]{\ensuremath #1^\dag}
+
+\newcommand{\tbd}[1]{{\color{red}#1}}
+
+\begin{document}
+\title{From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body Problem}
+
+
+\author{Alexei Bazavov (MSU), Scott Bogner (MSU), Patrick Coles (LANL), Heiko Hergert (MSU), Matthew Hirn (MSU), Morten Hjorth-Jensen (MSU and Univ Oslo), Dean Lee (MSU), Huey-Wen Lin (MSU) and Andrea Shindler (MSU)}
+
+\maketitle
+{\bf Collaboration Team:} This proposal assembles a team of leading experts 
+in nuclear theory, quantum computing, machine learning, and mathematics, with 
+the goal of designing new applications of quantum computing and information theory 
+to the most challenging problems in nuclear physics. The team members are 
+distinguished researchers from Los Alamos National Laboratory; IBM; and the 
+Departments of Physics and Astronomy, Computational Mathematics, Science and 
+Engineering (CMSE), and Facility for Rare Isotope Beams (FRIB) / National Superconducting Cyclotron Laboratory (NSCL) at 
+Michigan State University (MSU).
+
+{\bf Scientific Goals, Opportunities, and Challenges:} 
+How do we connect fundamental physics to forefront experiments?  With new science 
+waiting to be discovered at experimental facilities such as FRIB, this question is a 
+profound challenge and opportunity for nuclear theory.  We would like to know how nuclear forces emerge from the interactions of quarks and gluons in quantum chromodynamics, what is the internal partonic structure of nucleons, what are the signatures of physics beyond the Standard Model in atomic nuclei, how do we predict nuclear structure and reactions from the microscopic interactions of nucleons, and what are the properties of strongly-interacting matter under extreme conditions.  There have been many important and profound advances in recent years, with some of the most creative and impactful developments led by investigators on this proposal.  But there are limits to what can be done even with the most powerful supercomputers in this soon-to-be era of exascale computing.  Unfortunately, some of the most interesting scientific questions remain unexplored such as the real-time dynamics of hadronic and nuclear reactions and the properties of dense nuclear and neutron matter. For computational methods that construct quantum wave functions, the problem is the curse of large dimensionality and the impossibility of storing exponentially large vectors as classical bits.  For computational methods that rely on Monte Carlo simulations, the obstacle is the Monte Carlo sign problem, where positive and negative contributions cancel to produce exponentially small signals.
+
+Quantum computing has emerged as a new computational paradigm that offers the hope of evading both of these fundamental problems.  By allowing for arbitrary quantum superpositions of tensor products of qubits, one can store exponentially more information than classical bits.  Furthermore, qubits naturally evolve with unitary real-time dynamics. Clearly there are tremendous opportunities in this new paradigm for solving the most profound problems in nuclear physics.  But with these great opportunities, there are enormous challenges to realizing their promise.  All of the currently available digital quantum computing devices suffer from short decoherence times and significant readout errors.  Meanwhile all of the currently available analog quantum simulators have inherent quantum characteristics that are not directly applicable to address systems of relevance to nuclear physics.
+
+In order to meet these formidable challenges, we have proposed a series of new projects that bridge the gap between quantum computing as it exists today and the targeted territory of unsolved nuclear physics problems.  Some of the projects focus on variational methods and developing new algorithms for optimizing quantum wave functions.  We also explore new applications of error stabilization techniques, machine learning, and quantum compiling to make efficient short-depth quantum circuits. Other proposed projects focus on real-time evolution, the calculation of observables using new algorithms, and creative adaptations of quantum simulators to nuclear physics.  We are confident that the scientific output of this collaboration will have a significant and lasting impact on the landscape of quantum computing applied to nuclear physics.  While the focus is on applications to nuclear physics, all of the work products are new algorithms and methods of general applicability, and so they should have an equally important impact on quantum computing and quantum information science.
+
+{\bf Benefit to Society:}  Sustaining future progress in nuclear physics and quantum computing depends on training the next generation of thinkers and innovators.  Towards this purpose, our proposal has designed a very significant educational component involving the Quantum Computing Summer School at Los Alamos National Laboratory, the student-run Quantum Information and Computing (QuIC) seminar series at Michigan State University, a proposed Training in Advanced Low Energy Nuclear Theory (TALENT) summer school, as well as student and postdoctoral travel funds for collaborative work between Los Alamos and Michigan State.  The students also benefit from being a part of the nuclear physics program at FRIB and Michigan State, which is currently ranked the number one graduate program in the country according US News and World Report. The mix of analytical and computational skills that the students learn and implement provides excellent preparation for both academic and industrial research. All of the investigators on this proposal are committed to diversity in science and will seek to build a diverse scientific workforce and an inclusive environment for learning and research.
+
+\end{document}
+
+
+involving the
+Quantum Computing Summer School at Los Alamos National Laboratory, the
+student-run Quantum Information and Computing (QuIC) seminar series at
+Michigan State University, a proposed Training in Advanced Low Energy
+Nuclear Theory (TALENT) summer school, as well as student and
+postdoctoral travel funds for collaborative work between Los Alamos
+and Michigan State.  
