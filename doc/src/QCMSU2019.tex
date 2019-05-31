@@ -23,7 +23,7 @@
 \setlength{\topmargin}{-.04cm}
 \usepackage{pdfpages} 
 
-\renewcommand{\baselinestretch}{1.1}
+\renewcommand{\baselinestretch}{1.05}
 \DeclareMathOperator{\sgn}{sgn}
 
 \newcommand{\dagg}[1]{\ensuremath #1^\dag}
@@ -31,7 +31,6 @@
 \newcommand{\tbd}[1]{{\color{red}#1}}
 
 \begin{document}
-
 
 \title{DOE Quantum Horizons: \\ QIS Research and Innovation for Nuclear Science}
 \maketitle
@@ -49,7 +48,8 @@ DOE/Office of Science Program Office: {\bf Nuclear Physics}\newline
 DOE/Office of Science Program Office Technical Contact: Dr. Gulshan Rai (301-903-4702), gulshan.rai@science.doe.gov\newline
 Research Area: Theoretical Nuclear Physics; Computational Many-body Physics; Lattice Quantum Chromodynamics; Quantum Algorithms; Quantum Simulations
 \end{flushleft}
-\footnotesize{
+% \footnotesize
+{
 \rule{\linewidth}{1mm}
 \begin{table}[hbtp]
 %\caption{List of Team Members}
@@ -85,10 +85,13 @@ Shindler & Andrea & Associate Professor & MSU \\
 \end{tabular}
 \end{center}
 \end{table}
+
 }
+\pagestyle{empty}
 \newpage
 %\tableofcontents
 \section{Executive Summary}
+\pagestyle{empty}
 
 %Michigan State University (MSU) and the Facility for Rare Ion Beams (FRIB) are submitting 
 %a proposal on {\bf From Quarks to Stars: A Quantum Computing Approach to the Nuclear Many-Body %Problem}. 
@@ -115,6 +118,8 @@ In order to meet these formidable challenges, we have proposed a series of new p
 \clearpage
 
 \section{Introduction and Scientific Motivation}
+\pagestyle{plain}
+\setcounter{page}{1}
 
 \subsection{Grand Challenges in Nuclear Physics and Quantum Computing}
 
@@ -406,7 +411,8 @@ through comprehensive outreach activities including summer schools, publications
 \section{Proposed Research and Methods}
 
 In order to achieve our scientific goals, our application is divided into five work packages, four of these deal with our scientific goals while work package 5 details our plans for workforce developments.  In Fig.~\ref{diagram} we show the connectivity and links between institutions involved in this proposal through the proposed research projects and the training initiatives.
-\begin{figure}[hbtp]
+
+\begin{figure}[hbt]
 \begin{center}
  \includegraphics[scale=0.7]{Figures/NP_Collaboration.png}
  \caption{This figure shows the links between each of the institutions involved in the proposal.  We show the connectivity involving the proposed research projects and as well as training initiatives.}
@@ -423,12 +429,12 @@ In order to achieve our scientific goals, our application is divided into five w
 hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017}, there is an additional drive to identify early practical problems on which these devices might demonstrate an advantage~\cite{Mohseni2017,Boixo2016}.
 
 
-These machines are not fault-tolerant and, due to their noise, require short-depth algorithms to perform computations. There exist quantum simulation methods \cite{6-8} tailored for fault-tolerant QCs; however, their gate depth grows with simulation time. This issue makes them infeasible for near-term QCs. This motivates the need for quantum simulation methods that employ short-depth quantum circuits and hence can be implemented in the near-term. 
+These machines are not fault-tolerant and, due to their noise, require short-depth algorithms to perform computations. There exist quantum simulation methods \cite{6} tailored for fault-tolerant QCs; however, their gate depth grows with simulation time. This issue makes them infeasible for near-term QCs. This motivates the need for quantum simulation methods that employ short-depth quantum circuits and hence can be implemented in the near-term. 
 
 Machine learning (ML) provide a strategy towards this end. ML can redesign and optimize existing quantum algorithms (QAs) for noisy QCs, and it can also discover new QAs. For example, ML has been used to design an improved QA for computing quantum state overlap \cite{Cincio2018}. ML has also been used to design QAs for mathematical functions, a result that provides important subroutines for other QAs \cite{Mitarai2018}. 
 
-To address the scaling issue of applying ML to quantum systems, one can consider quantum machine learning (QML) methods. QML involves evaluating the cost function (efficiently) on a quantum computer, and then feeding the result to a classical optimizer, which then adjusts the parameters of the quantum algorithm. Such QML methods are typically called variational hybrid quantum-classical algorithms (VHQCAs). VHQCAs have demonstrated utility for other applications like ground state preparation \cite{Peruzzo2013,McClean2015} and factoring~\cite{Anschuetz2018}, and our group has developed such algorithms for quantum compiling \cite{Khatri2018}, quantum state diagonalization \cite{LaRose2018}, and characterizing quantum stochastic processes~\cite{Arrasmith2018}. VHQCAs have been shown experimentally to be inherently robust to certain errors~\cite{OMalley2016}, and are considered to be a promising candidates for performing practical
-quantum computations in the near term~\cite{Wecker2015a,Mueck2015}. 
+To address the scaling issue of applying ML to quantum systems, one can consider quantum machine learning (QML) methods. QML involves evaluating the cost function (efficiently) on a quantum computer, and then feeding the result to a classical optimizer, which then adjusts the parameters of the quantum algorithm. Such QML methods are typically called variational hybrid quantum-classical algorithms (VHQCAs). VHQCAs have demonstrated utility for other applications like ground state preparation \cite{Peruzzo2013} and factoring~\cite{Anschuetz2018}, and our group has developed such algorithms for quantum compiling \cite{Khatri2018}, quantum state diagonalization \cite{LaRose2018}, and characterizing quantum stochastic processes~\cite{Arrasmith2018}. VHQCAs have been shown experimentally to be inherently robust to certain errors~\cite{OMalley2016}, and are considered to be a promising candidates for performing practical
+quantum computations in the near term~\cite{Wecker:2015bk,Mueck2015}. 
 
 %Current computers are fundamentally limited by physical restrictions on transistor size.  Moore's law is failing. To answer critical questions at the forefront of science, new models of computation need to be developed.  Simple demonstrations of
 %quantum chemistry algorithms have been performed on architectures
@@ -438,7 +444,7 @@ quantum computations in the near term~\cite{Wecker2015a,Mueck2015}.
 %\cite{Peruzzo2013,McClean2015} has been shown experimentally to be
 %inherently robust to certain errors~\cite{OMalley2016}, and is
 %considered to be a promising candidate for performing practical
-%quantum computations in the near-term~\cite{Wecker2015a,Mueck2015}. 
+%quantum computations in the near-term~\cite{Wecker:2015bk,Mueck2015}. 
 
 %With recent developments in quantum computing
 %hardware~\cite{Corcoles2015,Riste2015,Kelly2015,Barends2016,Roushan2017},
@@ -818,7 +824,7 @@ excitation with $\sigma_z^{(n)}=-1$ as a bosonic particle at site $n$
 with hardcore interactions preventing multiple occupancy. If we
 initialize the system with one particle at the left edge of the ion
 trap, we can produce a wave packet that moves to the right and bounces
-elastically off the trap boundaries. In Fig.~\ref{particle} we plot
+elastically off the trap boundaries. In the left panel of Fig.~\ref{particle} we plot
 the real-time dynamics of a single particle released from the left
 edge of an $L=30$ trap.  We are plotting the particle density for
 several time snapshots, with later times linearly displaced in the
@@ -826,7 +832,7 @@ vertical direction.
 
 In a similar fashion we can initialize a dimer (two-particle) wave
 packet by putting two particles on adjacent sites at the edge of the
-ion trap. In Fig.~\ref{dimer_particle} we plot the real-time dynamics
+ion trap. In the right panel of Fig.~\ref{particle} we plot the real-time dynamics
 of a dimer and particle released from the left and right edges
 respectively of an $L=30$ trap.  We are plotting the particle density
 for several time snapshots, with later times linearly displaced in the
@@ -845,20 +851,21 @@ vertical direction.
   nuclear scattering and reactions in lattice effective field theory.
 
 \begin{figure}[hbtp]
-\centering
-\includegraphics[width=8cm]{particle_1}
-\caption{Plot of the real-time dynamics of a single particle released from the left edge of an $L=30$ trap.  We are plotting the particle density for several time snapshots, with later times linearly displaced in the vertical direction.}
+% \centering
+\includegraphics[width=0.495\textwidth]{particle_1}
+\includegraphics[width=0.495\textwidth]{dimer_particle_1}
+\caption{Plot of the real-time dynamics of a single particle released from the left edge (\emph{left panel}), and a dimer and particle released from the left and right edges, respectively, of an $L=30$ trap (\emph{right panel}).  We are plotting the particle density for several time snapshots, with later times linearly displaced in the vertical direction.}
 \label{particle}
 \end{figure}
  
-\begin{figure}
-\centering
-\includegraphics[width=8cm]{dimer_particle_1}
-\caption{Plot of the real-time dynamics of a dimer and a single particle released from the left and right edges respectively of an $L=30$ trap.  We are plotting the particle density for
-several time snapshots, with later times linearly displaced in the vertical
-direction.}
-\label{dimer_particle}
-\end{figure}
+% \begin{figure}
+% \centering
+% \includegraphics[width=8cm]{dimer_particle_1}
+% \caption{Plot of the real-time dynamics of a dimer and a single particle released from the left and right edges respectively of an $L=30$ trap.  We are plotting the particle density for
+% several time snapshots, with later times linearly displaced in the vertical
+% direction.}
+% \label{dimer_particle}
+% \end{figure}
 
  The time line for the development of the various elements of WP2 is
 \begin{footnotesize}
@@ -939,7 +946,7 @@ the 2 spinor components are distributed in neighboring sites resulting in
 two fermion sites per spatial sites.
 To obtain the form of the Hamiltonian density one uses a Jordan-Wigner
 transformation. To fix the gauge we set the temporal components
-of the gauge field to zero; one then obtains~\cite{Kuhn:2014rha,Klco:2018kyo}
+of the gauge field to zero; one then %obtains~\cite{Kuhn:2014rha,Klco:2018kyo}
 \begin{eqnarray}
 H &=& \beta \sum_{n=0}^{N_{f_s}-1} \left[\sigma_n^{+} L_n^- \sigma_{n+1}^{-} +
   \sigma_{n+1}^{+} L_n^+ \sigma_{n}^{-}\right] \\ \nonumber
@@ -1000,7 +1007,7 @@ correlation function \cite{Bellac:2011kqa}
 \end{equation}
 where
 \begin{eqnarray}
-D^{>(<)}_H(p_0, \vec{p}) &=& \int{d^4 p \over (2
+D^{>(<)}_H(p_0, \vec{p}) &=& \int\frac{d^4 p}{(2
 \pi)^4} e^{i p \cdot x} D^{>(<)}_H(x_0,\vec{x}) \label{eq.defspect} \\
 D^{>}_H(x_0,\vec{x}) &=& \langle
 J_H(x_0, \vec{x}), J_H(0, \vec{0}) \rangle \nonumber\\
@@ -1101,9 +1108,9 @@ in Hamiltonian LQCD and using it to determine the spectral functions
 at finite temperature. The validity of the methods will be tested with the
 conventional Monte Carlo as well as with the available analytical
 results~\cite{Fayyazuddin:1993ua}. 
-We will test our algorithm for non-trivial low-qubit using the IBM-QISKit based local simulator, before trying out 5-qubit ibmqx4 and the 16-qubit ibmqx5 machines. 
+We will test our algorithm for non-trivial low-qubit using the IBM Qiskit local simulator, before trying out the 5-qubit ibmqx4 and 16-qubit ibmqx5 machines. 
 If successful, such methods can be generalized for
-multiple situations which in Euclidean QFT lead to inverse problem arising
+multiple situations which in Euclidean QFT would lead to inverse problems arising
 from analytic continuation to real time.
 
 
@@ -1215,23 +1222,20 @@ We have recently repeated the QPE calculation for the pairing model in collabora
 % As stated above, the latter is a hybrid quantum-classical algorithm that is based on the variational principle of quantum mechanics.
 The quantum computer is used to prepare an initial state guess and measure the expectation value of the Hamiltonian in that state. The initial state is then slightly varied by a small change in the parameters $\theta$ and the expectation value is measured again. The classical computer computes an appropriate norm of the difference between the iterations of the expectation values and stops once this difference is sufficiently small. The algorithm will converge to the ground state energy of the Hamiltonian. The excited energies can be calculated by shifting the Hamiltonian using the previously attained knowledge of the ground-state energy, and repeating the algorithm. Continuing onward from these results, we will pursue the more ambitious task to design efficient quantum  algorithms for the IMSRG and UCC theories that will be able to run on both existing quantum computers and classical supercomputers. 
 
-\textbf{Designing Quantum Algorithms for In-Medium SRG and Unitary Coupled Cluster.} 
+\paragraph{Designing Quantum Algorithms for In-Medium SRG and Unitary Coupled Cluster.} 
 Following the benchmark calculations using VQE, the next major goal of WP4 is to develop quantum algorithms that perform SRG evolutions. A quantum computer is ideally suited for this purpose because SRGs are based on continuous unitary transformations. The IMSRG, in particular, can be used to directly compute individual nuclear eigenstates \cite{Hergert:2016jk,Hergert:2016ij,Hergert:2017kx}. This is achieved by solving a system of coupled non-linear ODEs. While quantum algorithms for such applications exist, the depth of the necessary quantum circuit exceeds the capabilities of current and near-term devices.
 
 However, the IMSRG wave function that results from applying the aggregate unitary transformation to a chosen uncorrelated reference state may represent a novel type of ansatz that can be optimized using the VQE \cite{Dawson:2008td}, as mentioned above. Using the Magnus expansion, the IMSRG wave function can be written as $\ket{\Psi(s)}=e^{\Omega(s)}\ket{\Phi}$, with a typically uncorrelated reference state $\ket{\Phi}$ and an operator $\Omega(s)$ that changes dynamically as we evolve in the flow parameter $s$ \cite{Morris:2015ve}. We note that this ansatz encompasses the UCC method that has been used successfully in conjunction with the VQE to determine electronic (see, e.g., \cite{Wecker:2015bk,McClean:2016qr,Lee:2019dd}) and nuclear ground state wave functions \cite{Dumitrescu:2018az,Lu:2018aq}. Unitary CC is obtained as the special case in which $\Omega(s)=s(T-T^{\dag})$, where $T$ is determined by a ``global'' variational optimization, and $s$ parameterizes a trivial linear trajectory between the reference state $\ket{\Phi}$ and the UCC wave function. In contrast, the dynamically updated $\Omega(s)$ of the IMSRG approach allows more general, locally optimized trajectories in the manifold of evolving operators that should allow greater control over approximation errors (see \cite{Hergert:2017kx} for a detailed discussion).
 
-With its explicit flow parameter, i.e., renormalization scale, dependence the IMSRG wave function is \emph{conceptually} analogous to certain types of tensor network states, in particular . These states have not only been extremely powerful tools in real-space or lattice RG approaches, but they can also be translated into quantum circuits in a fairly easy manner (see, e.g., \cite{Dawson:2008td}). Instead of describing the entanglement of lattice sites under rather simple short-range interactions, the IMSRG wave function encodes the entanglement of modes in momentum space (e.g., in a plane-wave basis) or a more general configuration space. The entanglement patterns of such modes are often more complex than those of lattice systems, especially when symmetries need to be taken into account \cite{Legeza:2015la}, hence a quantum circuit based on the IMSRG wave function will have features that are distinct from lattice tensor network states. 
+With its explicit flow parameter, i.e., renormalization scale, dependence the IMSRG wave function is conceptually analogous to certain types of tensor network states, in particular MERA-type states \cite{kim2017robust,Vidal:2007if,Evenbly:2015ht,Evenbly:2015bq,Dawson:2008td}. These states have not only been extremely powerful tools in real-space or lattice RG approaches, but they can also be translated into quantum circuits in a fairly easy manner (see, e.g., \cite{Dawson:2008td}). Instead of describing the entanglement of lattice sites under rather simple short-range interactions, the IMSRG wave function encodes the entanglement of modes in momentum space (e.g., in a plane-wave basis) or a more general configuration space. The entanglement patterns of such modes are often more complex than those of lattice systems, especially when symmetries need to be taken into account \cite{Legeza:2015la}, hence a quantum circuit based on the IMSRG wave function will have features that are distinct from lattice tensor network states. 
 
-Our first step in these studies, is to apply these algorithms to the nuclear pairing Hamiltonian, with and without particle-hole operators. These are models which have been extensively studied with many classical quantum mechanical algorithms.  
-In a recent work Babbush {\em et al} develop the formalism for performing quantum simulations with a plane-wave bases \cite{Babbush:2018wy} for the homogeneous electron gas (HEG). Our final goal is to extend our quantum algorithms for the UCC and IMSRG  to both the HEG and infinite nuclear matter. This will lay the foundation for the application of quantum algorithms for studies of finite nuclei and infinite nuclear matter. 
+Our first step in these studies is to again apply these algorithms to the simple Hamiltonians studied with VPE and QPE in the early stages of WP4.  In a recent work, Babbush {\em et al} develop the formalism for performing quantum simulations with a plane-wave bases \cite{Babbush:2018wy} for the homogeneous electron gas (HEG). Our final goal is to extend our quantum algorithms for the UCC and IMSRG  to both the HEG and infinite nuclear matter. This will lay the foundation for the application of quantum algorithms for studies of finite nuclei and infinite nuclear matter. 
 
-
-\textbf{Magnus Methods and Trotterization.}
+\paragraph{Magnus Methods and Trotterization.}
 In the Magnus formulation of the IMSRG, the unitary transformation is expressed as true operator exponential $U(s)=e^{\Omega(s)}$ rather than a Dyson series and evolutions for multiple observables are replaced by a single evolution of the anti-Hermitian operator $\Omega(s)$ \cite{Morris:2015ve}. Since the unitarity of the IMSRG transformation is made explicit by the Magnus ansatz, the flow equation for $\Omega(s)$ can be solved reliably with methods as simple as a first-order forward Euler integration, while taking large time steps. This is the reason why entire classes of numerical ODE integration methods are based on the Magnus expansion (see, e.g,. \cite{Blanes:2009fk}).
 Continuing along those lines, we will investigate whether Magnus methods --- possibly augmented with (S)RG ideas, e.g., a dynamical optimization for different time evolution scales --- can be a complement or a viable alternative to Trotterization.
 
-\textbf{Preprocessing Nuclear Hamiltonians with Similarity Renormalization Group Methods.} Similarity Renormalization group (SRG) methods have played an important role in enabling the enormous progress in nuclear many-body theory in the past decade, by providing systematic tools for dialing the resolution scales of interactions and quantum states \cite{Bogner:2010pq,Hergert:2016jk,Hergert:2017kx,Stroberg:2019mx}. The resolution scale of the Hamiltonian will inherently affect the complexity of its quantum-gate representation and the susceptibility of the computation to noise on near-term simulators: This is immediately evident from recent quantum simulations of light nuclei based on low-resolution effective field theory interactions \cite{Dumitrescu:2018az,Lu:2018aq} and previous realistic interactions with high inherent resolution \cite{Roggero:2019sr}.
-
+\paragraph{Preprocessing Nuclear Hamiltonians with Similarity Renormalization Group Methods.} Similarity Renormalization group (SRG) methods have played an important role in enabling the enormous progress in nuclear many-body theory in the past decade, by providing systematic tools for dialing the resolution scales of interactions and quantum states \cite{Bogner:2010pq,Hergert:2016jk,Hergert:2017kx,Stroberg:2019mx}. The resolution scale of the Hamiltonian will inherently affect the complexity of its quantum-gate representation and the susceptibility of the computation to noise on near-term simulators: This is immediately evident from recent quantum simulations of light nuclei based on low-resolution effective field theory interactions \cite{Dumitrescu:2018az,Lu:2018aq} and previous realistic interactions with high inherent resolution \cite{Roggero:2019sr}.
 
 
 The time line for WP4 is summarized in the following table:
@@ -1268,13 +1272,13 @@ In work package 5 we present our plans for a professional development of the Ph.
 \paragraph{Scientific development}
 The scientific development of the candidates involves several elements, of which some exist already while other ones will be developed by this project. 
 \begin{itemize}
-    \item Ph.D. student Ryan Larose (also together with other Ph.D. students at MSU) has developed a well-attended and widely popular seminar series on Quantum Information and Computations (QuIC) at MSU. The QuIC seminar series has had  several lectures and introductions that help new students and interested researchers to get started with quantum information theory and computing. This seminar series will be an important element in the dissemination of the results reached by this project and will also serve as an arena where students learn to present and popularize their results.  This project aims at helping in further developing this seminar series into a sustainable series in quantum information theory and computing at MSU. 
-    \item Patrick Coles has during the last few years chaired the Los Alamos National Laboratory's (LANL) Quantum Computing Summer School. This is an immersive 10-week curriculum that includes tutorials from world-leading experts in quantum computation as well as one-on-one mentoring from LANL staff scientists who are conducting cutting-edge quantum computing research. For our Ph.D. candidates this summer school offers a unique opportunity to meet world leading experts in Quantum Computing. 
+    \item Ph.D. student Ryan Larose (also together with other Ph.D. students at MSU) has developed a well-attended and widely popular seminar series on Quantum Information and Computations (QuIC) at MSU. The QuIC seminar series has had  several lectures and introductions that help new students and interested researchers to get started with quantum information theory and computing. This seminar series will be an important element in the dissemination of the results reached by this project and will also serve as an arena where students learn to present and promote their results.  This project aims at helping in further developing this seminar series into a sustainable series in quantum information theory and computing at MSU. 
+    \item Patrick Coles has during the last few years chaired the Los Alamos National Laboratory's (LANL) Quantum Computing Summer School. This is an immersive 10-week curriculum that includes tutorials from world-leading experts in quantum computation as well as one-on-one mentoring from LANL staff scientists who are conducting cutting-edge quantum computing research. For our Ph.D. candidates this summer school offers a unique opportunity to meet world leading experts in quantum computing. 
     \item We will also establish a three week intensive Nuclear TALENT (Training in Advanced Low Energy Nuclear Theory) course on quantum information theory and computing tailored to nuclear physics problems. This course will be offered in the second and third years of the project with the aim to introduce potential new students to the field. The postdoctoral fellow and the Ph.D. students are both likely participants and teaching assistants as well.
     \item Michigan State University offers, via the newly established department for Computational Mathematics, Science and Engineering (CMSE) a dual Ph.D. program in both Physics and Computational Science. This has important consequences for the possibility to establish a proper educational path in computational skills and competences, spanning from management of large numerical projects and making sustainable code projects to important algorithms and methods. Computational skills and competences are essential to most jobs in the STEM fields, and with quantum computing and quantum information theory as emerging fields, we guarantee thus a proper professional training of our students and postdoctoral fellows. This training will also involve classical computing and classical many-body algorithms and the development of large numerical projects.  
     \item The CMSE Department at Michigan State University plans to hire several faculty members over the few years in the areas of quantum information and quantum computing.  As a part of this hiring plan there will be a concerted effort to make connections between the new quantum information/computing faculty and the existing strengths in the CMSE Department in machine learning and data analytics.
     \item With our collaboration partnership with IBM and other industry research venues, our Ph.D. students can take advantage of internship and job opportunities. 
-    \item The annual workshops to be held by our project group will also allow our students and postdoctoral fellows to get in contact with many of the leading experts in the field. We are also planning for the second and third year a week long Hackathon on quantum computing and quantum information theory.
+    \item The annual workshops to be held by our project group will also allow our students and postdoctoral fellow to get in contact with many of the leading experts in the field. We are also planning for the second and third year a week long Hackathon on quantum computing and quantum information theory.
 \end{itemize}
 
 \paragraph{Mentoring plan}
@@ -1447,7 +1451,7 @@ provides possibilities for scientific exchanges, communications, and future oppo
 within the local group, requires skills in project management in order
 to adequately communicate the progress of the project and to meet
 deadlines. Participation in international conferences and visits at
-research centers can be expected within the time period the proposed
+research centers can be expected within the time period of the proposed
 project. This will equip the involved participants with skills in
 presentation techniques.  Proper documentation, both internally and in
 peer-reviewed international journals, in writing is expected. The
@@ -1456,7 +1460,7 @@ overlap with computational science and numerical analysis. These two
 complementary aspects will form a natural part of the everyday work
 and therefore add to the total competence of the
 participants. Naturally, this will add to the number of possible
-career paths.  Furthermore, the competences and skills acquired by the Ph.D. candidates and postdoctoral fellows in computational science, quantum computing and quantum information theories will lay the foundation for the education of the next generation of the scientific workforce. 
+career paths.  Furthermore, the competences and skills acquired by the Ph.D. candidates and postdoctoral fellow in computational science, quantum computing and quantum information theories will lay the foundation for the education of the next generation of the scientific workforce. 
 
 \subsection{Environmental Impact}
 
