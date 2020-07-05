@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+\usepackage{indentfirst}
+\usepackage[colorlinks=True, urlcolor=blue]{hyperref}
+\usepackage[dvips]{graphicx}
+\usepackage{pst-plot}
+\usepackage{mathrsfs}
+\usepackage{epic,eepic}
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage{braket}
+\usepackage{tabto}
+% set up paper size
+\setlength{\textwidth}{17.59cm}
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\textheight}{24.05cm}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\oddsidemargin}{-0.04cm}
+\setlength{\topmargin}{-.04cm}
+\usepackage{pdfpages} 
+
+\renewcommand{\baselinestretch}{1.05}
+\DeclareMathOperator{\sgn}{sgn}
+
+\newcommand{\dagg}[1]{\ensuremath #1^\dag}
+
+\newcommand{\tbd}[1]{{\color{red}#1}}
+
+\begin{document}
+
+\title{From Quarks to Stars:  A Quantum Computing Approach to the Nuclear Many-Body Problem}
+
+\maketitle
+
+\begin{abstract}
+  
+How do we connect fundamental physics to forefront experiments?  With
+new science waiting to be discovered at experimental facilities such
+as FRIB, this question is a profound challenge and opportunity for
+nuclear theory.  We would like to know how nuclear forces emerge from
+the interactions of quarks and gluons in quantum chromodynamics, what
+is the internal partonic structure of nucleons, what are the
+signatures of physics beyond the Standard Model in atomic nuclei, how
+do we predict nuclear structure and reactions from the microscopic
+interactions of nucleons, and what are the properties of
+strongly-interacting matter under extreme conditions.  There have been
+many important and profound advances in recent years, with some of the
+most creative and impactful developments led by investigators on this
+proposal.  But there are limits to what can be done even with the most
+powerful supercomputers in this soon-to-be era of exascale computing.
+Unfortunately, some of the most interesting scientific questions
+remain unexplored such as the real-time dynamics of hadronic and
+nuclear reactions and the properties of dense nuclear and neutron
+matter. For computational methods that construct quantum wave
+functions, the problem is the curse of large dimensionality and the
+impossibility of storing exponentially large vectors as classical
+bits.  For computational methods that rely on Monte Carlo simulations,
+the obstacle is the Monte Carlo sign problem, where positive and
+negative contributions cancel to produce exponentially small signal-to-noise ratios.
+
+Quantum computing has emerged as a new computational paradigm that
+offers the hope of evading both of these fundamental problems.  By
+allowing for arbitrary quantum superpositions of
+qubits, one can store exponentially more information than with classical
+bits.  Furthermore, qubits naturally evolve with unitary real-time
+dynamics. Clearly there are tremendous opportunities in this new
+paradigm for solving the most profound problems in nuclear physics,
+but there are enormous challenges to realizing their promise.  All of the currently available digital quantum computing devices suffer from short decoherence times and significant readout errors.
+Meanwhile all of the currently available
+analog quantum simulators have inherent quantum characteristics that
+are not directly applicable to address systems of relevance to nuclear
+physics.
+
+In order to meet these formidable challenges, we have proposed a
+series of new projects that bridge the gap between quantum computing
+as it exists today and the targeted territory of unsolved nuclear
+physics problems.  Some of the projects focus on variational methods
+and developing new algorithms for optimizing quantum wave functions.
+We also explore new applications of error stabilization techniques,
+machine learning, and quantum compiling to make efficient short-depth
+quantum circuits. Other proposed projects focus on real-time
+evolution, the calculation of observables using new algorithms, and
+creative adaptations of quantum simulators to nuclear physics.  We are
+confident that the scientific output of this collaboration will have a
+significant and lasting impact on the landscape of quantum computing
+applied to nuclear physics, and that the new algorithms and
+methods we develop will have an equally
+important impact on quantum computing and quantum information science.
+\end{abstract}  
+
+
+\end{document}
