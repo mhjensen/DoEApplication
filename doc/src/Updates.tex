@@ -1,0 +1,396 @@
+\documentclass[11pt]{article}
+\usepackage{indentfirst}
+\usepackage[colorlinks=True, urlcolor=blue]{hyperref}
+\usepackage[dvips]{graphicx}
+\usepackage{pst-plot}
+\usepackage{mathrsfs}
+\usepackage{epic,eepic}
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage{braket}
+\usepackage{tabto}
+% set up paper size
+\setlength{\textwidth}{17.59cm}
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\textheight}{24.05cm}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\oddsidemargin}{-0.04cm}
+\setlength{\topmargin}{-.04cm}
+\usepackage{pdfpages} 
+
+\renewcommand{\baselinestretch}{1.05}
+\DeclareMathOperator{\sgn}{sgn}
+
+\newcommand{\dagg}[1]{\ensuremath #1^\dag}
+
+\newcommand{\tbd}[1]{{\color{red}#1}}
+
+\begin{document}
+
+\title{From Quarks to Stars:  A Quantum Computing Approach to the Nuclear Many-Body Problem}
+
+\maketitle
+
+\noindent The following is a summary of updates to the proposal ``From Quarks to Stars:  A Quantum Computing Approach to the Nuclear Many-Body Problem'' for the DOE Quantum Horizons: QIS Research and Innovation for Nuclear Science Program.  These updates reflect new developments since the submission of the proposal in May 2019.
+
+We start however with alternative scenarios concerning the budget.
+
+\section{Budget considerations}
+We list here three possible scenarios concerning the final budget, with their eventual pros and cons.
+
+\begin{itemize}
+    \item The first scenario is obviously the simplest one, namely funding at the requested level for all items in the timetables.
+    \item The second alternative is a funding where travel and organization of workshops and schools are left out of the budget. We keep however three graduate students (GD) and one post-doctoral (PD) fellow. This leads to two PD years and 9 GD years. The final numbers here include all expenses (wages and benefits). One GD year is scaled to 65kUSD and one PD year to 110kUSD at Michigan State University. The final budget would then amount to 805kUSD. Compared with the full funding alternative, we may be able to find funds from alternative sources and still be able to achieve nearly all of our original goals, including those on workforce development in work package 5. We would hire three GD students as soon as we can start and then would hire a PD for the last two years. This would allow us to have a more experienced researcher who could help in developing good synergies between the various work packages. The PD would also help in coordinating educational activities and collaborate with the GD students and the involved researchers across work packages.   Some of the work packages have a higher risk and having a PD with an interest in the science of more than one work package will definitely be of importance to the success of the project.  Hiring a PD for the last two years has thus several advantages. If this is not possible, we would propose to hire 4 GD students only. This leads  to our third alternative.
+    \item The third alternative aims at hiring 4 GD students only, one for each work package. This leads to 12 GD years amounting to a total of $65000\times 12=780000$USD. Here as well we may be able to find funding elsewhere for travel and the organization of schools and workshops, meaning that all milestones in work package 5 can be achieved. 
+    
+    What would be lost here is however the possibility to have a more advanced PD researcher that interacts with the GD students and projects in two or more work packages, opening thus up for more synergies and cross-talk that will benefit the project.  Though we will try to complete all tasks, one or more of the milestones in year three for work packages 2, 3, or 4 may not be completed as a result.
+    
+    We consider it realistic to be able to hire 4 GD with interest in this project this coming fall. Alternative two is however our preferred scenario due to the possible synergies that can be developed. 
+    
+\end{itemize}
+
+\section{Work Package 1 (WP1): Quantum Simulation Algorithms}
+
+The time line for WP1 is summarized in the table here:
+\begin{footnotesize}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } & \multicolumn{4}{c|}{ 2023 } \\
+\hline
+Cost-driven redesign for current QCs &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & $\bullet$ & $\bullet$&$\bullet$ &$\bullet$ & & & & \\
+\hline
+Data-driven design for future QCs & & & & & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{footnotesize}
+
+\textbf{Updates on machine-learning/data-driven approach to design quantum algorithms}:
+
+\begin{itemize}
+    \item (Ryan and Matt) applied this approach to learn the \href{https://arxiv.org/abs/quant-ph/9601018}{approximate quantum Fourier transform} from the (exact) quantum Fourier transform.
+        \subitem Next step is to apply this approach to learn a lower-depth, approximate \href{https://arxiv.org/abs/1904.07358}{Dicke state preparation circuit} which is an important initial state in quantum optimization and simulation algorithms.
+    
+    \item Machine learning approach outlined in Patrick's paper ``\href{https://iopscience.iop.org/article/10.1088/1367-2630/aae94a}{Learning the quantum algorithm for state overlap}'' applied to IBMQ quantum compilation contest, places 1st out of 1745 entries.
+    
+    \item (Patrick) Published paper titled ``\href{https://arxiv.org/abs/1908.04416}{Noise Resilience of Variational Quantum Compiling}''
+    
+        \subitem Follow-up paper to \href{https://quantum-journal.org/papers/q-2019-05-13-140/}{quantum assisted quantum compiling} (Patrick and Ryan) referenced in initial proposal.
+        
+        \subitem Proves machine-learning approach to quantum compiling is invariant under certain common noise models.
+    
+    \item (Patrick) New papers on understanding cost function landscape of variational quantum circuits, a crucial component to optimizing gate structures to (re)design quantum algorithms.
+        \subitem \href{https://arxiv.org/abs/2001.00550}{Cost-Function-Dependent Barren Plateaus in Shallow Quantum Neural Networks}
+        
+        \subitem \href{https://arxiv.org/abs/2005.12458}{Trainability of Dissipative Perceptron-Based Quantum Neural Networks}
+        
+        \subitem \href{https://arxiv.org/abs/2005.12200}{Large gradients via correlation in random parameterized quantum circuits}
+\end{itemize}
+
+\textbf{Updates on variational algorithms (for simulation, kind of...)}:
+
+\begin{itemize}
+    \item (Patrick and Ryan) developed variational quantum algorithm for solving linear systems of equations (\href{https://arxiv.org/abs/1909.05820}{arxiv preprint}).
+        \subitem Executed on Rigetti's Aspen-7 quantum computer to solve a ten-qubit (1024 dimensional) linear system.
+        
+        \subitem Tutorial of algorithm written as a \href{https://qiskit.org/textbook/ch-paper-implementations/vqls.html}{chapter in the IBMQ quantum computing textbook}.
+    
+    \item (Patrick) Pre-print on new variational algorithm for quantum simulation ``\href{https://arxiv.org/abs/1910.04292}{Variational Fast Forwarding for Quantum Simulation Beyond the Coherence Time}.''
+        
+        \subitem 
+\end{itemize}
+
+\section{Work package 2 (WP2): Quantum State Preparation and Dynamics}
+
+
+In Ref.~\cite{Lee:2019zze} we introduced a new technique called the projected cooling algorithm.  The projected cooling algorithm can be regarded as the quantum analog of evaporative cooling.  Rather than evaporating hot gas molecules, we use quantum projection to separate out localized bound states from continuum states at higher energies. We start with an initial state $\ket{\psi_I}$ with support over a compact region which we call $\rho$.  We then allow the excited continuum states to disperse away and measure the part of the wave function that is left behind in region $\rho$. The algorithm can reproduce the localized ground state of any Hamiltonian $H$ with a translationally-invariant kinetic energy and interactions that vanish at large distances.  In the original paper we demonstrated the utility of the method for finding the bound state wave function for one or more particles in a potential.  It has since been used to study the transverse Ising model \cite{Gustafson:2020vqg}. 
+
+Since the performance of the projected cooling algorithm was found to be superior to adiabatic evolution for a wide range of quantum systems, we have updated our projects and milestones for the first year.  We now propose to implement the projected cooling algorithm on a supercomputing flux quantum computer.  We will focus on reducing the impact of noise when running on IBM Q devices with fourteen qubits, and we are also currently in discussions with IBM Q for access to larger devices. For this project we
+use Model 1A as defined in Ref.~\cite{Lee:2019zze}.
+
+The Hamiltonian is defined on a one-dimensional chain of $2L+1$ qubits labelled as $n = -L,\cdots L$.
+We take the vacuum to be the tensor product state where all qubits are $\ket{0}$, and from this vacuum state we can define particle excitations.  In the one-particle
+subspace, we write $\ket{[n]}$ for the tensor product state where qubit $n$
+is $\ket{1}$ and the rest are $\ket{0}$. In the one-particle space, our Hamiltonian
+has the form  $H=K+V$ with $\bra{[n']}H\ket{[n]}$ equal to $K_{n',n} + V_{n}\delta_{n',n}$,
+where the kinetic energy term $K_{n',n}$ is $\delta_{n',n}-\tfrac{1}{2}\delta_{n',n+1}-\tfrac{1}{2}\delta_{n',n-1}$,
+and $V_n$ is the single-particle potential energy on site $n$. We take the
+interaction term to be $V_{n}=-c_0\delta_{0,n}$.
+ We  take the compact region $\rho$ to correspond to the qubits $n = -R,
+\cdots R$ where $R \ll L$.  As defined above, $P$ is the projection operator
+that
+projects onto the subspace where all particle excitations are contained entirely
+in $\rho$.  Written explicitly, $P$ is the product of $\ket{0}\!\bra{0}$
+over all qubits outside $\rho$.  Therefore $P\ket{[n]}=0$ for $|n|>R,$ and
+$P\ket{[n]}=\ket{[n]}$ for $|n|\le R$. 
+
+ Since the terms in the Hamiltonian do not commute with each other, we use
+the Trotter approximation to
+break apart the Hamiltonian into pieces $H=A+B+D+V$, where $A_{n',n}$ is
+the off-diagonal part of $K_{n',n}$ when $\min(n',n) $ is even, $B_{n',n}$
+is the off-diagonal part of $K_{n',n}$ when $\min(n',n)$ is odd, and $D_{n',n}$
+is the diagonal part of $K_{n',n}$.  The first-order Trotterized time evolution operator is then 
+$e^{-iB\Delta t}e^{-iA\Delta t}e^{-iD\Delta t}e^{-iV\Delta t}$.  
+ 
+Ph.D. students Joey Bonitati and Jacob Watkins have written the first-order Trotter code in Qiskit and done tests
+of the projected cooling algorithm for Model 1A on IBM Q systems with five
+and fourteen qubits.  Their code was developed during the 
+Qiskit team coding competition of the IBM\ Quantum Computing Bootcamp
+at Michigan State University in October 2019.   Bonitati
+and Watkins won first prize in the competition, together with
+Ilaria Siloi from the University of Southern California.  We will improve upon this code and investigate several extensions including higher-order Trotter approximations \cite{Childs:2019a}, random compiling \cite{Campbell:2019a} and qubitization \cite{Hao_Low:2016a}.
+
+In Ref.~\cite{Lee:2019gtc} we show that a one-dimensional chain of trapped ions can be engineered to produce a quantum mechanical system with discrete scale invariance and fractal-like time dependence. By discrete scale invariance we mean a system that replicates itself under a rescaling of distance for some scale factor, and a time fractal is a signal that is invariant under the rescaling of time. These features are reminiscent of the Efimov effect, which has been predicted and observed in bound states of three-body systems. In this work we demonstrate that discrete scale invariance in the trapped ion system can be controlled with two independently tunable parameters.  For the projects in years 2 
+and 3, we use this discrete scaling Hamiltonian as a benchmark system as it provides a rich spectrum of bound states similar to atomic nuclei.   
+
+
+ The time line for the development of the various elements of WP2 is
+\begin{footnotesize}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } & \multicolumn{4}{c|}{ 2023 } \\
+\hline
+Projected Cooling &$\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & & & &  \\
+\hline
+Spectral Reconstruction & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & & &  \\
+\hline
+Transition Matrix Elements & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & &   \\
+\hline
+Few-body Dynamics & & & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & &\\
+\hline
+Scattering and Reaction Probabilities & & & & & & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ \\
+\hline
+
+\end{tabular}
+\end{center}
+\end{footnotesize}
+
+\section{Work Package 3 (WP3): Lattice Quantum Chromodynamics (QCD) and Quantum Information Theories}
+
+Activities under WP3:
+\begin{itemize}
+	\item \textbf{Year 1: Spectral functions and Schwinger model.}
+	\begin{enumerate}
+	\item Implement the Schwinger model (Quantum Electrodynamics in 1+1 dimensions) in the Hamiltonian form for classical computations,
+          where for small systems it can be solved by exact diagonalization. This will serve as a benchmark.
+	\item Calculate the spectrum and construct the spectral functions directly as per Eq. (21) in the proposal.
+	\item Implement the Jordan-Wigner transformed Hamiltonian in
+          Qiskit.
+          % to run in a simulator and on the actual IBM Q hardware.
+          As already stated in the proposal,
+          we will test our algorithm for non-trivial low-qubit
+          representation using
+          the IBM Qiskit local simulator,
+          before trying out the 5-qubit ibmqx4 and 16-qubit ibmqx5 machines.
+	\end{enumerate}
+      \item \textbf{Year 2: Spectral functions and Schwinger model, Quantum Field Theory (QFT) in 2+1 dimensions.}
+	\begin{enumerate}
+	\item Implement a hybrid quantum-classical approach to the Schwinger
+	  model where the gauge fields can be treated classically and the
+	  fermions evolve in the fixed gauge field background on a quantum
+	  computer. 
+	\item Apply the algorithms of WP2, "Spectral Reconstruction and Transition Matrix Elements"
+          to the Schwinger model to extract the low-lying spectrum and construct
+          spectral functions, compare to the classical calculations in Year 1.
+	\item Extend classical calculations to 2+1 dimensional Quantum Electrodynamics.
+	\end{enumerate}
+      \item \textbf{Year 3: Quantum Field Theory (QFT) in 2+1 dimensions.}
+        \begin{enumerate}
+        \item Extend the quantum calculations of the Schwinger model to 2+1 dimensions by implementing the Auxiliary Qubit Mapping algorithm and study its computational costs and feasibility of simulating on the available quantum hardware.
+          Compare with classical calculations in Year 2.
+        \item Implement the Verstraete-Cirac transform and the "superfast simulation"
+          techniques to a squared fermion-to-qubit mapping, and compare with
+          the Auxiliary Qubit Mapping algorithm.
+	\end{enumerate}
+\end{itemize}
+
+
+
+The time line for WP3 is summarized in the table here:
+
+\begin{footnotesize}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } & \multicolumn{4}{c|}{ 2023 } \\
+\hline
+Spectral  Functions   & $\bullet$&$\bullet$ & $\bullet$&$\bullet$ &$\bullet$ &$\bullet$ & & & & &  &  \\
+\hline
+Schwinger  Model & & &$\bullet$ &$\bullet$ & $\bullet$ &$\bullet$ & $\bullet$ & $\bullet$ &$\bullet$ & $\bullet$ &  &  \\
+%\hline
+%Topics 3 & & & & $\bullet$ &$\bullet$ &$\bullet$ &$\bullet$ & & & & &  \\
+\hline
+$2+1$ QFT Trials & && & & & & & $\bullet$ & $\bullet$ &$\bullet$ & $\bullet$& $\bullet$ \\
+\hline
+
+\end{tabular}
+\end{center}
+\end{footnotesize}
+
+
+\section{Work Package 4 (WP4): Nuclear Structure, from Finite Nuclei to Infinite Nuclear Matter}
+
+The time line for WP4 is summarized in the following table:
+
+%% HH: Saving the original timeline for immediate reference
+% \begin{footnotesize}
+% \begin{center}
+% \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+% \hline
+% \multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } & \multicolumn{4}{c|}{ 2023 } \\
+% \hline
+% Develop PE algorithm for Pairing model &$\bullet$ &$\bullet$ && & & & & & & & &  \\
+% \hline
+% Develop VQE algorithm for Pairing model &$\bullet$  & $\bullet$ & & &  & & & & & & & \\
+% \hline
+% Implement generalized two-body Hamiltonian & & &$\bullet$  & $\bullet$ & & & & & & & &  \\
+
+% \hline
+% UCC for the HEG and Infinite Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
+% \hline
+% IMSRG for the HEG and Infinite Nuclear Matter & && & &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
+% \hline
+% Magnus Expansion of Time Evolution Operator & && & &   &  &   &   &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
+% \hline
+
+% \end{tabular}
+% \end{center}
+% \end{footnotesize}
+
+%% HH: The reasoning:
+%  - UCC is implemented for pairing model, moving to HEG should be relatively easy
+%  - Implement IMSRG and compare with UCC along the way 
+%  - Implement nuclear Hamiltonians for UCC and IMSRG, and tackle infinite matter
+%  - bring in improved noise suppression once "basic" calculations are feasible
+%  - Then start looking into evolution. 
+
+Achievements since the original proposal:
+\begin{itemize}
+    \item The PE and VQE estimation algorithms have been implemented for the pairing model, the hydrogen molecule and few-electron systems like two-dimensional quantum dots. 
+    \item Implementation of generalized two-body Hamiltonian has been completed. 
+    \item UCC has been implemented and tested for the pairing model, the hydrogen molecule and confined few-electrons systems.
+\end{itemize}
+
+We have already mapped a general two-body Hamiltonian into various quantum circuits and tested our methods for the simple pairing model mentioned in the main application, as well as to systems like the hydrogen molecule and systems of quantum dots. We also implemented and tested the unitary coupled-cluster approach using the Phase Estimation (PE) algorithm and the Variational Quantum Eigensolver (VQE), with results that reproduce when run on classical quantum computers those from standard many-body methods like full configuration interaction theory. Two scientific articles, with graduate student Benjamin Hall are under preparation. Since these research topics  where part of our planned first year, we plan now to start with studies of infinite nuclear matter and the homogeneous electron gas (HEG). The latter is a simpler system mainly due to the well-known properties of the Coulomb interaction. For the HEG there are also many existing results we can use to benchmark our results against. 
+We have also run some of the simpler systems like the hydrogen molecule and two-electron quantum dots on IBM-Q's five qubit quantum computer, with very promising results. For the real quantum computer implementation, as expected, noise plays an important role. Our focus on the VQE algoritm, quantum adiabatic time evolution and other algorithms are meant to research whether noise in quantum circuits can be reduced.  Our last year, 2023, will be devoted to studies of noise suppression techniques. 
+
+All in all, we believe that the planned milestones are very realistic and that we will be able to produce results for infinite nuclear matter within the next three years.
+
+
+Activities under WP4:
+\begin{itemize}
+	\item \textbf{Year 1: Quantum computing and the homogeneous electron gas}
+	\begin{enumerate}
+	\item We will adapt our quantum algorithm for the unitary coupled cluster method to studies of the HEG. 
+	\item The HEG will also be studied with the IMSRG many-body method implemented with QC algorithms on classical and existing quantum computers.
+	\end{enumerate}
+      \item \textbf{Year 2: From the HEG to infinite nuclear matter}
+	\begin{enumerate}
+	\item We continue the studies of the HEG with IMSRG theory and prepare for calculations of infinite nuclear matter on classical computers and existing quantum computers.
+	\item The previous item will be accompanied with similar UCC studies. 
+	\end{enumerate}
+      \item \textbf{Year 3: Noise suppression and further developments}
+        \begin{enumerate}
+        \item Adapting improved noise suppression techniques.
+        \item For IMSRG calculations, the Magnus expansion has provided a very useful approach to solving coupled differential equations. Implementing this on quantum computers will form an important element of this work package.
+	\end{enumerate}
+\end{itemize}
+
+
+
+\begin{footnotesize}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|l}{Milestones } & \multicolumn{4}{|c|}{ 2021 } & \multicolumn{4}{c|}{ 2022 } & \multicolumn{4}{c|}{ 2023 } \\
+\hline
+UCC for HEG &$\bullet$ &$\bullet$ & $\bullet$ & $\bullet$ & & & & & & & &  \\
+\hline
+IMSRG for HEG & & & $\bullet$ & $\bullet$ &$\bullet$  & $\bullet$ & & & & & & \\
+\hline
+UCC and IMSRG for Infinite Nuclear Matter & & & & & & &$\bullet$  &$\bullet$  &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
+\hline
+Adapt Improved Noise Suppression Techniques & && & &  & & &   &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
+\hline
+Magnus Expansion of Time Evolution Operator & && & &   &  &   &   &$\bullet$  &$\bullet$ &$\bullet$  &$\bullet$   \\
+\hline
+
+\end{tabular}
+\end{center}
+\end{footnotesize}
+
+
+
+\section{Work Package 5 (WP5): Workforce Development}
+
+\begin{itemize}
+    \item Held MSU-IBM Quantum computing bootcamp with Qiskit (Oct. 2019).
+        \subitem Talks and Jupyter notebook tutorials on basics, superconducting qubits, and variational quantum algorithms (the quantum approximate optimization algorithm by Dean)  made publicly available at \href{https://github.com/rmlarose/qcbq}{https://github.com/rmlarose/qcbq}.
+    
+    \item MSU one of three selected universities in the Midwest U.S. to participate in the \href{https://www.hackerearth.com/challenges/hackathon/qiskit-community-summer-jam-mid-west/}{Qiskit community summer jam} (June 2020).
+    
+    \item \href{https://www.ryanlarose.com/quic-seminar.html}{QuIC Seminar} lecture notes and coding tutorials from fourth semester (and first three semesters) made publicly available online.
+    
+    \item Los Alamos National Lab joins the IBMQ Network (Jan. 2020).
+        \subitem Article: \href{https://www.lanl.gov/discover/news-release-archive/2020/January/0109-quantum-computing-algorithms.php?source=newsroom}{Laboratory joins IBM Q Network to explore quantum computing algorithms and education outreach}.
+
+    \item We will be hosting the Young Quantum Information Scientists conference in April 2021 at the Facility for Rare Isotope Beams.     
+    
+\end{itemize}
+
+
+\section{Timetable of Activities}
+We propose a three-year project to develop quantum simulation algorithms for scientific computing applications in nuclear physics. The project consists of the five work packages discussed above and this section summarizes the timetable outlined in the above tables. Our tasks include the development of classical algorithms, quantum algorithms, and software.
+
+\begin{itemize}
+    \item Year 1: Government fiscal year 2021
+    \begin{enumerate}
+        \item Project kick off meeting at MSU to coordinate logistics, discuss
+specific tasks, and review application targets.
+\item WP1: Cost-driven design for current QCs
+\item WP2: Projected cooling and spectral reconstruction
+\item WP3: Spectral functions and Schwinger model
+\item WP4: Quantum computing and the homogeneous electron gas
+\item WP5:  QuIC seminar. Develop educational material which can be used at the LANL summer school.
+\item WP5:  Hosting Young Quantum Information Scientists conference in April 2021
+\item Public release of developed software tools.
+
+\item Deliverable Year 1: Results from work packages 1-5 compiled and delivered to the program office
+    \end{enumerate}
+    \item Year 2: Government fiscal year 2022
+    \begin{enumerate}
+        \item Team hackathon meeting at MSU and coordination of logistics, discuss specific tasks and progress. Review and adjustment of targets.
+        \item WP1: Cost-driven design for current QCs and data-driven design for future QCs 
+\item WP2: Spectral reconstruction and transition matrix elements. Few-body dynamics.
+\item WP3: Schwinger model and $2+1$ QFT studies
+\item WP4: Nuclear matter studies with UCC and IMSRG
+\item WP5: Develop and extend the QuIC seminar and the Nuclear TALENT Course as well as further educational material to be offered at for example the LANL summer school.
+\item Public release of developed software tools.
+\item Deliverable Year 2: Results from work packages 1-5 compiled and delivered to the program office.
+    \end{enumerate}
+    \item Year 3: Government fiscal year 2023
+    \begin{enumerate}
+        \item  Team hackathon meeting at MSU and coordination of logistics, discuss specific tasks and progress. Review and adjustment of targets.
+        \item WP1: Data-driven design for future QCs 
+\item WP2: Few-body dynamics and scattering and reaction probabilities
+\item WP3: Schwinger model and $2+1$ QFT studies
+\item WP4: Perform studies of  infinite systems using developed quantum computing algorithms. Magnus Expansion of Time Evolution Operator and noise suppression techniques.
+\item WP5: Develop and extend the QuIC seminar. Develop educational material for intensive Nuclear TALENT courses and courses to be taught at MSU and the LANL summer school. 
+\item Public release of developed software tools.
+\item Deliverable Year 3: Results from work packages 1-5 compiled and delivered to the program office.
+    \end{enumerate}
+    
+\end{itemize}
+
+% replace with style we want
+\bibliographystyle{h-physrev_mod}
+\bibliography{References.bib}
+
+\end{document}
